@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" data-theme="light">
+<html lang="pt-br">
 
 <!--Não Mexer!!!!!-->
 
@@ -47,15 +47,65 @@
 
 
     <main>
-        
+        <h1>Cadastra-se</h1>
 
-        <!--Exemplo Botões-->
-            <button class="btn btn-primary btn-custom btn-next">BTN Próxima Página</button>
+        <div class="container_flex">
 
-            <button class="btn btn-primary btn-custom btn-back">BTN Voltar</button>
+            <div class="container_texto">
+                <h4>Por que preencher o formulário?</h4>
+                <p><strong>Seja bem-vindo à Húmus!</strong> Para garantirmos um atendimento humanizado e verdadeiramente
+                    customizado, nossa política de parceria começa na compreensão mútua. Por isso, solicitamos o
+                    preenchimento deste formulário: ele nos ajuda a avaliar minuciosamente as reais necessidades do seu
+                    negócio.</p>
+                <p>Com o objetivo de adequar nossos serviços com máxima precisão, <strong>o processo de cadastro não é
+                        automatizado ou instantâneo</strong>. Nossa equipe analisará suas respostas e, muito em breve,
+                    entrará em contato direto para discutir os termos do contrato e desenhar a melhor solução para a sua
+                    empresa.</p>
+            </div>
 
-            <button class="btn btn-primary btn-custom btn-humus">BTN Ja tenho conta</button>
-   
+            <div class="container_formulario">
+                <h2>Dados da Empresa</h2>
+
+                <div class="mb-3">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome">
+                </div>
+
+                <div class="mb-3">
+                    <label for="tel_comercial">Email Comercial</label>
+                    <input type="email" id="tel_comercial" placeholder="exemplo@empresa.com">
+                </div>
+
+                <div class="mb-3">
+                    <label for="whatsapp">WhatsApp / Celular</label>
+                    <input type="tel" id="whatsapp" placeholder="(00) 0 0000-0000">
+                </div>
+
+                <div class="mb-3">
+                    <label for="telefone">Telefone Fixo</label>
+                    <input type="tel" id="telefone" placeholder="(00) 0 0000-0000">
+                </div>
+
+                <p>Já tem uma conta? <a href="#"><strong>Faça login</strong></a></p>
+
+                <div class="container_botoes"
+                    style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; width: 100%;">
+
+                    <div class="botoes_esquerda" style="display: flex; gap: 12px;">
+                        <button type="button" class="btn-custom btn-humus"
+                            onclick="window.location.href='index.html'">Voltar</button>
+
+                        <button type="reset" class="btn-custom btn-back">Limpar</button>
+                    </div>
+
+                    <button type="button" class="btn-custom btn-next"
+                        onclick="window.location.href='cad_empresa_2.html'">Próximo</button>o</button>
+
+                </div>
+            </div>
+
+        </div>
+
     </main>
 </body>
 
