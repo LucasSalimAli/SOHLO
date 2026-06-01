@@ -14,22 +14,62 @@
     --txt_red: #D11010;
     --txt_green: #00FF48;
     --txt_blue: #4531E0;
+    --txt_nav:  #DEE8FF;
+    --txt_h_green: #00FF48;
+    --bg_footer: #FFEFEF;
+    --txt_invert: #000000;
 
     /*Logo*/
     --logo_std: #DEE8FF;
 
     /*Cores*/
-    --bg_body: #001015;
-    /*Background Principal*/
-    --bg_navbar: #192707;
-    /*Background NavBar*/
+    --bg_body: #001015; /*Background Principal*/
+    --bg_navbar: #192707; /*Background NavBar*/
+    --bg_btns: #194F15; /*Background dos Botões*/
+    --bg_cards: #1C1D21; /*Background dos Cards de planos e produtos*/
 
     /*Selection*/
-    --selection_blue: #00d2ff;
-    /*Seleção*/
+    --selection: #32963E; /*Seleção*/
+    --selection_invert: #00d2ff; /*Seleção de cor invertida com o tema branco*/
 
 
+
+    /*Background Image*/
+    --bg_img: url('../assets/img/Bg_Image_Dark.jpg');
 }
+
+/*Tema Claro*/
+[data-theme="light"]{
+
+    /*Textos*/
+    --txt_std: #000000;
+    --txt_red: #D11010;
+    --txt_green: #00FF48;
+    --txt_blue: #4531E0;
+    --txt_nav:  #DEE8FF;
+    --txt_h_green: #0aa034;
+    --bg_footer: #000000;
+    --txt_invert: #DEE8FF;
+
+    /*Logo*/
+    --logo_std: #DEE8FF;
+
+    /*Cores*/
+    --bg_body: #ffffff; /*Background Principal*/
+    --bg_navbar: #192707; /*Background NavBar*/
+    --bg_btns: #194F15; /*Background dos Botões*/
+    --bg_cards: #DCDCDC; /*Background dos Cards de planos e produtos*/
+
+    /*Selection*/
+    --selection: #00d2ff; /*Seleção*/
+    --selection_invert: #32963E; /*Seleção de cor invertida com o tema preto*/
+
+
+
+    /*Background Image*/
+    --bg_img: url('../assets/img/Bg_Image_Light.png');
+}
+
 
 
 
@@ -37,20 +77,77 @@
                      FONTES
    ========================================== */
 
+
+/*Freestyle Script*/
 @font-face {
     font-family: 'Freestyle Script';
     src: url('assets/fonts/FREESCPT.TTF') format('truetype');
 }
 
+/*Gilroy*/
 @font-face {
     font-family: 'Gilroy';
-    src: url('assets/fonts/Gilroy-Regular.ttf') format('truetype');
+    src: url('assets/fonts/Gilroy-Light.ttf') format('truetype');
+    font-weight: 300; /* Light = 300 */
 }
 
 @font-face {
-    font-family: 'Anonymous-Pro';
-    src: url('assets/fonts/AnonymousPro-Regular.ttf') format('truetype');
+    font-family: 'Gilroy';
+    src: url('assets/fonts/Gilroy-Regular.ttf') format('truetype');
+    font-weight: 400; /* Regular = 400 (Padrão) */
+}
 
+@font-face {
+    font-family: 'Gilroy';
+    src: url('assets/fonts/Gilroy-Medium.ttf') format('truetype');
+    font-weight: 500; /* Medium = 500 */
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('assets/fonts/Gilroy-Bold.ttf') format('truetype');
+    font-weight: 700; /* Bold = 700 */
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('assets/fonts/Gilroy-ExtraBold.ttf') format('truetype');
+    font-weight: 800; /* ExtraBold = 800 */
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('assets/fonts/Gilroy-Heavy.ttf') format('truetype');
+    font-weight: 900; /* Heavy = 900 */
+}
+
+/*AnonymousPro*/
+@font-face {
+    font-family: 'AnonymousPro';
+    src: url('assets/fonts/AnonymousPro-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AnonymousPro';
+    src: url('assets/fonts/AnonymousPro-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AnonymousPro'; /* Unificado sem o hífen */
+    src: url('assets/fonts/AnonymousPro-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'AnonymousPro'; 
+    src: url('assets/fonts/AnonymousPro-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic; 
 }
 
 
@@ -61,13 +158,20 @@
 
 /*Fonte padrão do Sistema*/
 body {
-    font-family: 'Science Gothic';
+    font-family: 'Gilroy', sans-serif;
     background-color: var(--bg_body);
-}
 
-.main {
-    margin-left: 54px;
-    margin-right: 544p;
+    background-image: var(--bg_img);
+    background-size: 100% 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+
+
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 /*==========================================
@@ -88,34 +192,394 @@ body {
 }
 
 .logo {
-    color: var(--txt_std);
+    color: var(--logo_std);
     font-family: 'Freestyle Script', cursive;
-    
+
     font-size: 50px;
 
 
 }
 
 .nav-link {
-    color: var(--txt_std);
-    font-family: 'Anonymous-Pro', monospace;
-
-
+    color: var(--txt_nav);
+    font-family: 'AnonymousPro', monospace;
+    font-size: 18px;
 }
 
 .nav-link:hover,
-.logo:hover {
-    color: var(--selection_blue);
+.logo:hover, .navbar_std, .nav-link:focus,
+.nav-link:active{
+    color: var(--selection);
 }
 
+.navbar-brand:focus{
+    color: var(--txt_nav);
+}
+.navbar_std, .nav-link:focus,
+.nav-link:active{
+    color: var(--txt_nav);
+}
+
+
+
+
+/*Botões*/
 .subs-btn {
-    width: 660px;
-    font-family: 'Anonymous-Pro', monospace;
-    background-color: color-mix(in srgb, #4E9A22 40%, transparent);;
+    width: 200px;
+    font-family: 'AnonymousPro', monospace;
+    font-size: 20px;
+    border: 0px;
+    color: var(--txt_nav);
+    background-color: color-mix(in srgb, #4E9A22 40%, transparent);
 }
 
 .login-btn {
     margin-left: 20px;
-    font-family: 'Anonymous-Pro', monospace;
-     background-color: color-mix(in srgb, #6761D3 40%, transparent);
+    font-family: 'AnonymousPro', monospace;
+    font-size: 20px;
+    border: 0px;
+    color: var(--txt_nav);
+    background-color: color-mix(in srgb, #6761D3 40%, transparent);
+}
+
+
+.subs-btn:hover,
+.login-btn:hover {
+    color: var(--txt_nav);
+    background-color: var(--selection);
+
+}
+
+/*==========================================
+                     MAIN
+  ========================================== */
+
+
+/*Iten-Margin*/
+.iten-margin{
+    margin-left: 165px;
+    margin-right: 165px;
+    /*Pra deixar a margem certinha nos itens. PQP AAAAAAAAAAAAAAAAAAAAAA*/
+}
+
+
+/*Slogan*/
+.slogan{
+    margin-top: 70px;
+}
+
+.slogan-title{
+    font-family: 'Freestyle Script', cursive;
+    color: var(--txt_std);
+    font-size: 94px;
+}
+.slogan-subtitle {
+    font-family: 'Gilroy', sans-serif;
+    color: var(--txt_std);
+}
+
+/*Botões*/
+.main-btn {
+    color: var(--txt_green);
+    background-color: color-mix(in srgb, var(--bg_btns) 70%, transparent);
+
+    font-family: 'AnonymousPro', monospace;
+    
+    border-radius: 15px;
+}
+
+
+
+.big-btn{
+    font-size: 36px;
+    width: 660px;
+    margin-top: 100px;
+}
+
+
+.main-btn:hover {
+    color: var(--txt_h_green);
+    background-color: color-mix(in srgb, var(--selection) 70%, transparent);
+}
+
+
+
+
+/*==========================================
+                  CARROSSEL
+  ========================================== */
+
+
+/* Limita o tamanho máximo do carrossel para não quebrar a tela */
+#main-carousel {
+    max-width: 2880px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border: 2px solid color-mix(in srgb, var(--txt_std) 30%, transparent);;
+    width: auto;
+}
+
+/* Controla o comportamento das imagens */
+.img-carosel {
+    height: 720px; /* Altura para ver os prints do sistema */
+    object-fit: cover;
+    object-position: top center; /* Foca no topo do print, fica a navbar */
+}
+
+/*Borda do Texto do Carrossel*/
+.bg-blur-caption {
+    background: var(--bg_body);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Letras Carrossel */
+.bg-blur-caption h5 {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 700;
+    color: var(--txt_std);
+}
+
+.bg-blur-caption p {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: var(--txt_std);
+    margin-bottom: 0;
+}
+
+/*Some com as setas*/
+#main-carousel .carousel-control-prev-icon,
+#main-carousel .carousel-control-next-icon {
+    display: none;
+}
+
+
+#main-carousel .carousel-indicators [data-bs-target] {
+    background-color: var(--txt_std);
+    opacity: 0.4;
+    transition: opacity 0.3s ease, background-color 0.3s ease; 
+}
+
+#main-carousel .carousel-indicators .active {
+    background-color: var(--txt_std);
+    opacity: 1;
+}
+
+
+
+/*==========================================
+             PLANOS e PRODUTOS
+  ========================================== */
+
+.product-title-size{
+    font-family: 'Freestyle Script', cursive;
+    font-size: 120px;
+    color: var(--txt_std);
+}
+
+.product-div{
+    color: var(--txt_std);
+    size: 120px;
+    opacity: 80%;
+    margin-top: -30px;
+    margin-bottom: 100px;
+}
+
+.plans{
+    width: 100%;
+    align-items: center;
+    padding: 30px;
+
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        color-mix(in srgb, var(--bg_body) 85%, transparent) 20%,
+        color-mix(in srgb, var(--bg_body) 85%, transparent) 
+    )
+    
+}
+
+.products{
+    width: 100%;
+    background-color: color-mix(in srgb, var(--bg_body) 85%, transparent);
+    align-items: center;
+    padding-top: 65px;
+    padding-bottom: 30px;
+    
+}
+
+.card{
+    margin: auto;
+    background-color: color-mix(in srgb, var(--bg_cards) 70%, transparent);
+    color: var(--txt_std);
+    height: 560px;
+
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px); /* O card dá um leve salto para cima */
+    background-color: color-mix(in srgb, var(--bg_cards) 90%, transparent); 
+
+    /*Aura*/
+    box-shadow: 0 10px 20px color-mix(in srgb, var(--selection) 50%, transparent); 
+}
+
+
+.card-title{
+    font-family: 'Freestyle Script', cursive;
+    color: var(--txt_std);
+    font-size: 72px;
+    margin-bottom: -10px;
+}
+
+.card-subtitle{
+    font-family: 'Gilroy', sans-serif;
+    color: var(--txt_std);
+    font-size: 30px;
+    font-weight: bold;
+    
+}
+
+.description{
+    font-family: 'Gilroy', sans-serif;
+    font-size: 20px;
+}
+
+.description-list{
+    padding-top: 15px;
+}
+
+.card-btn{
+    font-size: 24px;
+    width: 360px;
+    margin-top: 22px;
+}
+
+.card-div{
+    color: var(--txt_std);
+    opacity: 60%;
+}
+
+.card-img{
+    max-width: 300px;
+    max-height: 220px;
+    padding:20px;
+}
+
+
+
+/*==========================================
+                  QUEM SOMOS
+  ========================================== */
+
+  .mini-title{
+    font-family: 'AnonymousPro' monospace;
+    color: var(--txt_std);
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .about{
+    font-family: 'Gilroy', sans-serif;
+    color: var(--txt_std);
+    font-size: 20px;
+  }
+
+  .about-block{
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .img-about{
+    max-height: 500px;
+  }
+
+
+
+  /*==========================================
+                    FOOTER
+  ========================================== */
+
+
+footer{
+    background-color: var(--bg_footer);
+    padding-top: 50px;
+}
+
+.footer-title{
+    color: var(--txt_invert);
+
+}
+
+.footer-div{
+    color: var(--txt_invert);
+    size: 120px;
+    opacity: 80%;
+    
+    margin-bottom: 100px;
+}
+
+.social-btn-single {
+    font-size: 60px;
+    color: var(--txt_invert);
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease, filter 0.3s ease;
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    margin-top: -15px;
+    align-self: center;
+    padding-bottom: 57px;
+}
+
+
+.social-btn-single:hover {
+    transform: translateY(-10px);
+    color: var(--selection_invert); /* Cor oficial do Instagram */
+    filter: drop-shadow(0 0 10px rgba(225, 48, 108, 0.4)); /* Brilho neon */
+}
+
+.footer-text{
+    font-family: 'Gilroy', sans-serif;
+    font-size: 30px;
+
+    color: var(--txt_invert);
+    font-weight: bold;
+}
+
+.footer-list{
+    font-family: 'Gilroy', sans-serif;
+    font-size: 20px;
+    color: var(--txt_invert);
+    padding-bottom: 10px;
+}
+
+.footer-mini-text{
+    font-family: 'Gilroy', sans-serif;
+    font-size: 20px;
+
+    color: var(--txt_invert);
+    font-weight: bold;
+
+    margin-top: -70px;
+}
+
+.footer-link{
+    font-family: 'Gilroy', sans-serif;
+    color: var(--txt_invert);
+   
+}
+
+.footer-link:hover{
+    color: var(--selection_invert);
+}
+
+.copyright{
+    padding-top: 20px;
+    color: var(--txt_invert);
 }
