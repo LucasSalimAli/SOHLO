@@ -433,4 +433,408 @@ body {
 
 
 
+/* ==========================================
+   CONTEÚDO PRINCIPAL - FLUXO DE CAIXA
+   ========================================== */
 
+.financial-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    color: var(--txt_std);
+}
+
+/* Filtros do topo */
+.filters-section {
+    display: flex;
+    gap: 20px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.filter-group label {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--txt_std);
+}
+
+.filter-box {
+    background-color: var(--bg_dropdown_filter);
+    color: var(--txt_std); 
+    border: none;
+    padding: 12px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+select.filter-box {
+    appearance: none;
+    cursor: pointer;
+}
+
+/* Dashboards */
+.summary-cards {
+    display: flex;
+    gap: 20px;
+}
+
+.summary-cards .card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    overflow: hidden;
+    font-weight: bold;
+    border: none; 
+    color: #ffffff; 
+}
+
+.card-top {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 32px;
+}
+
+.card-top .currency {
+    font-size: 24px;
+}
+
+.card-bottom {
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background-color: rgba(0, 0, 0, 0.15); 
+}
+
+/* Cor - cards */
+.card-green { background-color: var(--dashboard_green); }
+.card-red { background-color: var(--dashboard_red); }
+.card-blue { background-color: var(--dashboard_blue); }
+
+/* Tabela de Dados */
+.table-section {
+    background-color: var(--bg_table);
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.table-header-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.table-header-actions .icon {
+    color: var(--disable_empty);
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.table-header-actions .icon:hover {
+    color: var(--txt_std);
+}
+
+.financial-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    color: var(--txt_std);
+}
+
+.financial-table th, 
+.financial-table td {
+    border: 1px solid var(--table_divs);
+    padding: 15px;
+    text-align: left;
+}
+
+.financial-table th {
+    text-transform: uppercase;
+    font-weight: normal;
+    color: var(--txt_std);
+    opacity: 0.8; 
+}
+
+.financial-table tr {
+    height: 45px;
+}
+
+.text-green td { color: var(--txt_green); }
+.text-red td { color: var(--txt_red); }
+
+
+/* ==========================================
+   CONTEÚDO PRINCIPAL - DASHBOARDS
+   ========================================== */
+
+.dashboard-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    box-sizing: border-box;
+    color: var(--txt_std);
+}
+
+/* Barra de Ações do Topo */
+.dashboard-top-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.right-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Estilização dos Botões Baseada nas suas Variáveis */
+.btn-dash {
+    background: transparent;
+    color: var(--txt_std);
+    border: 1px solid var(--txt_std);
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-dash.active, .btn-dash:hover {
+    background-color: var(--table_btn);
+    border-color: var(--table_btn);
+    color: #ffffff;
+}
+
+.btn-dash-outline {
+    background: transparent;
+    color: var(--txt_std);
+    border: 1px solid var(--txt_std);
+    padding: 6px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn-refresh {
+    background: transparent;
+    border: none;
+    color: var(--txt_std);
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Layout em fileiras (Rows) */
+.dashboard-row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Boxes dos gráficos */
+.chart-box {
+    background-color: var(--dashboard);
+    border-radius: 6px;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chart-title {
+    font-size: 13px;
+    color: var(--txt_std);
+    opacity: 0.7;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.chart-title-large {
+    font-size: 22px;
+    color: var(--txt_std);
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+/* Contêineres internos para travar o tamanho do Canvas */
+.canvas-container {
+    position: relative;
+    width: 100%;
+    height: 180px; /* Altura padrão para gráficos médios */
+}
+
+/* Grid específico do topo: Gráfico Grande + Mini Cards */
+.grid-main-top {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+}
+
+.main-profit-box .canvas-container {
+    height: 200px;
+}
+
+/* Mini Cards Laterais */
+.mini-cards-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mini-card {
+    background-color: var(--dashboard);
+    border-radius: 6px;
+    padding: 15px;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mini-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.mini-card-title {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.mini-card-value {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.mini-card-chart {
+    width: 100px;
+    height: 50px;
+}
+
+/* Grid de 3 colunas do meio */
+.grid-three-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.row-doughnut {
+    height: 160px;
+}
+
+/* Estilo para os medidores circulares de Margem de Lucro */
+.gauge-box {
+    flex-direction: row !important;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.gauge-wrapper {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+.gauge-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.gauge-label {
+    font-size: 9px;
+    opacity: 0.6;
+    text-transform: uppercase;
+}
+
+.gauge-value {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* Rodapé */
+.footer-chart {
+    height: 280px;
+}
+
+/* Container para alinhar gráfico + legenda lado a lado */
+.doughnut-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+.container-donut {
+    width: 130px !important; /* Força o tamanho da rosca menor para sobrar espaço */
+    height: 130px !important;
+}
+
+/* Alinhamento da lista de legendas */
+.chart-legends {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+}
+
+.legend-item {
+    font-size: 11px;
+    color: var(--txt_std);
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+/* Criando as bolinhas coloridas das legendas */
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Cores batendo certinho com o gráfico do JS */
+.dot.yellow { background-color: #eab308; }
+.dot.blue   { background-color: #2563eb; }
+.dot.green  { background-color: #10b981; }
+.dot.purple { background-color: #4f46e5; }
+.dot.red    { background-color: #dc2626; }
+
+.w-100 { width: 100%; }
