@@ -27,9 +27,8 @@
     /*Background NavBar*/
 
     /*Selection*/
-    --selection_blue: #00d2ff;
-    /*Seleção*/
-    --selection_green: #32963E;
+    --selection:  #32963E;
+;
     /*Seleção*
     
     /*Botões*/
@@ -64,10 +63,8 @@
     /*Background NavBar*/
 
     /*Selection*/
-    --selection_blue: #00d2ff;
-    /*Seleção*/
-    --selection_green: #32963E;
-    /*Seleção*
+    --selection: #00d2ff;
+   
     
     /*Botões*/
     --btn_humus: #6761D3;
@@ -98,37 +95,43 @@
 @font-face {
     font-family: 'Gilroy';
     src: url('assets/fonts/Gilroy-Light.ttf') format('truetype');
-    font-weight: 300; /* Light = 300 */
+    font-weight: 300;
+    /* Light = 300 */
 }
 
 @font-face {
     font-family: 'Gilroy';
     src: url('assets/fonts/Gilroy-Regular.ttf') format('truetype');
-    font-weight: 400; /* Regular = 400 (Padrão) */
+    font-weight: 400;
+    /* Regular = 400 (Padrão) */
 }
 
 @font-face {
     font-family: 'Gilroy';
     src: url('assets/fonts/Gilroy-Medium.ttf') format('truetype');
-    font-weight: 500; /* Medium = 500 */
+    font-weight: 500;
+    /* Medium = 500 */
 }
 
 @font-face {
     font-family: 'Gilroy';
     src: url('assets/fonts/Gilroy-Bold.ttf') format('truetype');
-    font-weight: 700; /* Bold = 700 */
+    font-weight: 700;
+    /* Bold = 700 */
 }
 
 @font-face {
     font-family: 'Gilroy';
     src: url('assets/fonts/Gilroy-ExtraBold.ttf') format('truetype');
-    font-weight: 800; /* ExtraBold = 800 */
+    font-weight: 800;
+    /* ExtraBold = 800 */
 }
 
 @font-face {
     font-family: 'Gilroy';
     src: url('assets/fonts/Gilroy-Heavy.ttf') format('truetype');
-    font-weight: 900; /* Heavy = 900 */
+    font-weight: 900;
+    /* Heavy = 900 */
 }
 
 /*AnonymousPro*/
@@ -147,17 +150,18 @@
 }
 
 @font-face {
-    font-family: 'AnonymousPro'; /* Unificado sem o hífen */
+    font-family: 'AnonymousPro';
+    /* Unificado sem o hífen */
     src: url('assets/fonts/AnonymousPro-Italic.ttf') format('truetype');
     font-weight: 400;
     font-style: italic;
 }
 
 @font-face {
-    font-family: 'AnonymousPro'; 
+    font-family: 'AnonymousPro';
     src: url('assets/fonts/AnonymousPro-BoldItalic.ttf') format('truetype');
     font-weight: 700;
-    font-style: italic; 
+    font-style: italic;
 }
 
 
@@ -222,7 +226,7 @@ body {
 
 .nav-link:hover,
 .logo:hover {
-    color: var(--selection_blue);
+    color: var(--selection);
 }
 
 
@@ -238,9 +242,9 @@ body {
 
 .container_botoes {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
-    margin-top: auto; 
+    margin-top: auto;
     width: 100%;
 }
 
@@ -263,7 +267,7 @@ body {
 }
 
 .container_botoes .btn-custom {
-    margin-left: 0; 
+    margin-left: 0;
     display: inline-block;
 }
 
@@ -271,7 +275,7 @@ body {
 /*Botão Humus*/
 .btn-humus {
     background-color: color-mix(in srgb, var(--btn_humus) 40%, transparent);
-    border: 2px solid var(--selection_blue);
+    border: 2px solid var(--selection);
     display: block;
     margin-left: 240px;
     box-shadow: 0 0 8px rgba(8, 67, 93, 0.5);
@@ -419,6 +423,7 @@ h4::after {
 .container_formulario .mb-3 {
     margin-bottom: 20px;
     width: 100%;
+
 }
 
 .container_formulario label {
@@ -458,7 +463,7 @@ a:hover {
 }
 
 .form-control {
-    background-color: var(--line); 
+    background-color: var(--line);
     border: 2px solid var(--line);
     margin-top: 80px;
     width: 500px;
