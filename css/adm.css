@@ -619,3 +619,168 @@ html, body {
 .tabela-historico-preta thead th:first-child {
     text-align: center;
 }
+
+/* ==========================================================================
+                             SEÇÃO: PÁGINA CONTAS A PAGAR                      
+   ========================================================================== */
+
+/* Grupo de Selects Superiores */
+.select-custom-group {
+    background-color: var(--bg_body, #252A2D); 
+    border: 1px solid var(--table_divs, #3E3E3E);
+    border-radius: 6px;
+    height: 38px;
+    cursor: pointer;
+}
+
+/* Estilização dos Cards Superiores */
+.card-financeiro-box {
+    background-color: var(--bg_table, #1C1D21);
+    border: 1px solid var(--table_divs, #3E3E3E);
+    border-radius: 4px;
+    padding: 12px 0;
+}
+
+.card-fin-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--txt_std, #ffffff);
+    border-bottom: 1px solid var(--table_divs, #3E3E3E);
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.card-fin-number {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--txt_std, #ffffff);
+    font-family: 'Science Gothic', sans-serif;
+}
+
+/* Filtros Rápidos da Tabela */
+.btn-filtro-tab {
+    background-color: transparent;
+    border: 1px solid var(--table_btn, #4B4C4F);
+    color: var(--txt_std, #ffffff);
+    border-radius: 6px;
+    padding: 2px 14px;
+    font-size: 13px;
+}
+
+.btn-filtro-tab:hover, .btn-filtro-tab.active {
+    background-color: var(--table_btn, #4B4C4F);
+    color: var(--txt_std, #ffffff);
+    border-color: var(--table_btn, #4B4C4F);
+}
+
+/* Ícones de ação superiores */
+.btn-icon-action {
+    background: none;
+    border: none;
+    color: var(--txt_std, #ffffff);
+    opacity: 0.8;
+    padding: 0;
+    transition: opacity 0.2s;
+}
+
+.btn-icon-action:hover {
+    opacity: 1;
+}
+
+/* Customização de Cores dos Textos das Colunas */
+.text-green-custom {
+    color: var(--txt_green, #00FF48) !important;
+}
+
+.text-red-custom {
+    color: var(--txt_red, #D11010) !important;
+}
+
+.text-muted-custom {
+    color: var(--disable_empty, #72767B) !important;
+}
+
+/* Badges de Status internas da tabela */
+.badge-status {
+    display: inline-block;
+    padding: 3px 18px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.status-pago {
+    background-color: var(--table_status_green, #17411C);
+    color: var(--txt_green, #00FF48);
+}
+
+.status-aberto {
+    background-color:var(--table_status_red,#411717); 
+    color:var(--txt_red,#D11010);
+}
+
+.status-vencido {
+    background-color: var(--table_status_red, #411717);
+    color: var(--txt_red, #D11010);
+}
+
+/* Botão Anexar Comprovante (Tamanho Fixo do Figma) */
+.btn-anexar {
+    background-color: var(--txt_std, #ffffff);
+    color: var(--bg_body, #252A2D);
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    
+    /* Trava o tamanho para não encolher sem o texto */
+    width: 78px;  /* Largura exata para manter o formato retangular */
+    height: 26px; /* Altura ideal e controlada */
+    padding: 0;   /* Zera os espaçamentos internos para não distorcer */
+    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+}
+
+.btn-anexar:hover {
+    opacity: 0.9;
+}
+
+/* Reutilização da estrutura da tabela com variáveis */
+.tabela-financeira-custom {
+    background-color: var(--bg_table, #1C1D21) !important;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.tabela-financeira-custom thead th {
+    background-color: var(--bg_table, #1C1D21) !important;
+    color: var(--txt_std, #ffffff) !important;
+    font-weight: 500;
+    font-size: 14px;
+    border-bottom: 2px solid var(--table_divs, #3E3E3E) !important;
+    border-right: 1px solid var(--table_divs, #3E3E3E) !important;
+    padding: 12px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.tabela-financeira-custom tbody td {
+    background-color: transparent !important;
+    border-bottom: 1px solid var(--table_divs, #3E3E3E) !important;
+    border-right: 1px solid var(--table_divs, #3E3E3E) !important;
+    padding: 8px 12px;
+    font-size: 14px;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.tabela-financeira-custom tbody td:last-child,
+.tabela-financeira-custom thead th:last-child {
+    border-right: none !important;
+}
