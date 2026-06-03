@@ -431,6 +431,191 @@ body {
     margin-left: 65px;
 }
 
+/* ==========================================================================
+                               SEÇÃO: PÁGINA HISTÓRICO                             
+   ========================================================================== */
 
+   /* força a trava no navegador  */
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    overflow: hidden !important; /* Corta qualquer rolagem externa */
+}
 
+/* ajuste na extrutura geral (Caso o grupo use uma div wrapper/container principal) */
+.wrapper, .container-geral, #app {
+    height: 100vh !important;
+    max-height: 100vh !important;
+    overflow: hidden !important;
+}
 
+/* Fundo Geral do Site (Ajustado com trava ) */
+.main {
+    background-color: var(--bg_body, #252A2D) !important; 
+    height: calc(100vh - 70px) !important; /* Altura exata descontando a navbar */
+    max-height: calc(100vh - 70px) !important;
+    font-family: 'Science Gothic', sans-serif;
+    overflow-y: hidden !important; /* Garante que o main em si não role */
+    overflow-x: hidden !important;
+}
+
+/* Quadrado/Barra Superior dos Filtros */
+.topo-filtros-box {
+    background-color: var(--bg_sdbar, #1a1c1e); 
+    border-bottom: 1px solid var(--table_divs, #3E3E3E);
+    width: 100%;
+}
+
+/* Rótulo dos Filtros */
+.filtro-label {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--disable_empty, #72767B); 
+}
+
+/* Input do Intervalo de Datas */
+.data-input-group {
+    background-color: var(--bg_body, #252A2D); 
+    border: 1px solid var(--table_divs, #3E3E3E);
+    border-radius: 6px;
+    height: 38px;
+}
+
+.data-texto {
+    font-size: 14px;
+    color: var(--txt_std, #ffffff); 
+}
+
+/* Botões de Filtros Rápidos */
+.btn-filtro {
+    background-color: transparent;
+    border: 1px solid var(--table_btn, #4B4C4F);
+    color: var(--txt_std, #ffffff);
+    border-radius: 20px;
+    padding: 4px 16px;
+    font-size: 14px;
+    height: 38px;
+    transition: all 0.2s ease;
+}
+
+.btn-filtro:hover, .btn-filtro.active {
+    background-color: var(--table_btn, #4B4C4F); 
+    border-color: var(--table_btn, #4B4C4F);
+    color: var(--txt_std, #ffffff);
+}
+
+/* Botão Editar */
+.btn-editar-custom {
+    background-color: transparent;
+    border: 1px solid var(--txt_std, #ffffff);
+    color: var(--txt_std, #ffffff);
+    border-radius: 8px;
+    padding: 4px 24px;
+    font-size: 14px;
+    height: 38px;
+}
+
+.btn-editar-custom:hover {
+    background-color: var(--txt_std, #ffffff);
+    color: var(--bg_body, #252A2D);
+}
+
+/* Texto de Aviso Centralizado */
+.aviso-historico {
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--txt_std, #ffffff);
+    letter-spacing: 0.5px;
+}
+
+/* Botão do Ícone Atualizar */
+.btn-refresh-table {
+    background: none;
+    border: none;
+    color: var(--txt_std, #ffffff);
+    padding: 0;
+    opacity: 0.8;
+}
+
+.btn-refresh-table:hover {
+    opacity: 1;
+}
+
+/* Container da Tabela Expandido */
+.tabela-container-wrapper {
+    width: 100%; 
+}
+
+/* Caixa com barra de rolagem  */
+.tabela-scroll-box {
+    height: calc(100vh - 360px); 
+    overflow-y: auto;  
+    overflow-x: hidden; 
+    border: 1px solid var(--table_divs, #3E3E3E);
+    border-radius: 4px;
+    background-color: var(--bg_table, #1C1D21);
+}
+
+/* ---- Estilização Customizada da Barra de Rolagem ---- */
+.tabela-scroll-box::-webkit-scrollbar {
+    width: 10px;
+}
+
+.tabela-scroll-box::-webkit-scrollbar-track {
+    background: var(--bg_table, #1C1D21);
+    border-left: 1px solid var(--table_divs, #3E3E3E);
+}
+
+.tabela-scroll-box::-webkit-scrollbar-thumb {
+    background: var(--table_btn, #4B4C4F);
+    border-radius: 20px;
+}
+
+.tabela-scroll-box::-webkit-scrollbar-thumb:hover {
+    background: var(--disable_empty, #72767B);
+}
+
+/* Tabela Customizada */
+.tabela-historico-preta {
+    background-color: var(--bg_table, #1C1D21) !important;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.tabela-historico-preta thead th {
+    background-color: var(--bg_table, #1C1D21) !important;
+    color: var(--disable_empty, #72767B) !important;
+    font-weight: 500;
+    font-size: 14px;
+    border-bottom: 2px solid var(--table_divs, #3E3E3E) !important;
+    border-right: 1px solid var(--table_divs, #3E3E3E) !important;
+    padding: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.tabela-historico-preta tbody th, 
+.tabela-historico-preta tbody td {
+    background-color: transparent !important;
+    color: var(--txt_std, #ffffff) !important;
+    border-bottom: 1px solid var(--table_divs, #3E3E3E) !important;
+    border-right: 1px solid var(--table_divs, #3E3E3E) !important;
+    padding: 10px 12px;
+    font-size: 14px;
+    height: 40px;
+}
+
+/* Remoção da borda da última coluna */
+.tabela-historico-preta tbody td:last-child,
+.tabela-historico-preta thead th:last-child {
+    border-right: none !important;
+}
+
+.tabela-historico-preta tbody th, 
+.tabela-historico-preta thead th:first-child {
+    text-align: center;
+}
