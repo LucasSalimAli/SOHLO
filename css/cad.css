@@ -21,12 +21,16 @@
     --logo_std: #DEE8FF;
 
     /*Cores*/
-    --bg_body: #001015; /*Background Principal*/
-    --bg_navbar: #192707; /*Background NavBar*/
+    --bg_body: #001015;
+    /*Background Principal*/
+    --bg_navbar: #192707;
+    /*Background NavBar*/
 
     /*Selection*/
-    --selection_blue: #00d2ff; /*Seleção*/
-    --selection_green: #32963E; /*Seleção*
+    --selection_blue: #00d2ff;
+    /*Seleção*/
+    --selection_green: #32963E;
+    /*Seleção*
     
     /*Botões*/
     --btn_humus: #6761D3;
@@ -54,12 +58,16 @@
     --logo_std: #DEE8FF;
 
     /*Cores*/
-    --bg_body: #ffffff; /*Background Principal*/
-    --bg_navbar: #192707; /*Background NavBar*/
+    --bg_body: #ffffff;
+    /*Background Principal*/
+    --bg_navbar: #192707;
+    /*Background NavBar*/
 
     /*Selection*/
-    --selection_blue: #00d2ff; /*Seleção*/
-    --selection_green: #32963E; /*Seleção*
+    --selection_blue: #00d2ff;
+    /*Seleção*/
+    --selection_green: #32963E;
+    /*Seleção*
     
     /*Botões*/
     --btn_humus: #6761D3;
@@ -80,22 +88,77 @@
                      FONTES
    ========================================== */
 
+/*Freestyle Script*/
 @font-face {
     font-family: 'Freestyle Script';
     src: url('assets/fonts/FREESCPT.TTF') format('truetype');
 }
 
+/*Gilroy*/
+@font-face {
+    font-family: 'Gilroy';
+    src: url('assets/fonts/Gilroy-Light.ttf') format('truetype');
+    font-weight: 300; /* Light = 300 */
+}
+
 @font-face {
     font-family: 'Gilroy';
     src: url('assets/fonts/Gilroy-Regular.ttf') format('truetype');
+    font-weight: 400; /* Regular = 400 (Padrão) */
 }
 
 @font-face {
-    font-family: 'Anonymous-Pro';
-    src: url('assets/fonts/AnonymousPro-Regular.ttf') format('truetype');
-
+    font-family: 'Gilroy';
+    src: url('assets/fonts/Gilroy-Medium.ttf') format('truetype');
+    font-weight: 500; /* Medium = 500 */
 }
 
+@font-face {
+    font-family: 'Gilroy';
+    src: url('assets/fonts/Gilroy-Bold.ttf') format('truetype');
+    font-weight: 700; /* Bold = 700 */
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('assets/fonts/Gilroy-ExtraBold.ttf') format('truetype');
+    font-weight: 800; /* ExtraBold = 800 */
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('assets/fonts/Gilroy-Heavy.ttf') format('truetype');
+    font-weight: 900; /* Heavy = 900 */
+}
+
+/*AnonymousPro*/
+@font-face {
+    font-family: 'AnonymousPro';
+    src: url('assets/fonts/AnonymousPro-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AnonymousPro';
+    src: url('assets/fonts/AnonymousPro-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AnonymousPro'; /* Unificado sem o hífen */
+    src: url('assets/fonts/AnonymousPro-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'AnonymousPro'; 
+    src: url('assets/fonts/AnonymousPro-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic; 
+}
 
 
 /* ==========================================
@@ -212,7 +275,9 @@ body {
     display: block;
     margin-left: 240px;
     box-shadow: 0 0 8px rgba(8, 67, 93, 0.5);
-    
+
+    /*Tamanho*/
+
 }
 
 /*Efeito ao passar o mouse*/
@@ -241,7 +306,7 @@ body {
     box-shadow: 0 0 15px rgba(92, 27, 27, 0.7);
     /*Brilho*/
     background-color: color-mix(in srgb, #420707 40%, transparent);
-    
+
     /*Cor ao passar o mouse*/
     color: var(--txt_std);
 }
@@ -259,7 +324,7 @@ body {
 .btn-next:hover {
     background-color: color-mix(in srgb, #62f400 30%, transparent);
     border-color: #01d401;
-     /*Brilho*/
+    /*Brilho*/
     box-shadow: 0 0 15px rgba(46, 112, 64, 0.8);
 
     /*Cor ao passar o mouse*/
@@ -269,7 +334,6 @@ body {
 /* Efeito de clique */
 .btn-custom:active {
     transform: scale(0.98);
-    
 }
 
 
@@ -279,9 +343,9 @@ body {
 
 .container_flex {
     display: flex;
-    justify-content: center; 
-    gap: 60px; 
-    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
     padding: 20px;
 }
 
@@ -292,30 +356,37 @@ h1 {
     color: var(--txt_std);
 }
 
-h2, h4 {
+h2,
+h4 {
     font-size: 32px;
     margin-bottom: 40px;
     color: var(--txt_std);
     text-align: center;
-    position: relative;  
+    position: relative;
     padding-bottom: 15px;
+    margin-top: 40px;
 }
 
 h4::after {
-    content: ""; /* Necessário para o pseudo-elemento aparecer */
+    content: "";
+    /* Necessário para o pseudo-elemento aparecer */
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%); /* Essas duas linhas garantem que ela fique perfeitamente centralizada */
-    
+    transform: translateX(-50%);
+    /* Essas duas linhas garantem que ela fique perfeitamente centralizada */
+
     /* Customização da Linha (Ajuste como preferir) */
-    width: 180px;                /* Largura da linha */
-    height: 4px;                /* Espessura da linha */
-    border-radius: 2px;         /* Deixa as pontas da linha arredondadas */
-    
+    width: 180px;
+    /* Largura da linha */
+    height: 4px;
+    /* Espessura da linha */
+    border-radius: 2px;
+    /* Deixa as pontas da linha arredondadas */
+
     /* Cor da linha: você pode usar uma cor fixa ou o color-mix que já está usando no projeto */
-    background-color: var(--txt_gray); 
-    
+    background-color: var(--txt_gray);
+
 }
 
 .container_texto p {
@@ -323,29 +394,31 @@ h4::after {
     line-height: 1.6;
     text-align: justify;
     color: var(--txt_std);
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
-.container_formulario, .container_texto {
-    display: flex; 
+.container_formulario,
+.container_texto,
+.container_textoArea {
+    display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 575px; 
-    min-height: 660px; 
+    max-width: 575px;
+    min-height: 660px;
     border: 2px solid var(--line);
     padding: 40px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 
 .container_texto {
-    justify-content: center; 
+    justify-content: center;
 }
 
 
 .container_formulario .mb-3 {
     margin-bottom: 20px;
-    width: 100%; 
+    width: 100%;
 }
 
 .container_formulario label {
@@ -364,22 +437,29 @@ h4::after {
     box-sizing: border-box;
 }
 
-p{
+p {
     color: var(--txt_std);
     font-size: 14px;
-    width: 100%;       
+    width: 100%;
     margin-top: 15px;
     text-align: right;
 }
 
 p a {
     color: var(--txt_gray);
-    text-decoration: none;     
-    text-align: right;   
-    margin-top: 10px;   
+    text-decoration: none;
+    text-align: right;
+    margin-top: 10px;
 }
 
 a:hover {
     color: var(--txt_std);
     text-decoration: underline;
+}
+
+.form-control {
+    background-color: var(--line); 
+    border: 2px solid var(--line);
+    margin-top: 80px;
+    width: 500px;
 }
