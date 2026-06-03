@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="ligh">
+
+<!--Não Mexer!!!!!-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.O.H.L.O.</title>
+
+    <!--Link para o Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!--Link dos Ícones do Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!--Link das Fontes (Science Gothic)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+
+    <!--Link Css Custom-->
+    <link rel="stylesheet" href="css/adm.css">
+
+</head>
+
+
+<body>
+
+    <header>
+        <!--NavBar-->
+        <div class="container.flex">
+            <nav class="navbar navbar-expand-lg rounded navbar_std" aria-label="Eleventh navbar example">
+
+                <!--Logo-->
+                <div class="container-fluid">
+                    <a class="navbar-brand logo" href="#">S.O.H.L.O.</a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false"
+                        aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <!--Status Showcase-->
+                <div class="status">
+                    <h5 class="d-flex align-items-center gap-2"> <span>Administrador</span>
+                        <i class="bi bi-unlock2-fill fs-4"></i>
+                    </h5>
+                </div>
+
+                <!--Notificações-->
+                <div class="collapse navbar-collapse">
+                    <div class="dropdown">
+                        <button class="btn btn-dark dropdown-toggle align-items-center gap-2 notification_btn"
+                            type="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-bell fs-1"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">---</a></li>
+                            <li><a class="dropdown-item" href="#">---</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!--User_Button-->
+                <div class="collapse navbar-collapse">
+                    <div class="dropdown">
+                        <button class="btn btn-dark dropdown-toggle align-items-center gap-2 user_btn" type="button"
+                            data-bs-toggle="dropdown">
+                            <span>Nome_Usuário</span>
+                            <i class="bi bi-person-circle fs-1"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">Configurações</a></li>
+                            <li><a class="dropdown-item" href="#">Minha Conta</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar-adm">
+
+        <div class="sidebar-body">
+
+            <!-- Icones Logistico/Financeiro -->
+            <div class="sidebar-nav-icons">
+                <div class="icons-group">
+                    <button class="main-icon-btn">
+                        <i class="bi bi-globe"></i>
+                    </button>
+
+                    <button class="main-icon-btn active" id="btn-fin">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </button>
+                </div>
+
+                <!-- Botão LogOut -->
+                <button class="logout-btn">
+                    <i class="bi bi-box-arrow-left"></i>
+                    <span>Log<br>Out</span>
+                </button>
+            </div>
+
+            <!-- Links para as páginas -->
+            <div class="sidebar-submenu-panel">
+                <h4 class="module-title">Sistema<br>Financeiro</h4>
+
+                <!-- Caixa de Pesquisa -->
+                <div class="sidebar-search-box">
+                    <i class="bi bi-search"></i>
+                    <input type="text" placeholder="Pesquisar">
+                </div>
+
+                <hr class="sidebar-divider">
+
+                <nav class="submenu-links">
+                    <a href="#" class="menu-link">Dashboards</a>
+                    <a href="#" class="menu-link">Receita</a>
+                    <a href="#" class="menu-link">Contas à Pagar</a>
+                    <a href="#" class="menu-link active">Fluxo de Caixa</a>
+                    <a href="#" class="menu-link">Multas</a>
+                    <a href="#" class="menu-link">Ajuste de Preço</a>
+                    <a href="#" class="menu-link">Histórico</a>
+                    <a href="#" class="menu-link">Relatório Diário</a>
+                </nav>
+            </div>
+
+        </div>
+    </aside>
+
+
+    <!-- Começo do Site -->
+
+    <main class="main">
+
+ <div>
+         <main class="main">
+
+    <div class="financial-content">
+        
+        <div class="filters-section">
+            <div class="filter-group">
+                <label>Intervalo de Datas</label>
+                <div class="filter-box">
+                    01/01/2026 &rarr; 01/06/2026
+                </div>
+            </div>
+            <div class="filter-group">
+                <label>Conta Bancaria</label>
+                <select class="filter-box">
+                    <option>Principal</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Filtrar</label>
+                <select class="filter-box">
+                    <option>Data da Transação</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="summary-cards">
+            <div class="card card-green">
+                <div class="card-top">
+                    <span class="currency">$</span>
+                    <span class="amount">772.00</span>
+                </div>
+                <div class="card-bottom">Entrada</div>
+            </div>
+            <div class="card card-red">
+                <div class="card-top">
+                    <span class="currency">$</span>
+                    <span class="amount">510.50</span>
+                </div>
+                <div class="card-bottom">Saida</div>
+            </div>
+            <div class="card card-blue">
+                <div class="card-top">
+                    <span class="currency">$</span>
+                    <span class="amount">261.50</span>
+                </div>
+                <div class="card-bottom">Lucro</div>
+            </div>
+        </div>
+
+        <div class="table-section">
+            <div class="table-header-actions">
+                <i class="bi bi-arrow-clockwise icon" title="Atualizar"></i>
+                <i class="bi bi-pencil-square icon" title="Editar"></i>
+            </div>
+            
+            <table class="financial-table">
+                <thead>
+                    <tr>
+                        <th>DATA</th>
+                        <th>NOME_APP</th>
+                        <th>DESCRIÇÃO</th>
+                        <th>TIPO</th>
+                        <th>VALOR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="text-green">
+                        <td>29/02</td>
+                        <td>Mensalidade</td>
+                        <td>Recebida a Mensalidade do Cliente: Jurandir Freitas</td>
+                        <td>M/Q</td>
+                        <td>52,00</td>
+                    </tr>
+                    <tr class="text-green">
+                        <td>29/02</td>
+                        <td>Anualidade</td>
+                        <td>Recebida a Anualidade do Cliente: Adolfo Costa Pinto</td>
+                        <td>A/S</td>
+                        <td>720,00</td>
+                    </tr>
+                    <tr class="text-red">
+                        <td>28/02</td>
+                        <td>Conta Paga</td>
+                        <td>Paga a conta de Energia da Empresa</td>
+                        <td>D/C</td>
+                        <td>300,00</td>
+                    </tr>
+                    <tr class="text-red">
+                        <td>28/02</td>
+                        <td>Conta Paga</td>
+                        <td>Paga a conta de Água da Empresa</td>
+                        <td>D/C</td>
+                        <td>210,50</td>
+                    </tr>
+                    <tr><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td><td></td><td></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    </main>
+
+
+
+    <!-- Não Mexer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+    </script>
+
+    <script src="js\animation.js"></script>
+
+
+</body>
+
+
+</html>
