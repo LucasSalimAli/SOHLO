@@ -2,6 +2,7 @@
 <html lang="pt-br" data-theme="ligh">
 
 <!--Não Mexer!!!!!-->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -120,14 +121,14 @@
                 <hr class="sidebar-divider">
 
                 <nav class="submenu-links">
-                    <a href="#" class="menu-link">Dashboards</a>
-                    <a href="#" class="menu-link">Receita</a>
+                    <a href="financeiro_dashboard.html" class="menu-link">Dashboards</a>
+                    <a href="financeiro_receita.html" class="menu-link">Receita</a>
                     <a href="#" class="menu-link">Contas à Pagar</a>
                     <a href="#" class="menu-link active">Fluxo de Caixa</a>
-                    <a href="#" class="menu-link">Multas</a>
-                    <a href="#" class="menu-link">Ajuste de Preço</a>
-                    <a href="#" class="menu-link">Histórico</a>
-                    <a href="#" class="menu-link">Relatório Diário</a>
+                    <a href="financeiro_multas.html" class="menu-link">Multas</a>
+                    <a href="financeiro_preço.html" class="menu-link">Ajuste de Preço</a>
+                    <a href="financeiro_historico.html" class="menu-link">Histórico</a>
+                    <a href="financeiro_diario.html" class="menu-link">Relatório Diário</a>
                 </nav>
             </div>
 
@@ -137,35 +138,56 @@
 
     <!-- Começo do Site -->
 
-    <main class="main">
+    <main class="main conteudo-principal">
 
- <div>
-         <main class="main">
+        <div class="filter-bar d-flex align-items-center justify-content-between">
 
-    <div class="financial-content">
-        
-        <div class="filters-section">
-            <div class="filter-group">
-                <label>Intervalo de Datas</label>
-                <div class="filter-box">
-                    01/01/2026 &rarr; 01/06/2026
+            <div class="filter-group d-flex align-items-center gap-2">
+                <div class="dropdown">
+                    <button class="btn btn-filter active dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Total
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-menu-item active" href="#">Total</a></li>
+                        <li><a class="dropdown-menu-item" href="#">Esta Semana</a></li>
+                        <li><a class="dropdown-menu-item" href="#">Este Mês</a></li>
+                        <li><a class="dropdown-menu-item" href="#">Ano Completo</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown">
+                    <button class="btn btn-filter dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Filtro A
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-menu-item" href="#">Opção 1</a></li>
+                        <li><a class="dropdown-menu-item" href="#">Opção 2</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown">
+                    <button class="btn btn-filter dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Filtro B
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-menu-item" href="#">Opção X</a></li>
+                        <li><a class="dropdown-menu-item" href="#">Opção Y</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="filter-group">
-                <label>Conta Bancaria</label>
-                <select class="filter-box">
-                    <option>Principal</option>
-                </select>
+
+            <div class="action-group d-flex align-items-center">
+                <button class="btn btn-filter-action">
+                    Editar
+                </button>
             </div>
-            <div class="filter-group">
-                <label>Filtrar</label>
-                <select class="filter-box">
-                    <option>Data da Transação</option>
-                </select>
-            </div>
+
         </div>
 
-        <div class="summary-cards">
+        <div class="summary-cards my-4">
             <div class="card card-green">
                 <div class="card-top">
                     <span class="currency">$</span>
@@ -189,60 +211,81 @@
             </div>
         </div>
 
-        <div class="table-section">
-            <div class="table-header-actions">
-                <i class="bi bi-arrow-clockwise icon" title="Atualizar"></i>
-                <i class="bi bi-pencil-square icon" title="Editar"></i>
-            </div>
-            
-            <table class="financial-table">
-                <thead>
-                    <tr>
-                        <th>DATA</th>
-                        <th>NOME_APP</th>
-                        <th>DESCRIÇÃO</th>
-                        <th>TIPO</th>
-                        <th>VALOR</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="text-green">
-                        <td>29/02</td>
-                        <td>Mensalidade</td>
-                        <td>Recebida a Mensalidade do Cliente: Jurandir Freitas</td>
-                        <td>M/Q</td>
-                        <td>52,00</td>
-                    </tr>
-                    <tr class="text-green">
-                        <td>29/02</td>
-                        <td>Anualidade</td>
-                        <td>Recebida a Anualidade do Cliente: Adolfo Costa Pinto</td>
-                        <td>A/S</td>
-                        <td>720,00</td>
-                    </tr>
-                    <tr class="text-red">
-                        <td>28/02</td>
-                        <td>Conta Paga</td>
-                        <td>Paga a conta de Energia da Empresa</td>
-                        <td>D/C</td>
-                        <td>300,00</td>
-                    </tr>
-                    <tr class="text-red">
-                        <td>28/02</td>
-                        <td>Conta Paga</td>
-                        <td>Paga a conta de Água da Empresa</td>
-                        <td>D/C</td>
-                        <td>210,50</td>
-                    </tr>
-                    <tr><td></td><td></td><td></td><td></td><td></td></tr>
-                    <tr><td></td><td></td><td></td><td></td><td></td></tr>
-                    <tr><td></td><td></td><td></td><td></td><td></td></tr>
-                    <tr><td></td><td></td><td></td><td></td><td></td></tr>
-                </tbody>
-            </table>
-        </div>
+        <section class="section-table d-flex flex-column align-items-end w-100">
 
-    </div>
+            <div class="row table-btns">
+
+
+                <div class="col-1">
+                    <button class="edit-btn">
+                        <i class="bi bi-pencil-square"></i>
+                    </button>
+                </div>
+
+
+                <div class="col-1">
+                    <button class="refresh-btn">
+                        <i class="bi bi-arrow-clockwise"></i>
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="tabela-container table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>DATA</th>
+                            <th>NOME_APP</th>
+                            <th>DESCRIÇÃO</th>
+                            <th>TIPO</th>
+                            <th>VALOR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="text-green">
+                            <td>29/02</td>
+                            <td>Mensalidade</td>
+                            <td>Recebida a Mensalidade do Cliente: Jurandir Freitas</td>
+                            <td>M/Q</td>
+                            <td>52,00</td>
+                        </tr>
+                        <tr class="text-green">
+                            <td>29/02</td>
+                            <td>Anualidade</td>
+                            <td>Recebida a Anualidade do Cliente: Adolfo Costa Pinto</td>
+                            <td>A/S</td>
+                            <td>720,00</td>
+                        </tr>
+                        <tr class="text-red">
+                            <td>28/02</td>
+                            <td>Conta Paga</td>
+                            <td>Paga a conta de Energia da Empresa</td>
+                            <td>D/C</td>
+                            <td>300,00</td>
+                        </tr>
+                        <tr class="text-red">
+                            <td>28/02</td>
+                            <td>Conta Paga</td>
+                            <td>Paga a conta de Água da Empresa</td>
+                            <td>D/C</td>
+                            <td>210,50</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                       
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+
     </main>
 
 
@@ -250,7 +293,7 @@
     <!-- Não Mexer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
-    </script>
+        </script>
 
     <script src="js\animation.js"></script>
 

@@ -2,6 +2,7 @@
 <html lang="pt-br" data-theme="ligh">
 
 <!--Não Mexer!!!!!-->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -121,13 +122,13 @@
 
                 <nav class="submenu-links">
                     <a href="#" class="menu-link active">Dashboards</a>
-                    <a href="#" class="menu-link">Receita</a>
+                    <a href="financeiro_receita.html" class="menu-link">Receita</a>
                     <a href="#" class="menu-link">Contas à Pagar</a>
-                    <a href="#" class="menu-link">Fluxo de Caixa</a>
-                    <a href="#" class="menu-link">Multas</a>
-                    <a href="#" class="menu-link">Ajuste de Preço</a>
-                    <a href="#" class="menu-link">Histórico</a>
-                    <a href="#" class="menu-link">Relatório Diário</a>
+                    <a href="financeiro_fluxo.html" class="menu-link">Fluxo de Caixa</a>
+                    <a href="financeiro_multas.html" class="menu-link">Multas</a>
+                    <a href="financeiro_preço.html" class="menu-link">Ajuste de Preço</a>
+                    <a href="financeiro_historico.html" class="menu-link">Histórico</a>
+                    <a href="financeiro_diario.html" class="menu-link">Relatório Diário</a>
                 </nav>
             </div>
 
@@ -137,21 +138,56 @@
 
     <!-- Começo do Site -->
 
-<main class="main">
-        <div class="dashboard-content">
-            
-            <div class="dashboard-top-actions">
-                <div class="filter-buttons">
-                    <button class="btn-dash active">Geral</button>
-                    <button class="btn-dash">Filtro A</button>
-                    <button class="btn-dash">Filtro B</button>
-                    <button class="btn-dash">Filtro C</button>
+    <main class="main conteudo-principal">
+
+
+        <!-- Filtros -->
+
+        <div class="filter-bar d-flex align-items-center justify-content-between mb-3">
+
+            <div class="filter-group d-flex align-items-center gap-2">
+
+                <div class="dropdown">
+                    <button class="btn btn-filter active dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Total
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-menu-item active" href="#">Total</a></li>
+                        <li><a class="dropdown-menu-item" href="#">Esta Semana</a></li>
+                        <li><a class="dropdown-menu-item" href="#">Este Mês</a></li>
+                        <li><a class="dropdown-menu-item" href="#">Ano Completo</a></li>
+                    </ul>
                 </div>
-                <div class="right-buttons">
-                    <button class="btn-dash-outline">Editar</button>
-                    <button class="btn-refresh"><i class="bi bi-arrow-clockwise"></i></button>
+
+                <div class="dropdown">
+                    <button class="btn btn-filter dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Filtro A
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-menu-item" href="#">Opção 1</a></li>
+                        <li><a class="dropdown-menu-item" href="#">Opção 2</a></li>
+                    </ul>
                 </div>
+
+                <div class="dropdown">
+                    <button class="btn btn-filter dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Filtro B
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-menu-item" href="#">Opção X</a></li>
+                        <li><a class="dropdown-menu-item" href="#">Opção Y</a></li>
+                    </ul>
+                </div>
+
             </div>
+        </div>
+
+        <!-- Dashboards -->
+
+        <div class="dashboard-content">
 
             <div class="dashboard-row grid-main-top">
                 <div class="chart-box main-profit-box">
@@ -181,10 +217,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> 
 
             <div class="dashboard-row grid-three-columns">
-                
+
                 <div class="chart-box">
                     <h6 class="chart-title">Despesas no Mês</h6>
                     <div class="doughnut-wrapper">
@@ -234,27 +270,28 @@
                 </div>
             </div>
 
-            <div class="dashboard-row">
+             <div class="dashboard-row">
                 <div class="chart-box core-history-box">
                     <h5 class="chart-title-large">Receitas e Despesas</h5>
                     <div class="canvas-container footer-chart">
                         <canvas id="chartReceitasDespesas"></canvas>
                     </div>
                 </div>
-            </div>
+            </div> 
 
         </div>
     </main>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 
 
     <!-- Não Mexer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
-    </script>
+        </script>
 
+    <script src="js\animation.js"></script>
     <script src="js\dashboardjava.js"></script>
 
 

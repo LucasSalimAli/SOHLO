@@ -486,6 +486,13 @@ body {
  
 }
 
+.filter-group {
+    display: flex !important;
+    flex-direction: row !important; /* Impede o empilhamento vertical */
+    align-items: center !important;
+    gap: 8px !important; /* Espaçamento entre os botões redondos */
+}
+
 /* Estilo Base para os Botões de Filtro (Estilo Pills do seu print) */
 .btn-filter {
     background: transparent ;

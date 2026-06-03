@@ -2,6 +2,7 @@
 <html lang="pt-br" data-theme="ligh">
 
 <!--Não Mexer!!!!!-->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -120,14 +121,14 @@
                 <hr class="sidebar-divider">
 
                 <nav class="submenu-links">
-                    <a href="#" class="menu-link">Dashboards</a>
-                    <a href="#" class="menu-link">Receita</a>
+                    <a href="financeiro_dashboard.html" class="menu-link">Dashboards</a>
+                    <a href="financeiro_receita.html" class="menu-link">Receita</a>
                     <a href="#" class="menu-link">Contas à Pagar</a>
-                    <a href="#" class="menu-link">Fluxo de Caixa</a>
+                    <a href="financeiro_fluxo.html" class="menu-link">Fluxo de Caixa</a>
                     <a href="#" class="menu-link active">Multas</a>
-                    <a href="#" class="menu-link">Ajuste de Preço</a>
-                    <a href="#" class="menu-link">Histórico</a>
-                    <a href="#" class="menu-link">Relatório Diário</a>
+                    <a href="financeiro_preço.html" class="menu-link">Ajuste de Preço</a>
+                    <a href="financeiro_historico.html" class="menu-link">Histórico</a>
+                    <a href="financeiro_diario.html" class="menu-link">Relatório Diário</a>
                 </nav>
             </div>
 
@@ -139,33 +140,69 @@
 
     <main class="main text-white py-4 pe-4">
         <div class="container-fluid">
-            
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <div class="filter-buttons">
-                    <button class="btn-dash active">Total</button>
-                    <button class="btn-dash">Filtro A</button>
-                    <button class="btn-dash">Filtro B</button>
+
+            <div class="filter-bar d-flex align-items-center justify-content-between mb-3">
+
+                <div class="filter-group d-flex align-items-center gap-2">
+
+                    <div class="dropdown">
+                        <button class="btn btn-filter active dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Total
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-menu-item active" href="#">Total</a></li>
+                            <li><a class="dropdown-menu-item" href="#">Esta Semana</a></li>
+                            <li><a class="dropdown-menu-item" href="#">Este Mês</a></li>
+                            <li><a class="dropdown-menu-item" href="#">Ano Completo</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="btn btn-filter dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Filtro A
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-menu-item" href="#">Opção 1</a></li>
+                            <li><a class="dropdown-menu-item" href="#">Opção 2</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="btn btn-filter dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Filtro B
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-menu-item" href="#">Opção X</a></li>
+                            <li><a class="dropdown-menu-item" href="#">Opção Y</a></li>
+                        </ul>
+                    </div>
+
                 </div>
-                <div class="right-buttons">
-                    <button class="btn-dash-outline">Editar</button>
-                </div>
+
+
             </div>
 
             <div class="row g-3 text-center mb-4">
                 <div class="col-md-4">
-                    <div class="p-3" style="background-color: var(--dashboard); border-radius: 4px; border-bottom: 3px solid var(--txt_blue);">
+                    <div class="p-3"
+                        style="background-color: var(--dashboard); border-radius: 4px; border-bottom: 3px solid var(--txt_blue);">
                         <div class="small text-uppercase opacity-75 mb-2">Clientes Multados</div>
                         <h2 class="display-5 fw-bold m-0" style="color: var(--txt_blue);">03</h2>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="p-3" style="background-color: var(--dashboard); border-radius: 4px; border-bottom: 3px solid var(--txt_red);">
+                    <div class="p-3"
+                        style="background-color: var(--dashboard); border-radius: 4px; border-bottom: 3px solid var(--txt_red);">
                         <div class="small text-uppercase opacity-75 mb-2">Nº Multas Não Pagas</div>
                         <h2 class="display-5 fw-bold m-0" style="color: var(--txt_red);">02</h2>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="p-3" style="background-color: var(--dashboard); border-radius: 4px; border-bottom: 3px solid var(--txt_green);">
+                    <div class="p-3"
+                        style="background-color: var(--dashboard); border-radius: 4px; border-bottom: 3px solid var(--txt_green);">
                         <div class="small text-uppercase opacity-75 mb-2">Multas Pagas</div>
                         <h2 class="display-5 fw-bold m-0" style="color: var(--txt_green);">01</h2>
                     </div>
@@ -174,7 +211,8 @@
 
             <div class="row g-3 text-center mb-4">
                 <div class="col-md-4">
-                    <div class="p-3 d-flex align-items-center justify-content-between" style="background-color: var(--dashboard); border-radius: 4px;">
+                    <div class="p-3 d-flex align-items-center justify-content-between"
+                        style="background-color: var(--dashboard); border-radius: 4px;">
                         <span class="fs-3 opacity-75">$</span>
                         <div class="text-end">
                             <h2 class="fw-bold m-0">10.00</h2>
@@ -183,7 +221,8 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="p-3 d-flex align-items-center justify-content-between" style="background-color: var(--dashboard); border-radius: 4px;">
+                    <div class="p-3 d-flex align-items-center justify-content-between"
+                        style="background-color: var(--dashboard); border-radius: 4px;">
                         <span class="fs-3 opacity-75">$</span>
                         <div class="text-end">
                             <h2 class="fw-bold m-0">02.00</h2>
@@ -192,7 +231,8 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="p-3 d-flex align-items-center justify-content-between" style="background-color: var(--dashboard); border-radius: 4px;">
+                    <div class="p-3 d-flex align-items-center justify-content-between"
+                        style="background-color: var(--dashboard); border-radius: 4px;">
                         <span class="fs-3 opacity-75">%</span>
                         <div class="text-end">
                             <h2 class="fw-bold m-0">5.00</h2>
@@ -210,7 +250,7 @@
                 </div>
 
                 <div class="table-responsive">
-                    <table class="financial-table text-center align-middle">
+                    <table>
                         <thead>
                             <tr>
                                 <th style="width: 80px;">Nº</th>
@@ -228,7 +268,8 @@
                                 <td>02/02/26</td>
                                 <td>03/02/26</td>
                                 <td>
-                                    <span class="badge px-3 py-2 fw-semibold" style="background-color: var(--table_status_green); color: var(--txt_green);">Pago</span>
+                                    <span class="badge px-3 py-2 fw-semibold"
+                                        style="background-color: var(--table_status_green); color: var(--txt_green);">Pago</span>
                                 </td>
                                 <td>10.00</td>
                             </tr>
@@ -238,7 +279,9 @@
                                 <td>02/02/26</td>
                                 <td>--/--/--</td>
                                 <td>
-                                    <span class="badge px-3 py-2 fw-semibold" style="background-color: var(--table_status_red); color: var(--txt_red);">Em Aberto</span>
+                                    <span class="badge px-3 py-2 fw-semibold"
+                                        style="background-color: var(--table_status_red); color: var(--txt_red);">Em
+                                        Aberto</span>
                                 </td>
                                 <td>20.00</td>
                             </tr>
@@ -248,7 +291,9 @@
                                 <td>02/02/26</td>
                                 <td>--/--/--</td>
                                 <td>
-                                    <span class="badge px-3 py-2 fw-semibold" style="background-color: var(--table_status_red); color: var(--txt_red);">Em Aberto</span>
+                                    <span class="badge px-3 py-2 fw-semibold"
+                                        style="background-color: var(--table_status_red); color: var(--txt_red);">Em
+                                        Aberto</span>
                                 </td>
                                 <td>12.00</td>
                             </tr>
@@ -265,7 +310,7 @@
     <!-- Não Mexer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
-    </script>
+        </script>
 
     <script src="js\animation.js"></script>
 
