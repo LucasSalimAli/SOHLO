@@ -14,6 +14,7 @@
     --txt_red: #D11010;
     --txt_green: #00FF48;
     --txt_blue: #4531E0;
+    --txt_card: #ffffff;
 
     /*Logo*/
     --logo_std: #DEE8FF;
@@ -30,10 +31,9 @@
     --dashboard_red: #910000; /*Background Dashboard Vermelho*/
     --dashboard_green: #00982B; /*Background Dashboard Verde*/
     --dashboard_blue: #1700C4; /*Background Dashboard Azul*/
-   
+
     /*Table*/
-    --bg_table: #1C1D21; /*Background da tabela*/
-    --table_divs: #3E3E3E; /*Divisões da tabela*/
+    --bg_table: #1f2229; /*1C1D21*/ /*Background da tabela*/
     --table_btn: #4B4C4F; /*Botão Selecionado de cima da tabela (O não selecionado é apenas com um tracejado branco, sem preenchimento)*/
     --table_status_red: #411717; /*Background do Status vermelho da tabela*/
     --table_status_green: #17411C; /*Background do Starus verde da tabela*/
@@ -45,12 +45,13 @@
 }
 
 /* Tema Claro */
-[data-theme="light"]{
+[data-theme="light"] {
     /*Textos*/
     --txt_std: #000000;
     --txt_red: #D11010;
     --txt_green: #00FF48;
     --txt_blue: #4531E0;
+    --txt_card: #ffffff;
 
     /*Logo*/
     --logo_std: #14132B;
@@ -67,14 +68,13 @@
     --dashboard_red: #910000; /*Background Dashboard Vermelho*/
     --dashboard_green: #00982B; /*Background Dashboard Verde*/
     --dashboard_blue: #1700C4; /*Background Dashboard Azul*/
-   
-     /*Table*/
+
+    /*Table*/
     --bg_table: #F5F7F7; /*Background da tabela*/
-    --table_divs: #3E3E3E; /*Divisões da tabela*/
     --table_btn: #ACAFB1; /*Botão Selecionado de cima da tabela (O não selecionado é apenas com um tracejado preto, sem preenchimento)*/
     --table_status_red: #D64B4B; /*Background do Status vermelho da tabela*/
     --table_status_green: #17411C; /*Background do Starus verde da tabela*/
-    
+
     /*Selection*/
     --selection_blue: #00d2ff; /*Seleção*/
 
@@ -88,15 +88,25 @@
    ========================================== */
 
 /*Fonte padrão do Sistema*/
+html,
 body {
     font-family: 'Science Gothic';
     background-color: var(--bg_body);
+
+
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
 
-   .main{
-    margin-left: 280px ;
+.main {
+    margin-left: 280px;
     margin-right: 34p;
-   }
+}
+
+
 
 
 
@@ -118,7 +128,7 @@ body {
 }
 
 /*Configuração da Logo*/
-.logo{
+.logo {
     /*Tamanho*/
     font-size: 40px;
 
@@ -126,10 +136,10 @@ body {
     color: var(--logo_std);
 }
 
-.logo:hover{
+.logo:hover {
     color: var(--logo_std);
-    text-decoration: none; 
-    opacity: 1; 
+    text-decoration: none;
+    opacity: 1;
 }
 
 
@@ -149,7 +159,7 @@ body {
     /*Cor*/
     background-color: var(--bg_navbar);
     color: var(--txt_std);
-    
+
 }
 
 /*Texto Botão User*/
@@ -167,7 +177,7 @@ body {
 
 
 /*Botão Notificação*/
-.notification_btn{
+.notification_btn {
     /*Tamanho*/
     width: 54px;
     height: 50px;
@@ -177,7 +187,7 @@ body {
     align-items: center;
     justify-content: space-between;
 
-     padding: 0 7px;
+    padding: 0 7px;
 
     /*Espaçamento Notification-User*/
     margin-right: 20px;
@@ -195,7 +205,7 @@ body {
 
 
 /*Status*/
-.status{
+.status {
 
     /*Alinhamento*/
     display: flex;
@@ -207,7 +217,7 @@ body {
     margin-right: 20px;
 
     /*Cor*/
-    
+
 }
 
 
@@ -248,7 +258,8 @@ body {
     border-right: 1px solid #23262b;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Empurra o logout para o rodapé */
+    justify-content: space-between;
+    /* Empurra o logout para o rodapé */
     align-items: center;
     padding: 20px 0;
 }
@@ -267,7 +278,8 @@ body {
     height: 60px;
     border: none;
     background: transparent;
-    color: #4e5561; /* Cor desativada */
+    color: #4e5561;
+    /* Cor desativada */
     font-size: 24px;
     display: flex;
     align-items: center;
@@ -276,7 +288,7 @@ body {
     transition: all 0.2s ease;
 }
 
-.main-icon-btn:hover, 
+.main-icon-btn:hover,
 .main-icon-btn.active {
     color: var(--selection_blue);
     background-color: var(--bg_sdbar);
@@ -303,13 +315,15 @@ body {
 }
 
 .logout-btn:hover {
-    color: var(--txt_red); /* Vermelho sutil no hover do logout */
+    color: var(--txt_red);
+    /* Vermelho sutil no hover do logout */
 }
 
 /* SubMenus */
 .sidebar-submenu-panel {
     flex-grow: 1;
-    background-color: var(--bg_sdbar); /* Fundo ligeiramente diferente para dar profundidade */
+    background-color: var(--bg_sdbar);
+    /* Fundo ligeiramente diferente para dar profundidade */
     padding: 24px 16px;
     display: flex;
     flex-direction: column;
@@ -367,7 +381,7 @@ body {
 .submenu-links {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 20px;
 }
 
 .menu-link {
@@ -377,11 +391,12 @@ body {
     font-weight: 300;
     padding: 7px 12px;
     border-radius: 4px;
-    margin-bottom: 20px;
+
     display: flex;
     align-items: center;
     transition: all 0.2s ease;
-    border-left: 3px solid transparent; /* Reserva o espaço da bordinha acesa */
+    border-left: 3px solid transparent;
+    /* Reserva o espaço da bordinha acesa */
 }
 
 .menu-link:hover {
@@ -392,19 +407,23 @@ body {
 /* Item Selecionado */
 .menu-link.active {
     color: var(--txt_std);
-    background-color: var(--bg_navbar); /* Fundo do item selecionado */
-    border-left: 3px solid var(--selection_blue); /* A bordinha */
-    font-weight: 400;
-    height: 30px;
+    background-color: var(--bg_navbar);
+    /* Fundo do item selecionado */
+    border-left: 3px solid var(--selection_blue);
+    /* A bordinha */
+    font-weight: 500;
+
     margin-right: 0;
 }
 
 /* Ajuste das coisas da página*/
 .conteudo-principal {
-    margin-left: 280px; /* Largura sidebar */
+    margin-left: 280px;
+    /* Largura sidebar */
     padding: 30px;
     min-height: 100vh;
-    background-color: var(--bg_body); /* Fundo do painel de gráficos */
+    background-color: var(--bg_body);
+    /* Fundo do painel de gráficos */
 }
 
 
@@ -414,10 +433,11 @@ body {
    ========================================== */
 
 /* Adiciona um efeito suave de deslizamento na sidebar e no conteúdo */
-.sidebar-adm, 
+.sidebar-adm,
 .conteudo-principal {
     transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .sidebar-adm.small {
     width: 65px;
 }
@@ -427,10 +447,579 @@ body {
     display: none;
 }
 
-.main.small_sb{
+.main.small_sb {
     margin-left: 65px;
 }
 
 
 
+/* ==========================================
+                    FILTROS
+   ========================================== */
 
+/* Container principal da barra de filtros */
+.filter-bar {
+    margin-left: -25px !important;
+    margin-right: -25px !important;
+    
+    /* 2. Compensa a largura: 20px da esquerda + 20px da direita = 40px */
+    width: calc(100% + 60px) !important; 
+
+    /* 3. Mantém os botões internos alinhados com a margem de 20px da tabela */
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+
+    /* 4. Remove o arredondado das pontas para virar uma faixa contínua */
+    border-radius: 0 !important; 
+
+    /* Seus estilos visuais e de alinhamento */
+    background-color: var(--dashboard);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px; /* Uma altura elegante para a faixa */
+    border-bottom: 1px solid rgba(173, 151, 151, 0.05);
+
+    margin-top: -29px;
+    
+    
+ 
+}
+
+/* Estilo Base para os Botões de Filtro (Estilo Pills do seu print) */
+.btn-filter {
+    background: transparent ;
+    border: 1px solid var(--txt_std);
+    /* Cor da borda discreta */
+    color: var(--txt_std);
+    font-family: 'Science Gothic', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    padding: 6px 18px ;
+    border-radius: 20px ;
+    /* Deixa as pontas totalmente arredondadas */
+    transition: all 0.2s ease;
+}
+
+/* Estado Ativo/Selecionado (Igual ao botão 'Total') */
+.btn-filter.active,
+.btn-filter:hover {
+    background-color: color-mix(in srgb, var(--txt_std) 25%, transparent);
+    /* Cinza preenchido do seu print */
+    border-color: var(--txt_std);
+    color: var(--txt_std)!important;
+}
+
+/* Remove a setinha padrão do Bootstrap se você quiser o visual idêntico ao print */
+.btn-filter.dropdown-toggle::after {
+    display: none;
+}
+
+/* Botão de Ação da Direita (Botão Editar) */
+.btn-filter-action {
+    background: transparent !important;
+    border: 1px solid var(--txt_std)!important;
+    
+    color: var(--txt_std) !important;
+    font-family: 'Science Gothic', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 22px !important;
+    border-radius: 20px !important;
+    transition: all 0.2s ease;
+}
+
+.btn-filter-action:hover {
+    background-color: color-mix(in srgb, var(--selection_blue) 70%, transparent) !important;
+    /* Feedback visual azul ao passar o mouse */
+    border-color: var(--txt_std) !important;
+}
+
+/* Customização interna da caixinha que desce (Dropdown menu) */
+.dropdown-menu-dark {
+    background-color: var(--bg_table) !important;
+    border: 1px solid var(--bg_sdbar) !important;
+    font-family: 'Science Gothic', sans-serif;
+    font-size: 13px;
+}
+
+.dropdown-menu-item {
+    color: var(--txt_std);
+    text-decoration: none;
+    display: block;
+    padding: 6px 16px;
+}
+
+.dropdown-menu-item:hover {
+    background-color: var(--selection_blue);
+    color: var(--txt_std);
+}
+
+
+.btn-filter:focus, 
+.btn-filter:active,
+.show > .btn-filter.dropdown-toggle {
+  
+    border-color: var(--txt_std);
+    color: var(--txt_std);            
+    box-shadow: var(--selection_blue) !important;           
+}
+
+
+/* ==========================================
+              GRÁFICO DE BARRAS
+   ========================================== */
+
+.graph-receita {
+
+    padding: 10px 0;
+    background-color: var(--dashboard);
+    margin-left: 20px;
+    border-radius: 15px;
+}
+
+/* Container principal que alinha as colunas lado a lado */
+.bar-wrapper {
+    display: flex;
+    justify-content: space-between;
+    /* Distribui as barras igualmente */
+    align-items: flex-end;
+    /* Força todas as barras a nascerem de baixo para cima */
+    height: 150px;
+    /* Altura máxima da área do gráfico */
+    margin-bottom: 45px;
+    /* Espaço para as labels de baixo não cortarem */
+}
+
+/* Cada coluna individual (Texto Superior + Barra + Texto Inferior) */
+.bar-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    /* Ocupa a altura total do wrapper */
+    flex: 1;
+    /* Divide o espaço igualmente entre as 6 colunas */
+}
+
+/* O número da porcentagem no topo da barra */
+.percent {
+    font-weight: 700;
+    font-size: 11px;
+    color: var(--txt_std);
+    margin-bottom: 6px;
+}
+
+/* O bloco colorido da barra em si */
+.bar-body {
+    width: 52px;
+    /* Largura exata da barra (fina como na sua foto) */
+    border-radius: 4px;
+    /* Cantos levemente arredondados */
+    transition: transform 0.5s ease;
+    /* Efeito opcional ao passar o mouse */
+}
+
+.bar-body:hover {
+    transform: scaleX(1.05);
+    /* Dá uma leve destacada no hover */
+}
+
+/* Os textos de identificação na base do gráfico */
+.bar-label {
+    position: absolute;
+    transform: translateY(38px);
+    /* Empurra o texto para baixo da linha invisível da base */
+
+    font-size: 12px;
+    color: var(--txt_std);
+    text-align: center;
+    line-height: 1.2;
+    white-space: nowrap;
+    /* Impede o texto de quebrar além do <br> */
+}
+
+
+
+
+
+/* ==========================================
+                      CARDS
+   ========================================== */
+
+
+.section-card {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/*Formato das Cards*/
+.cards {
+    display: grid;
+
+
+    margin-bottom: 30px;
+
+    border-radius: 15px;
+    text-align: center;
+}
+
+/*Background das Cards*/
+.card-green {
+    background-color: var(--dashboard_green);
+    color: var(--txt_card);
+}
+
+.card-red {
+    background-color: var(--dashboard_red);
+    color: var(--txt_card);
+}
+
+.card-blue {
+    background-color: var(--dashboard_blue);
+    color: var(--txt_card);
+}
+
+
+.card-std {
+    background-color: var(--dashboard);
+    color: var(--txt_card);
+    max-height: 130px;
+
+}
+
+/*Info de dinheiro*/
+.money {
+    padding-top: 10px;
+    color: var(--txt_std);
+}
+
+/*With Colored Background*/
+.money-w-cbg{
+    color: var(--txt_card);
+}
+
+/*Simbolo de dinheiro*/
+.money-symbol {
+    font-size: 50px;
+    color: var(--txt_std);
+}
+
+/*With Colored Background*/
+.money-symbol-w-cbg{
+    font-size: 50px;
+    color: var(--txt_card);
+}
+
+/*Texto de baixo das Cards*/
+.card-label {
+    align-items: center;
+    font-size: 16px;
+    color: var(--txt_std);
+}
+
+/*Div das Cards*/
+.card-std hr {
+    margin-top: 10px;
+    margin-bottom: 0;
+    border-color: var(--txt_std);
+    opacity: 1;
+}
+
+
+.card-std .card-label {
+    margin: 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    line-height: 1;
+    text-align: center;
+}
+
+
+
+/* ==========================================
+                 MINI CARDS
+   ========================================== */
+
+/* Estilo da caixinha do card */
+.mini-card-panel {
+    background-color: #11161d;
+    /* Tom escuro de fundo interno do card */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100px;
+    margin-right: 20px;
+
+    height: 100px;
+
+    box-sizing: border-box;
+}
+
+/* Texto de cima (O cabeçalho do mini card) */
+.mini-card-header {
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--txt_std);
+    text-transform: none;
+    margin-bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Área do conteúdo (Recebe a linha divisória superior fina) */
+.mini-card-body {
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    /* Linha horizontal fina idêntica à foto */
+    padding-top: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* O texto interno (Ex: Plano Semanal Mensal) */
+.mini-card-text {
+    font-weight: 600;
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 1;
+    margin: 0;
+}
+
+/* O número grande (Ex: 01) */
+.mini-card-numero {
+    /* Fonte quadrada para dar o look financeiro */
+    font-weight: 700;
+    font-size: 28px;
+}
+
+/* Classes de cores específicas do seu painel */
+.text-red {
+    color: #D11010;
+}
+
+.text-blue {
+    color: #4531E0;
+}
+
+
+/* ==========================================
+                 EXTRA INFO
+   ========================================== */
+
+/*Seção de info extra*/
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.box {
+    background-color: var(--dashboard);
+    padding: 20px;
+    border-radius: 15px;
+    color: var(--txt_std);
+}
+
+.entry {
+    color: var(--txt_green);
+
+}
+
+.left {
+    color: var(--txt_red);
+
+}
+
+
+
+/* ==========================================
+                   TABELAS
+   ========================================== */
+
+
+/*Seção da tabela*/
+.section-table {
+    margin-left: 20px;
+    margin-right: 20px;
+
+    width: calc(100% - 20px) !important;
+}
+
+/*Botões de cima da tabela*/
+.table-btns {
+    gap: 30px;
+}
+
+
+/*Botão de Atualziar*/
+.refresh-btn {
+
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+    background-color: var(--bg_body);
+
+    color: var(--txt_std);
+    border: none;
+    cursor: pointer;
+    font-size: 36px;
+
+}
+
+.refresh-btn:hover {
+    color: var(--selection_blue);
+}
+
+
+/*Botão de Editaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa quero morre*/
+.edit-btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+    background-color: var(--bg_body);
+
+    color: var(--txt_std);
+    border: none;
+    cursor: pointer;
+    font-size: 36px;
+}
+
+.edit-btn:hover {
+    color: var(--selection_blue);
+}
+
+
+
+
+
+/* Tabela */
+
+/*Definição geral da tabela*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: var(--txt_std);
+}
+
+
+/*Definição geral da tabela*/
+.tabela-container {
+    max-height: 350px;
+    overflow-y: auto;
+    border-radius: 15px;
+    background: var(--bg_table);
+
+/*Mini configs de tamanho e barinhas*/
+    width: 100%;
+    max-height: 350px;   
+    overflow-y: auto;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+/*Table Header e Table Data*/
+th,
+td {
+    padding: 15px;
+    border-bottom: 1px solid #444;
+}
+
+
+/*Scroll custom*/
+
+.tabela-container::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+.tabela-container::-webkit-scrollbar-thumb {
+
+    background: var(--selection_blue);
+
+    border-radius: 10px;
+
+}
+
+.tabela-container::-webkit-scrollbar-track {
+    background: #23262d;
+}
+
+table {
+    width: 100%;
+    background: var(--bg_table);
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 15px;
+    border-bottom: 1px solid #444;
+}
+
+th {
+    background: var(--bg_table);
+}
+
+
+
+
+
+/* ==========================================
+                   RECEITAS
+   ========================================== */
+
+.info-receita {
+    margin-bottom: 100px;
+}
+
+/*Table da pag receitas com sidescrolling*/
+#table-receitas {
+    display: block !important; /*Força o container a se comportar como um bloco isolado*/
+    width: 100% !important;
+    max-height: 350px;
+    overflow-x: auto !important; /*Ativa o side-scrolling obrigatório*/
+    overflow-y: auto !important; /*Mantém o scroll vertical*/
+}
+
+#table-receitas table {
+    display: block !important; /*Impede que a tabela se comprima para caber na tela*/
+    width: max-content !important; /*Faz a tabela assumir o tamanho real baseado no texto das colunas*/
+    min-width: 100% !important;
+    
+}
+
+/*Cansei de comentar. Awui é o treco do cabeçalh*/
+#table-receitas th {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #1f2229;
+}
+
+/*Celulas*/
+#table-receitas th,
+#table-receitas td {
+    white-space: nowrap;
+    padding: 15px 25px;
+}
+
+
+/*Tamanho da barra de rolagem lateral da página de receitas*/
+#table-receitas::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+
+/*CABOOOOOO PORRAAAAAA*/
