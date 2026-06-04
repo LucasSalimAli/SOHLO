@@ -7,7 +7,7 @@
    ========================================== */
 
 /*Tema Escuro */
-:root {
+[data-theme="dark"] {
 
     /*Textos*/
     --txt_std: #ffffff;
@@ -558,6 +558,7 @@ a:hover {
     font-size: 1rem;
     color: var(--txt_std);
 }
+
 
 
 /* Bloco da Direita - Formulário */

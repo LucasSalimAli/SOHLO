@@ -7,7 +7,7 @@
    ========================================== */
 
 /*Tema Escuro */
-:root {
+[data-theme="dark"] {
 
     /*Textos*/
     --txt_std: #DEE8FF;
