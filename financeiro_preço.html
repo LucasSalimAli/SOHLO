@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" data-theme="light">
+<html lang="pt-br">
 
 <!--Não Mexer!!!!!-->
 
@@ -23,6 +23,7 @@
     <!--Link Css Custom-->
     <link rel="stylesheet" href="css/adm.css">
 
+    <script src="js/theme.js" defer></script>
 </head>
 
 
@@ -61,6 +62,16 @@
                             <li><a class="dropdown-item" href="#">---</a></li>
                             <li><a class="dropdown-item" href="#">---</a></li>
                         </ul>
+                    </div>
+                </div>
+
+                <!-- Tema -->
+                <div class="collapse navbar-collapse">
+                    <div class="dropdown">
+                        <button id="theme-toggle" class="btn btn-dark align-items-center gap-2 notification_btn"
+                            type="button" data-bs-toggle="dropdown">
+                            <i id="theme-icon" class="bi bi-sun fs-1"></i> </button>
+                        </button>
                     </div>
                 </div>
 
@@ -123,7 +134,7 @@
                 <nav class="submenu-links">
                     <a href="financeiro_dashboard.html" class="menu-link">Dashboards</a>
                     <a href="financeiro_receita.html" class="menu-link">Receita</a>
-                    <a href="#" class="menu-link">Contas à Pagar</a>
+                    <a href="financeiro_contas.html" class="menu-link">Contas à Pagar</a>
                     <a href="financeiro_fluxo.html" class="menu-link">Fluxo de Caixa</a>
                     <a href="financeiro_multas.html" class="menu-link">Multas</a>
                     <a href="#" class="menu-link active">Ajuste de Preço</a>

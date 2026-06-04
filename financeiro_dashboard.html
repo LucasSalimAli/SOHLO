@@ -23,6 +23,7 @@
     <!--Link Css Custom-->
     <link rel="stylesheet" href="css/adm.css">
 
+    <script src="js/theme.js" defer></script>
 </head>
 
 
@@ -64,6 +65,16 @@
                     </div>
                 </div>
 
+                <!-- Tema -->
+                <div class="collapse navbar-collapse">
+                    <div class="dropdown">
+                        <button id="theme-toggle" class="btn btn-dark align-items-center gap-2 notification_btn"
+                            type="button" data-bs-toggle="dropdown">
+                            <i id="theme-icon" class="bi bi-sun fs-1"></i> </button>
+                        </button>
+                    </div>
+                </div>
+
                 <!--User_Button-->
                 <div class="collapse navbar-collapse">
                     <div class="dropdown">
@@ -102,10 +113,10 @@
                 </div>
 
                 <!-- Botão LogOut -->
-                <button class="logout-btn">
+                <a href="index.html" class=" btn logout-btn">
                     <i class="bi bi-box-arrow-left"></i>
                     <span>Log<br>Out</span>
-                </button>
+                </a>
             </div>
 
             <!-- Links para as páginas -->
@@ -123,7 +134,7 @@
                 <nav class="submenu-links">
                     <a href="#" class="menu-link active">Dashboards</a>
                     <a href="financeiro_receita.html" class="menu-link">Receita</a>
-                    <a href="#" class="menu-link">Contas à Pagar</a>
+                    <a href="financeiro_contas.html" class="menu-link">Contas à Pagar</a>
                     <a href="financeiro_fluxo.html" class="menu-link">Fluxo de Caixa</a>
                     <a href="financeiro_multas.html" class="menu-link">Multas</a>
                     <a href="financeiro_preço.html" class="menu-link">Ajuste de Preço</a>
@@ -217,7 +228,7 @@
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
 
             <div class="dashboard-row grid-three-columns">
 
@@ -270,14 +281,14 @@
                 </div>
             </div>
 
-             <div class="dashboard-row">
+            <div class="dashboard-row">
                 <div class="chart-box core-history-box">
                     <h5 class="chart-title-large">Receitas e Despesas</h5>
                     <div class="canvas-container footer-chart">
                         <canvas id="chartReceitasDespesas"></canvas>
                     </div>
                 </div>
-            </div> 
+            </div>
 
         </div>
     </main>

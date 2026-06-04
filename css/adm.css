@@ -1402,7 +1402,7 @@ select.filter-box {
 }
 
 .container-donut {
-    width: 130px !important; /* Força o tamanho da rosca menor para sobrar espaço */
+    width: 130px !important; 
     height: 130px !important;
 }
 

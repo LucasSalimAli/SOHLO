@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" data-theme="light">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -16,14 +16,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/adm.css">
+
+    <script src="js/theme.js" defer></script>
 </head>
 
 <body>
 
-    <header>
-        <div class="container-fluid">
+     <header>
+        <!--NavBar-->
+        <div class="container.flex">
             <nav class="navbar navbar-expand-lg rounded navbar_std" aria-label="Eleventh navbar example">
 
+                <!--Logo-->
                 <div class="container-fluid">
                     <a class="navbar-brand logo" href="#">S.O.H.L.O.</a>
 
@@ -33,12 +37,15 @@
                     </button>
                 </div>
 
+                <!--Status Showcase-->
                 <div class="status">
                     <h5 class="d-flex align-items-center gap-2"> <span>Administrador</span>
                         <i class="bi bi-unlock2-fill fs-4"></i>
                     </h5>
                 </div>
 
+
+                <!--Notificações-->
                 <div class="collapse navbar-collapse">
                     <div class="dropdown">
                         <button class="btn btn-dark dropdown-toggle align-items-center gap-2 notification_btn"
@@ -52,6 +59,17 @@
                     </div>
                 </div>
 
+                <!-- Tema -->
+                <div class="collapse navbar-collapse">
+                    <div class="dropdown">
+                        <button id="theme-toggle" class="btn btn-dark align-items-center gap-2 notification_btn"
+                            type="button" data-bs-toggle="dropdown">
+                            <i id="theme-icon" class="bi bi-sun fs-1"></i> </button>
+                        </button>
+                    </div>
+                </div>
+
+                <!--User_Button-->
                 <div class="collapse navbar-collapse">
                     <div class="dropdown">
                         <button class="btn btn-dark dropdown-toggle align-items-center gap-2 user_btn" type="button"
@@ -67,6 +85,8 @@
                 </div>
             </nav>
         </div>
+
+
     </header>
 
     <aside class="sidebar-adm">
@@ -83,10 +103,10 @@
                     </button>
                 </div>
 
-                <button class="logout-btn">
+               <a href="index.html" class=" btn logout-btn">
                     <i class="bi bi-box-arrow-left"></i>
                     <span>Log<br>Out</span>
-                </button>
+                </a>
             </div>
 
             <div class="sidebar-submenu-panel">
@@ -102,7 +122,7 @@
                 <nav class="submenu-links">
                     <a href="financeiro_dashboard.html" class="menu-link">Dashboards</a>
                     <a href="financeiro_receita.html" class="menu-link">Receita</a>
-                    <a href="#" class="menu-link">Contas à Pagar</a>
+                    <a href="financeiro_contas.html" class="menu-link">Contas à Pagar</a>
                     <a href="financeiro_fluxo.html" class="menu-link">Fluxo de Caixa</a>
                     <a href="#" class="menu-link active">Multas</a>
                     <a href="financeiro_preço.html" class="menu-link">Ajuste de Preço</a>
