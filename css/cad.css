@@ -183,17 +183,18 @@ body {
 
 /*Config NavBar*/
 .navbar_std {
-
-    /*Margens*/
-    padding-left: 54px;
-    padding-right: 54px;
+    width: 100%;
+    padding-left: 24px; 
+    padding-right: 24px;
     height: 65px;
 
-    /*Posição*/
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
 
-    /*Cor BG*/
+    /* Cor BG */
     background-color: color-mix(in srgb, var(--bg_navbar) 44%, transparent);
+   
 }
 
 
@@ -215,8 +216,6 @@ body {
 .nav-link {
     color: var(--txt_std);
     font-family: 'Anonymous-Pro', monospace;
-
-
 }
 
 .nav-link:hover,
@@ -233,6 +232,16 @@ body {
 
 
 /*Estrutura geral dos botões*/
+
+.container_botoes {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    margin-top: auto; 
+    width: 100%;
+
+}
+
 .btn-custom {
     font-family: 'Science Gothic', sans-serif;
     font-size: 16px;
@@ -255,13 +264,10 @@ body {
 /*Botão Humus*/
 .btn-humus {
     background-color: color-mix(in srgb, var(--btn_humus) 40%, transparent);
-    border: 2px solid var(--selection_blue);
-
-
+    border: 2px solid var(--selection);
+    display: block;
+    margin-left: 45px; 
     box-shadow: 0 0 8px rgba(8, 67, 93, 0.5);
-
-    /*Tamanho*/
-
 }
 
 /*Efeito ao passar o mouse*/
@@ -321,6 +327,14 @@ body {
 
 }
 
+.btn_temConta {
+    width: 100%; 
+    order: 2; 
+    display: flex; 
+    justify-content: flex-start;
+    margin-top: -50px;
+}
+
 
 /*==========================================
                 SEÇÃO DE TEXTOS
@@ -338,13 +352,17 @@ h1 {
     font-size: 48px;
     text-align: center;
     margin: 40px 0;
-    color: var(--txt_std);
+    color: var(--txt_std); 
+}
+
+main h1{
+    margin-top: 80px;
 }
 
 h2,
 h4 {
     font-size: 32px;
-    margin-bottom: 40px;
+    margin-bottom: 100px;
     color: var(--txt_std);
     text-align: center;
     position: relative;
@@ -387,14 +405,12 @@ h4::after {
 .container_textoArea {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    max-width: 575px;
+    width: 575px;
     min-height: 660px;
     border: 2px solid var(--line);
     padding: 40px;
     box-sizing: border-box;
 }
-
 
 .container_texto {
     justify-content: center;
@@ -408,18 +424,30 @@ h4::after {
 
 .container_formulario label {
     display: block;
-    margin-bottom: 8px;
-    color: var(--txt_std);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--txt_std); 
+    line-height: 1.1;
 }
 
 .container_formulario input {
     width: 100%;
-    padding: 10px;
-    border: 1px solid var(--line);
-    border-radius: 5px;
+    padding: 12px 16px; 
+    font-size: 15px;
+    border: 2px solid var(--line); 
+    border-radius: 10px; 
     background-color: transparent;
     color: var(--txt_std);
     box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 5px;
+    margin-bottom: 35px;
+}
+
+.container_formulario input:focus {
+    outline: none;
+    border-color: var(--selection_green); 
+    box-shadow: 0 0 8px color-mix(in srgb, var(--selection_green) 50%, transparent);
 }
 
 p {
@@ -442,9 +470,292 @@ a:hover {
     text-decoration: underline;
 }
 
-.form-control {
-    background-color: var(--line); 
+/* Note a junção das duas classes para ganhar do Bootstrap */
+.form-control.textArea {
+    width: 100%;
+    height: 200px;
+    padding: 16px;
+    font-size: 15px;
     border: 2px solid var(--line);
-    margin-top: 80px;
-    width: 500px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: var(--txt_std);
+    box-sizing: border-box;
+    resize: none; 
+    text-align: justify;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px; 
+    transition: border-color 0.2s, box-shadow 0.2s; 
+}
+
+
+textarea.form-control.textArea:hover {
+    border-color: var(--selection_green) ; 
+}
+
+textarea.form-control.textArea:focus {
+    outline: none ;
+    border-color: var(--selection_green) ;
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.4);
+}
+
+.textArea::selection {
+    background-color: var(--selection_green);
+    color: var(--txt_std); 
+}
+
+.textArea::-webkit-scrollbar {
+    width: 6px;
+}
+
+.textArea::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.textArea::-webkit-scrollbar-thumb {
+    background-color: color-mix(in srgb, var(--line) 40%, transparent);
+    border-radius: 10px;
+}
+
+.textArea::-webkit-scrollbar-thumb:hover {
+    background-color: var(--selection);
+}
+
+.coluna_esquerda{
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
+    flex: 1;
+}
+
+.lista-requisitos-senha {
+    list-style: none;
+    padding-left: 0;
+    margin-top: -35px;
+    margin-bottom: 60px;
+    font-family: 'Science Gothic', sans-serif;
+    font-size: 13px;
+}
+
+.lista-requisitos-senha li {
+    margin-bottom: 2px;
+    transition: color 0.3s ease;
+}
+
+
+.lista-requisitos-senha li.invalido {
+    color: #ff6b6b;
+    opacity: 0.8;
+}
+
+
+.lista-requisitos-senha li.valido {
+    color: #62f400;
+    opacity: 1;
+}
+
+.lista-requisitos-senha li i {
+    margin-right: 6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Cabeçalho superior */
+.main-header {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    background-color: var(--txt_std);
+}
+
+.main-header h1 {
+    font-family: 'Freestyle Script', cursive;
+    /* Simula a fonte cursiva verde */
+
+    color: var(--txt_std);
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+/* Container Principal */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin-top: 20px;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+}
+
+/* Estrutura dos blocos (Flexbox lateral) */
+.form-wrapper {
+    display: flex;
+    gap: 25px;
+    align-items: stretch;
+}
+
+.form-input {
+    background-color: color-mix(in srgb, var(--txt_std) 10%, transparent);
+    ;
+}
+
+/* Bloco da Esquerda - Informações */
+.info-box {
+    flex: 1;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 20px;
+    background-color: color-mix(in srgb, var(--txt_std) 0%, transparent);
+    ;
+}
+
+.info-box h3 {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.info-card-title {
+    color: var(--logo_std)
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background-color: #3b5759;
+    margin-bottom: 30px;
+}
+
+.info-text p {
+    font-size: 1.15rem;
+    line-height: 1.5;
+    font-weight: 500;
+    color: var(--txt_std)
+}
+
+.info-text {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: var(--txt_std);
+}
+
+
+
+/* Bloco da Direita - Formulário */
+.form-box {
+    flex: 1.4;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 30px 35px;
+    background-color: var(--bg_body);
+    display: flex;
+    flex-direction: column;
+}
+
+.section-title {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+/* Grid do Formulário de 2 colunas */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.input-group input {
+    background-color: color-mix(in srgb, var(--txt_std) 25%, transparent);
+    ;
+    border: 1px solid var();
+    border-radius: 4px;
+    height: 42px;
+    padding: 0 12px;
+    color: var(--line);
+    font-size: 1.1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+    border-color: var(--btn_next);
+}
+
+/* Botões do Formulário (Cancelar / Próxima Página) */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+
+/* Botão inferior (Já tenho uma conta) */
+.footer-actions {
+    margin-top: 25px;
+    align-self: flex-start;
+}
+
+/* Responsividade para telas menores (Celular) */
+@media (max-width: 768px) {
+    .form-wrapper {
+        flex-direction: column;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+.tamanho {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 40px;
 }

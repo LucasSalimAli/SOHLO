@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="dark"> >
+
+<!--Não Mexer!!!!!-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.O.H.L.O.</title>
+
+    <!--Link para o Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!--Link dos Ícones do Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!--Link das Fontes (Science Gothic)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+
+    <!--Link Css Custom-->
+    <link rel="stylesheet" href="css/cad.css">
+
+</head>
+
+
+<body>
+
+    <header>
+        <div class="container-fluid p-0">
+
+            <nav class="navbar navbar-expand-lg navbar_std w-100">
+
+                <div class="container-fluid position-relative">
+                    <div class="collapse navbar-collapse d-lg-flex">
+                        <a class="navbar-brand logo" href="#">Húmus - Compostagem</a>
+                    </div>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        <h1>Cadastra-se</h1>
+
+        <div class="container_flex" style="display: flex; flex-wrap: wrap;">
+
+            <div class="container_texto" style="margin-bottom: 20px;">
+                <h4 style="margin-top: -140px;">Recomendações</h4>
+                <p>Defina a Sua Senha! Essa Senha será a sua entrada para o sistema. Poderá ser alterada no futuro na
+                    página [Editar Perfil].
+                </p>
+
+                <p><strong>Importante:</strong> Certifique-se de escolher uma senha forte para proteger sua conta.</p>
+
+            </div>
+
+            <div class="container_formulario">
+
+                <div class="mb-3">
+                    <h2>Defina a sua senha</h2>
+                    <label for="nome">Senha</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+
+                <ul id="lista-requisitos" class="lista-requisitos-senha">
+                    <li id="req-comprimento" class="invalido"><i class="bi bi-x-circle-fill"></i> Mínimo de 8 caracteres
+                    </li>
+                    <li id="req-maiuscula" class="invalido"><i class="bi bi-x-circle-fill"></i> Pelo menos uma letra
+                        maiúscula</li>
+                    <li id="req-numero" class="invalido"><i class="bi bi-x-circle-fill"></i> Pelo menos um número</li>
+                </ul>
+
+                <div class="mb-3">
+                    <label for="tel_comercial">Confirme a sua senha</label>
+                    <input type="password" class="form-control" id="password_confirm" name="password_confirm" required>
+                </div>
+
+                <ul class="lista-requisitos-senha">
+                    <li id="req-combina" class="invalido"><i class="bi bi-x-circle-fill"></i> As senhas devem ser iguais</li>
+                </ul>
+
+                <div class="container_botoes">
+                    <div class="botoes_esquerda" style="display: flex; gap: 12px;">
+                        <button type="reset" class="btn-custom btn-back"
+                            onclick="window.location.href='cad_empresa_2.html'">Voltar</button>
+                    </div>
+
+                    <button type="button" class="btn-custom btn-next"
+                        onclick="window.location.href='cad_empresa_4.html'">Próximo</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+
+    <script src="js/password.js"></script>
+</body>
+
+</html>

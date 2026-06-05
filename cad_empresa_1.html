@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="dark"> >
 
 <!--Não Mexer!!!!!-->
 
@@ -29,29 +29,27 @@
 <body>
 
     <header>
+        <div class="container-fluid p-0"> 
+            
+            <nav class="navbar navbar-expand-lg navbar_std w-100">
 
-        <div class="container-flex">
-            <nav class="navbar navbar-expand-lg rounded navbar_std">
-
-                <div class="container">
+                <div class="container-fluid position-relative">
                     <div class="collapse navbar-collapse d-lg-flex">
                         <a class="navbar-brand logo" href="#">Húmus - Compostagem</a>
                     </div>
-
                 </div>
 
+            </nav>
         </div>
-        </nav>
-
     </header>
 
 
     <main>
         <h1>Cadastra-se</h1>
 
-        <div class="container_flex">
+        <div class="container_flex" style="display: flex; flex-wrap: wrap;">
 
-            <div class="container_texto">
+            <div class="container_texto" style="margin-bottom: 20px;">
                 <h4>Por que preencher o formulário?</h4>
                 <p><strong>Seja bem-vindo à Húmus!</strong> Para garantirmos um atendimento humanizado e verdadeiramente
                     customizado, nossa política de parceria começa na compreensão mútua. Por isso, solicitamos o
@@ -63,49 +61,45 @@
                     empresa.</p>
             </div>
 
+            <div class="btn_temConta">
+                <button type="button" class="btn-custom btn-humus" onclick="window.location.href='login.html'">
+                    Já tem uma conta?
+                </button>
+            </div>
+
             <div class="container_formulario">
                 <h2>Dados da Empresa</h2>
-
                 <div class="mb-3">
                     <label for="nome">Nome</label>
-                    <input type="text" id="nome">
+                    <input type="text" class="form-control" id="nome" name="nome" required>
                 </div>
 
                 <div class="mb-3">
                     <label for="tel_comercial">Email Comercial</label>
-                    <input type="email" id="tel_comercial" placeholder="exemplo@empresa.com">
+                    <input type="email" class="form-control" id="email_comercial" name="email_comercial" required>
                 </div>
 
                 <div class="mb-3">
                     <label for="whatsapp">WhatsApp / Celular</label>
-                    <input type="tel" id="whatsapp" placeholder="(00) 0 0000-0000">
+                    <input type="tel" class="form-control" id="whatsapp" name="whatsapp" required>
                 </div>
 
                 <div class="mb-3">
                     <label for="telefone">Telefone Fixo</label>
-                    <input type="tel" id="telefone" placeholder="(00) 0 0000-0000">
+                    <input type="tel" class="form-control" id="telefone" name="telefone">
                 </div>
 
-                <p>Já tem uma conta? <a href="#"><strong>Faça login</strong></a></p>
-
-                <div class="container_botoes"
-                    style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; width: 100%;">
-
+                <div class="container_botoes">
                     <div class="botoes_esquerda" style="display: flex; gap: 12px;">
-                        <button type="button" class="btn-custom btn-humus"
-                            onclick="window.location.href='index.html'">Voltar</button>
-
-                        <button type="reset" class="btn-custom btn-back">Limpar</button>
+                        <button type="reset" class="btn-custom btn-back"
+                        onclick="window.location.href='login.html'">Voltar</button>
                     </div>
 
                     <button type="button" class="btn-custom btn-next"
-                        onclick="window.location.href='cad_empresa_2.html'">Próximo</button></button>
-
+                        onclick="window.location.href='cad_empresa_2.html'">Próximo</button>
                 </div>
             </div>
-
         </div>
-
     </main>
 </body>
 
