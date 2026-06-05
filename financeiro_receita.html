@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<!--Não Mexer!!!!!-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.O.H.L.O.</title>
+
+    <!--Link para o Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!--Link dos Ícones do Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!--Link das Fontes (Science Gothic)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+
+    <!--Link Css Custom-->
+    <link rel="stylesheet" href="css/adm.css">
+
+    <script src="js/theme.js" defer></script>
+</head>
+
+
+<body>
+
+    <header>
+        <!--NavBar-->
+        <div class="container.flex">
+            <nav class="navbar navbar-expand-lg rounded navbar_std" aria-label="Eleventh navbar example">
+
+                <!--Logo-->
+                <div class="container-fluid">
+                    <a class="navbar-brand logo" href="#">S.O.H.L.O.</a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false"
+                        aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <!--Status Showcase-->
+                <div class="status">
+                    <h5 class="d-flex align-items-center gap-2"> <span>Administrador</span>
+                        <i class="bi bi-unlock2-fill fs-4"></i>
+                    </h5>
+                </div>
+
+                <!--Notificações-->
+                <div class="collapse navbar-collapse">
+                    <div class="dropdown">
+                        <button class="btn btn-dark dropdown-toggle align-items-center gap-2 notification_btn"
+                            type="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-bell fs-1"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">---</a></li>
+                            <li><a class="dropdown-item" href="#">---</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tema -->
+                <div class="collapse navbar-collapse">
+                    <div class="dropdown">
+                        <button id="theme-toggle" class="btn btn-dark align-items-center gap-2 notification_btn"
+                            type="button" data-bs-toggle="dropdown">
+                            <i id="theme-icon" class="bi bi-sun fs-1"></i> </button>
+                        </button>
+                    </div>
+                </div>
+
+                <!--User_Button-->
+                <div class="collapse navbar-collapse">
+                    <div class="dropdown">
+                        <button class="btn btn-dark dropdown-toggle align-items-center gap-2 user_btn" type="button"
+                            data-bs-toggle="dropdown">
+                            <span>Nome_Usuário</span>
+                            <i class="bi bi-person-circle fs-1"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">Configurações</a></li>
+                            <li><a class="dropdown-item" href="#">Minha Conta</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar-adm">
+
+        <div class="sidebar-body">
+
+            <!-- Icones Logistico/Financeiro -->
+            <div class="sidebar-nav-icons">
+                <div class="icons-group">
+                    <button class="main-icon-btn">
+                        <i class="bi bi-globe"></i>
+                    </button>
+
+                    <button class="main-icon-btn active" id="btn-fin">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </button>
+                </div>
+
+                <!-- Botão LogOut -->
+                <a href="index.html" class=" btn logout-btn">
+                    <i class="bi bi-box-arrow-left"></i>
+                    <span>Log<br>Out</span>
+                </a>
+            </div>
+
+            <!-- Links para as páginas -->
+            <div class="sidebar-submenu-panel">
+                <h4 class="module-title">Sistema<br>Financeiro</h4>
+
+                <!-- Caixa de Pesquisa -->
+                <div class="sidebar-search-box">
+                    <i class="bi bi-search"></i>
+                    <input type="text" placeholder="Pesquisar">
+                </div>
+
+                <hr class="sidebar-divider">
+
+                <nav class="submenu-links">
+                    <a href="financeiro_dashboard.html" class="menu-link">Dashboards</a>
+                    <a href="#" class="menu-link active">Receita</a>
+                    <a href="financeiro_contas.html" class="menu-link">Contas à Pagar</a>
+                    <a href="financeiro_fluxo.html" class="menu-link">Fluxo de Caixa</a>
+                    <a href="financeiro_multas.html" class="menu-link">Multas</a>
+                    <a href="financeiro_preço.html" class="menu-link">Ajuste de Preço</a>
+                    <a href="financeiro_historico.html" class="menu-link">Histórico</a>
+                    <a href="financeiro_diario.html" class="menu-link">Relatório Diário</a>
+                </nav>
+            </div>
+
+        </div>
+    </aside>
+
+
+    <!-- Começo do Site -->
+
+    <main class="main conteudo-principal">
+
+        <!-- Filtros -->
+
+        <div class="filter-bar d-flex align-items-center justify-content-between mb-3">
+
+            <div class="filter-group d-flex align-items-center gap-2">
+
+                <div class="dropdown">
+                    <button class="btn btn-filter active dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Total
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-menu-item active" href="#">Total</a></li>
+                        <li><a class="dropdown-menu-item" href="#">Esta Semana</a></li>
+                        <li><a class="dropdown-menu-item" href="#">Este Mês</a></li>
+                        <li><a class="dropdown-menu-item" href="#">Ano Completo</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown">
+                    <button class="btn btn-filter dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Filtro A
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-menu-item" href="#">Opção 1</a></li>
+                        <li><a class="dropdown-menu-item" href="#">Opção 2</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown">
+                    <button class="btn btn-filter dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Filtro B
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-menu-item" href="#">Opção X</a></li>
+                        <li><a class="dropdown-menu-item" href="#">Opção Y</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="row info-receita">
+
+
+            <!-- Grafico -->
+            <div class="col-12 col-lg-6">
+                <div class="graph-receita">
+
+                    <!-- Barras -->
+                    <div class="bar-wrapper">
+
+
+                        <!-- Barras -->
+                        <div class="bar-col">
+                            <span class="percent">37%</span>
+                            <div class="bar-body" style="height: 37%; background-color: #98EE99;"></div>
+                            <span class="bar-label">Semanal<br>Mensal</span>
+                        </div>
+
+                        <!-- Barras -->
+                        <div class="bar-col">
+                            <span class="percent">20%</span>
+                            <div class="bar-body" style="height: 20%; background-color: #7B8CFF;"></div>
+                            <span class="bar-label">Quinzenal<br>Mensal</span>
+                        </div>
+
+                        <!-- Barras -->
+                        <div class="bar-col">
+                            <span class="percent">27%</span>
+                            <div class="bar-body" style="height: 27%; background-color: #FFF59D;"></div>
+                            <span class="bar-label">Semanal<br>Anual</span>
+                        </div>
+
+                        <!-- Barras -->
+                        <div class="bar-col">
+                            <span class="percent">13%</span>
+                            <div class="bar-body" style="height: 13%; background-color: #F48FB1;"></div>
+                            <span class="bar-label">Quinzenal<br>Anual</span>
+                        </div>
+
+                        <!-- Barras -->
+                        <div class="bar-col">
+                            <span class="percent">2%</span>
+                            <div class="bar-body" style="height: 2%; background-color: #E57373;"></div>
+                            <span class="bar-label">Venda de<br>Adubo</span>
+                        </div>
+
+                        <!-- Barras -->
+                        <div class="bar-col">
+                            <span class="percent">1%</span>
+                            <div class="bar-body" style="height: 1%; background-color: #7986CB;"></div>
+                            <span class="bar-label">Venda de<br>Fertilizante</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Mini-Cards -->
+            <div class="col-12 col-md-3 d-flex flex-column gap-3">
+
+                <div class="mini-card-panel">
+                    <span class="mini-card-header">Maior Origem</span>
+                    <div class="mini-card-body">
+                        <p class="mini-card-text text-center">Plano Semanal<br>Mensal</p>
+                    </div>
+                </div>
+
+                <div class="mini-card-panel">
+                    <span class="mini-card-header text-red">Clientes em Débito</span>
+                    <div class="mini-card-body">
+                        <span class="mini-card-numero text-red">01</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-12 col-md-3 d-flex flex-column gap-3">
+
+                <div class="mini-card-panel">
+                    <span class="mini-card-header">Menor Origem</span>
+                    <div class="mini-card-body">
+                        <p class="mini-card-text text-center">Venda de<br>Biofertilizante</p>
+                    </div>
+                </div>
+
+                <div class="mini-card-panel">
+                    <span class="mini-card-header text-blue">Clientes Atrasados</span>
+                    <div class="mini-card-body">
+                        <span class="mini-card-numero text-blue">01</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Tabela -->
+        <section class="section-table d-flex flex-column align-items-end w-100">
+
+            <div class="row table-btns">
+
+
+                <div class="col-1">
+                    <button class="edit-btn">
+                        <i class="bi bi-pencil-square"></i>
+                    </button>
+                </div>
+
+
+                <div class="col-1">
+                    <button class="refresh-btn">
+                        <i class="bi bi-arrow-clockwise"></i>
+                    </button>
+                </div>
+            </div>
+
+
+
+
+            <div class="tabela-container table-responsive" id="table-receitas">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nº</th>
+                            <th>DATA/HORA</th>
+                            <th>NOME DO CLIENTE</th>
+                            <th>ORIGEM</th>
+                            <th>VENCIMENTO</th>
+                            <th>FORMA DE PAGAMENTO</th>
+                            <th>VALOR ESPERADO</th>
+                            <th>VALOR RECEBIDO</th>
+                            <th>VALOR LÍQUIDO</th>
+                            <th>STATUS</th>
+                            <th>AÇÕES</th>
+                        </tr>
+                    </thead>
+
+                    <tbody class="table-content">
+                        <tr>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                        </tr>
+
+                        <tr>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                        </tr>
+
+                        <tr>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                        </tr>
+
+                        <tr>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                            <th>-</th>
+                        </tr>
+
+               
+                    
+
+                    </tbody>
+
+                </table>
+
+
+            </div>
+        </section>
+
+    </main>
+
+
+
+    <!-- Não Mexer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+
+    <script src="js\animation.js"></script>
+
+
+</body>
+
+
+</html>
