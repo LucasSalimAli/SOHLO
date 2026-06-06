@@ -156,12 +156,12 @@
 
             <div class="filter-group d-flex align-items-center gap-2">
                 <div class="dropdown">
-                    <button class="btn btn-filter active dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    <button class="btn btn-filter dropdown-toggle active " type="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         Total
                     </button>
                     <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><a class="dropdown-menu-item active" href="#">Total</a></li>
+                        <li><a class="dropdown-menu-item" href="#">Total</a></li>
                         <li><a class="dropdown-menu-item" href="#">Esta Semana</a></li>
                         <li><a class="dropdown-menu-item" href="#">Este Mês</a></li>
                         <li><a class="dropdown-menu-item" href="#">Ano Completo</a></li>
@@ -191,51 +191,47 @@
                 </div>
             </div>
 
-            <div class="action-group d-flex align-items-center">
-                <button class="btn btn-filter-action">
-                    Editar
-                </button>
-            </div>
-
         </div>
 
-        <div class="summary-cards my-4">
-            <div class="card card-green">
-                <div class="card-top">
-                    <span class="currency">$</span>
-                    <span class="amount">772.00</span>
+        <section class="section-card">
+            <div class="summary-cards my-4">
+                <div class="card card-green">
+                    <div class="card-top">
+                        <span class="currency">$</span>
+                        <span class="amount">772.00</span>
+                    </div>
+                    <div class="card-bottom">Entrada</div>
                 </div>
-                <div class="card-bottom">Entrada</div>
-            </div>
-            <div class="card card-red">
-                <div class="card-top">
-                    <span class="currency">$</span>
-                    <span class="amount">510.50</span>
+                <div class="card card-red">
+                    <div class="card-top">
+                        <span class="currency">$</span>
+                        <span class="amount">510.50</span>
+                    </div>
+                    <div class="card-bottom">Saida</div>
                 </div>
-                <div class="card-bottom">Saida</div>
-            </div>
-            <div class="card card-blue">
-                <div class="card-top">
-                    <span class="currency">$</span>
-                    <span class="amount">261.50</span>
+                <div class="card card-blue">
+                    <div class="card-top">
+                        <span class="currency">$</span>
+                        <span class="amount">261.50</span>
+                    </div>
+                    <div class="card-bottom">Lucro</div>
                 </div>
-                <div class="card-bottom">Lucro</div>
             </div>
-        </div>
+        </section>
 
         <section class="section-table d-flex flex-column align-items-end w-100">
 
             <div class="row table-btns">
 
 
-                <div class="col-1">
+                <div class="col-auto">
                     <button class="edit-btn">
                         <i class="bi bi-pencil-square"></i>
                     </button>
                 </div>
 
 
-                <div class="col-1">
+                <div class="col-auto">
                     <button class="refresh-btn">
                         <i class="bi bi-arrow-clockwise"></i>
                     </button>
@@ -243,10 +239,11 @@
             </div>
 
 
-            <div class="tabela-container table-responsive">
+            <div class="tabela-container table-responsive" id="table-fluxo">
                 <table>
                     <thead>
                         <tr>
+                            <th>Nº</th>
                             <th>DATA</th>
                             <th>NOME_APP</th>
                             <th>DESCRIÇÃO</th>
@@ -256,41 +253,73 @@
                     </thead>
                     <tbody>
                         <tr class="text-green">
-                            <td>29/02</td>
+                            <th>1</th>
+                            <td>05/06/2026</td>
                             <td>Mensalidade</td>
                             <td>Recebida a Mensalidade do Cliente: Jurandir Freitas</td>
                             <td>M/Q</td>
                             <td>52,00</td>
                         </tr>
                         <tr class="text-green">
-                            <td>29/02</td>
+                            <th>2</th>
+                            <td>05/06/2026</td>
                             <td>Anualidade</td>
                             <td>Recebida a Anualidade do Cliente: Adolfo Costa Pinto</td>
                             <td>A/S</td>
                             <td>720,00</td>
                         </tr>
                         <tr class="text-red">
-                            <td>28/02</td>
+                            <th>3</th>
+                            <td>04/06/2026</td>
                             <td>Conta Paga</td>
                             <td>Paga a conta de Energia da Empresa</td>
                             <td>D/C</td>
                             <td>300,00</td>
                         </tr>
                         <tr class="text-red">
-                            <td>28/02</td>
+                            <th>4</th>
+                            <td>04/06/2026</td>
                             <td>Conta Paga</td>
                             <td>Paga a conta de Água da Empresa</td>
                             <td>D/C</td>
                             <td>210,50</td>
                         </tr>
                         <tr>
+                            <th>-</th>
                             <td>-</td>
                             <td>-</td>
                             <td>-</td>
                             <td>-</td>
                             <td>-</td>
                         </tr>
-                       
+
+                        <tr>
+                            <th>-</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <th>-</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <th>-</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
                     </tbody>
                 </table>
             </div>

@@ -195,49 +195,56 @@
 
 
         </div>
-        <div class="px-4">
 
-            <div class="row g-4 mb-4">
-                <div class="col-12 col-md-4">
-                    <div class="card-financeiro-box text-center">
-                        <div class="card-fin-title">Contas Pagas</div>
-                        <div class="card-fin-number">02</div>
+        <section>
+            <div class="px-4">
+
+                <div class="row g-3 text-center mb-4">
+                    <div class="col-md-4">
+                        <div class="card card-std money card-border-green">
+                            <div class="small text-uppercase opacity-75 mb-2">Contas Pagas</div>
+                            <h2 class="card-text-green display-5">03</h2>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card card-std money card-border-red">
+                            <div class="small text-uppercase opacity-75 mb-2">Contas Abertas</div>
+                            <h2 class="card-text-blue display-5">02</h2>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card card-std money card-border-red">
+                            <div class="small text-uppercase opacity-75 mb-2">Contas Vencidas</div>
+                            <h2 class="card-text-red display-5">01</h2>
+                        </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-4">
-                    <div class="card-financeiro-box text-center">
-                        <div class="card-fin-title">Contas Abertas</div>
-                        <div class="card-fin-number">01</div>
-                    </div>
+
+        </section>
+
+
+        <section class="section-table d-flex flex-column align-items-end w-100">
+
+            <div class="row table-btns">
+
+
+                <div class="col-auto">
+                    <button class="edit-btn">
+                        <i class="bi bi-pencil-square"></i>
+                    </button>
                 </div>
-                <div class="col-12 col-md-4">
-                    <div class="card-financeiro-box text-center">
-                        <div class="card-fin-title">Contas Vencidas</div>
-                        <div class="card-fin-number">00</div>
-                    </div>
+
+
+                <div class="col-auto">
+                    <button class="refresh-btn">
+                        <i class="bi bi-arrow-clockwise"></i>
+                    </button>
                 </div>
             </div>
 
-            <section class="section-table d-flex flex-column align-items-end w-100">
-
-                <div class="row table-btns">
-
-
-                    <div class="col-1">
-                        <button class="edit-btn">
-                            <i class="bi bi-pencil-square"></i>
-                        </button>
-                    </div>
-
-
-                    <div class="col-1">
-                        <button class="refresh-btn">
-                            <i class="bi bi-arrow-clockwise"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!--<div class="d-flex justify-content-between align-items-center mb-3 mt-4">
+            <!--<div class="d-flex justify-content-between align-items-center mb-3 mt-4">
                     <div class="d-flex gap-2">
                         <button class="btn btn-filtro-tab active">Todas</button>
                         <button class="btn btn-filtro-tab">Pagas</button>
@@ -248,105 +255,91 @@
                     
                 </div>-->
 
-                <div class="tabela-container-wrapper">
-                    <div class="tabela-scroll-box">
-                        <table class="table tabela-financeira-custom">
-                            <thead>
-                                <tr>
-                                    <th scope="col" style="width: 22%;">NOME</th>
-                                    <th scope="col" style="width: 15%;">STATUS</th>
-                                    <th scope="col" style="width: 18%;">DATA PAGAMENTO</th>
-                                    <th scope="col" style="width: 18%;">DATA VENCIMENTO</th>
-                                    <th scope="col" style="width: 15%;">COMPROVANTE</th>
-                                    <th scope="col" style="width: 12%;">VALOR</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="text-start text-green-custom fw-medium">Posto de Gasolina</td>
-                                    <td><span class="badge-status status-pago">Pago</span></td>
-                                    <td class="text-green-custom">29/02/2026</td>
-                                    <td class="text-muted-custom">---------</td>
-                                    <td><button class="btn-anexar"></button></td>
-                                    <td class="text-green-custom fw-medium">52,00</td>
-                                </tr>
-                                <tr>
-                                    <td class="text-start text-green-custom fw-medium">Conta de Luz</td>
-                                    <td><span class="badge-status status-pago">Pago</span></td>
-                                    <td class="text-green-custom">29/02/2026</td>
-                                    <td class="text-green-custom">05/03/2026</td>
-                                    <td><button class="btn-anexar"></button></td>
-                                    <td class="text-green-custom fw-medium">220,00</td>
-                                </tr>
-                                <tr>
-                                    <td class="text-start text-red-custom fw-medium">Conta de Água</td>
-                                    <td><span class="badge-status status-aberto">Em Aberto</span></td>
-                                    <td class="text-muted-custom">---------</td>
-                                    <td class="text-red-custom">05/03/2026</td>
-                                    <td><button class="btn-anexar"></button></td>
-                                    <td class="text-red-custom fw-medium">300,00</td>
-                                </tr>
-                                <tr>
-                                    <td class="text-start text-red-custom fw-medium">Conta de Internet</td>
-                                    <td><span class="badge-status status-vencido">Vencida</span></td>
-                                    <td class="text-muted-custom">---------</td>
-                                    <td class="text-red-custom">28/02/2026</td>
-                                    <td><button class="btn-anexar"></button></td>
-                                    <td class="text-red-custom fw-medium">250,00</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </section>
+            <div class="tabela-container table-responsive" id="table-contas">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nº</th>
+                            <th>NOME</th>
+                            <th>STATUS</th>
+                            <th>DATA DE PAGAMENTO</th>
+                            <th>DATA DE VENCIMENTO</th>
+                            <th>COMPROVANTE</th>
+                            <th>VALOR</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr class="text-green">
+                            <td>1</td>
+                            <td>Posto de Gasolina</td>
+                            <td><span class="status-badge status-green">Pago</span></td>
+                            <td>07/06/2026</td>
+                            <td>--/--/--</td>
+                            <td><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D"
+                                    class="btn status-badge status-btn" target="_blank">Anexar</a></td>
+                            <td>52,00</td>
+                        </tr>
+                        <tr class="text-green">
+                            <td>2</td>
+                            <td>Conta de Água</td>
+                            <td><span class="status-badge status-green">Pago</span></td>
+                            <td>05/06/2026</td>
+                            <td>08/06/2026</td>
+                            <td><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D"
+                                    class="btn status-badge status-btn" target="_blank">Anexar</a></td>
+                            <td>125,00</td>
+                        </tr>
+                        <tr class="text-blue">
+                            <td>3</td>
+                            <td>Conta de Luz</td>
+                            <td><span class="status-badge status-blue">À Pagar</span></td>
+                            <td>--/--/--</td>
+                            <td>08/06/2026</td>
+                            <td><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D"
+                                    class="btn status-badge status-btn" target="_blank">Anexar</a></td>
+                            <td>125,00</td>
+                        </tr>
+                        <tr class="text-red">
+                            <td>4</td>
+                            <td>Conta de Internet</td>
+                            <td><span class="status-badge status-red">Atrasada</span></td>
+                            <td>--/--/--</td>
+                            <td>05/06/2026</td>
+                            <td><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D"
+                                    class="btn status-badge status-btn" target="_blank">Anexar</a></td>
+                            <td>173,00</td>
+                        </tr>
+
+                        <tr class="text-green">
+                            <td>5</td>
+                            <td>Posto de Gasolina</td>
+                            <td><span class="status-badge status-green">Pago</span></td>
+                            <td>04/06/2026</td>
+                            <td>--/--/--</td>
+                            <td><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D"
+                                    class="btn status-badge status-btn" target="_blank">Anexar</a></td>
+                            <td>57.33</td>
+                        </tr>
+
+                        <tr class="text-red">
+                            <td>6</td>
+                            <td>Conta de Internet</td>
+                            <td><span class="status-badge status-green">Pago</span></td>
+                            <td>08/05/2026</td>
+                            <td>05/05/2026</td>
+                            <td><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D"
+                                    class="btn status-badge status-btn" target="_blank">Anexar</a></td>
+                            <td>125,00</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+
+
+        </section>
 
         </div>
     </main>

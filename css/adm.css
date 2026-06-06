@@ -15,33 +15,55 @@
     --txt_green: #00FF48;
     --txt_blue: #4531E0;
     --txt_card: #ffffff;
+    --txt_invert: #000000;
 
     /*Logo*/
     --logo_std: #DEE8FF;
 
     /*Cores*/
-    --bg_body: #252A2D; /*Background Principal*/
-    --bg_navbar: #0E0E0E; /*Background NavBar*/
-    --bg_modes: #121315; /*Background Icones Sidebar*/
-    --bg_sdbar: #1a1c1e; /*Background Itens Sidebar*/
-    --bg_filters: #1C1D21; /*Background Filtros*/
-    --bg_dropdown_filter: #3E3E3E; /*Background da seleção dos filtros grandes)*/
-    --disable_empty: #72767B; /*#212529*/ /*Itens Desabilitados / Vazios / Filtros*/
-    --dashboard: #1C1D21; /*Background Dashboards Geral*/
-    --dashboard_red: #910000; /*Background Dashboard Vermelho*/
-    --dashboard_green: #00982B; /*Background Dashboard Verde*/
-    --dashboard_blue: #1700C4; /*Background Dashboard Azul*/
+    --bg_body: #252A2D;
+    /*Background Principal*/
+    --bg_navbar: #0E0E0E;
+    /*Background NavBar*/
+    --bg_modes: #121315;
+    /*Background Icones Sidebar*/
+    --bg_sdbar: #1a1c1e;
+    /*Background Itens Sidebar*/
+    --bg_filters: #1C1D21;
+    /*Background Filtros*/
+    --bg_dropdown_filter: #3E3E3E;
+    /*Background da seleção dos filtros grandes)*/
+    --disable_empty: #72767B;
+    /*#212529*/
+    /*Itens Desabilitados / Vazios / Filtros*/
+    --dashboard: #1C1D21;
+    /*Background Dashboards Geral*/
+    --dashboard_red: #910000;
+    /*Background Dashboard Vermelho*/
+    --dashboard_green: #00982B;
+    /*Background Dashboard Verde*/
+    --dashboard_blue: #1700C4;
+    /*Background Dashboard Azul*/
 
     /*Table*/
-    --bg_table: #1f2229; /*1C1D21*/ /*Background da tabela*/
-    --table_btn: #4B4C4F; /*Botão Selecionado de cima da tabela (O não selecionado é apenas com um tracejado branco, sem preenchimento)*/
-    --table_status_red: #411717; /*Background do Status vermelho da tabela*/
-    --table_status_green: #17411C; /*Background do Starus verde da tabela*/
+    --bg_table: #1f2229;
+    /*1C1D21*/
+    /*Background da tabela*/
+    --table_btn: #4B4C4F;
+    /*Botão Selecionado de cima da tabela (O não selecionado é apenas com um tracejado branco, sem preenchimento)*/
+    --table_status_red: #411717;
+    /*Background do Status vermelho da tabela*/
+    --table_status_green: #17411C;
+    /*Background do Starus verde da tabela*/
+    --table_status_blue: #241e51;
+    /*Backgorund do Status Azul da tabela*/
 
     /*Selection*/
-    --selection_blue: #00d2ff; /*Seleção*/
+    --selection_blue: #00d2ff;
+    /*Seleção*/
 
-    --sb_hover: #23262b; /*Hover da Sidebar*/
+    --sb_hover: #23262b;
+    /*Hover da Sidebar*/
 }
 
 /* Tema Claro */
@@ -52,33 +74,54 @@
     --txt_green: #00FF48;
     --txt_blue: #4531E0;
     --txt_card: #ffffff;
+    --txt_invert: #ffffff;
 
     /*Logo*/
     --logo_std: #14132B;
 
     /*Cores*/
-    --bg_body: #ffffff; /*Background Principal*/
-    --bg_navbar: #DCDFE0; /*Background NavBar / Seleção / Pesquisar*/
-    --bg_modes: #E5E9EC; /*Background Icones Sidebar*/
-    --bg_sdbar: #F4F9FF; /*Background Itens Sidebar*/
-    --bg_filters: #E5E9EC; /*Background Filtros*/
-    --bg_dropdown_filter: #848383; /*Background da seleção dos filtros grandes)*/
-    --disable_empty: #72767B; /*#212529*/ /*Itens Desabilitados / Vazios*/
-    --dashboard: #DCDCDC; /*Background Dashboards Geral*/
-    --dashboard_red: #910000; /*Background Dashboard Vermelho*/
-    --dashboard_green: #00982B; /*Background Dashboard Verde*/
-    --dashboard_blue: #1700C4; /*Background Dashboard Azul*/
+    --bg_body: #ffffff;
+    /*Background Principal*/
+    --bg_navbar: #DCDFE0;
+    /*Background NavBar / Seleção / Pesquisar*/
+    --bg_modes: #E5E9EC;
+    /*Background Icones Sidebar*/
+    --bg_sdbar: #F4F9FF;
+    /*Background Itens Sidebar*/
+    --bg_filters: #E5E9EC;
+    /*Background Filtros*/
+    --bg_dropdown_filter: #848383;
+    /*Background da seleção dos filtros grandes)*/
+    --disable_empty: #72767B;
+    /*#212529*/
+    /*Itens Desabilitados / Vazios*/
+    --dashboard: #ececec;
+    /*Background Dashboards Geral*/
+    --dashboard_red: #910000;
+    /*Background Dashboard Vermelho*/
+    --dashboard_green: #00982B;
+    /*Background Dashboard Verde*/
+    --dashboard_blue: #1700C4;
+    /*Background Dashboard Azul*/
 
     /*Table*/
-    --bg_table: #F5F7F7; /*Background da tabela*/
-    --table_btn: #ACAFB1; /*Botão Selecionado de cima da tabela (O não selecionado é apenas com um tracejado preto, sem preenchimento)*/
-    --table_status_red: #D64B4B; /*Background do Status vermelho da tabela*/
-    --table_status_green: #17411C; /*Background do Starus verde da tabela*/
+    --bg_table: #F5F7F7;
+    /*Background da tabela*/
+    --table_btn: #ACAFB1;
+    /*Botão Selecionado de cima da tabela (O não selecionado é apenas com um tracejado preto, sem preenchimento)*/
+    --table_status_red: #D64B4B;
+    /*Background do Status vermelho da tabela*/
+    --table_status_green: #17411C;
+    /*Background do Starus verde da tabela*/
+    --table_status_blue: #978bf0;
+    /*Backgorund do Status Azul da tabela*/
 
     /*Selection*/
-    --selection_blue: #00d2ff; /*Seleção*/
+    --selection_blue: #00d2ff;
+    /*Seleção*/
 
-    --sb_hover: #e5f0f6; /*Hover da Sidebar*/
+    --sb_hover: #e5f0f6;
+    /*Hover da Sidebar*/
 }
 
 
@@ -106,7 +149,38 @@ body {
     margin-right: 34p;
 }
 
+.text-blue {
+    color: var(--txt_blue);
+}
 
+.text-green {
+    color: var(--txt_green);
+}
+
+.text-red {
+    color: var(--txt_red);
+}
+
+
+/*==========================================
+                    TEXTOS
+  ========================================== */
+
+.text-red {
+    color: var(--txt_red);
+}
+
+.text-blue {
+    color: var(--txt_blue);
+}
+
+.text-green{
+    color: var(--txt_green) ;
+}
+
+.text-std{
+    color: var(--txt_std);
+}
 
 
 
@@ -460,49 +534,52 @@ body {
 .filter-bar {
     margin-left: -25px !important;
     margin-right: -25px !important;
-    
+
     /* 2. Compensa a largura: 20px da esquerda + 20px da direita = 40px */
-    width: calc(100% + 60px) !important; 
+    width: calc(100% + 60px) !important;
 
     /* 3. Mantém os botões internos alinhados com a margem de 20px da tabela */
     padding-left: 20px !important;
     padding-right: 20px !important;
 
     /* 4. Remove o arredondado das pontas para virar uma faixa contínua */
-    border-radius: 0 !important; 
+    border-radius: 0 !important;
 
     /* Seus estilos visuais e de alinhamento */
-    background-color: var(--dashboard);
+    background-color: var(--bg_filters);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 60px; /* Uma altura elegante para a faixa */
+    height: 60px;
+    /* Uma altura elegante para a faixa */
     border-bottom: 1px solid rgba(173, 151, 151, 0.05);
 
     margin-top: -29px;
-    
-    
- 
+
+
+
 }
 
 .filter-group {
     display: flex !important;
-    flex-direction: row !important; /* Impede o empilhamento vertical */
+    flex-direction: row !important;
+    /* Impede o empilhamento vertical */
     align-items: center !important;
-    gap: 8px !important; /* Espaçamento entre os botões redondos */
+    gap: 8px !important;
+    /* Espaçamento entre os botões redondos */
 }
 
 /* Estilo Base para os Botões de Filtro (Estilo Pills do seu print) */
 .btn-filter {
-    background: transparent ;
+    background: transparent;
     border: 1px solid var(--txt_std);
     /* Cor da borda discreta */
     color: var(--txt_std);
     font-family: 'Science Gothic', sans-serif;
     font-size: 13px;
     font-weight: 400;
-    padding: 6px 18px ;
-    border-radius: 20px ;
+    padding: 6px 18px;
+    border-radius: 20px;
     /* Deixa as pontas totalmente arredondadas */
     transition: all 0.2s ease;
 }
@@ -513,7 +590,7 @@ body {
     background-color: color-mix(in srgb, var(--txt_std) 25%, transparent);
     /* Cinza preenchido do seu print */
     border-color: var(--txt_std);
-    color: var(--txt_std)!important;
+    color: var(--txt_std) !important;
 }
 
 /* Remove a setinha padrão do Bootstrap se você quiser o visual idêntico ao print */
@@ -524,8 +601,8 @@ body {
 /* Botão de Ação da Direita (Botão Editar) */
 .btn-filter-action {
     background: transparent !important;
-    border: 1px solid var(--txt_std)!important;
-    
+    border: 1px solid var(--txt_std) !important;
+
     color: var(--txt_std) !important;
     font-family: 'Science Gothic', sans-serif;
     font-size: 13px;
@@ -562,13 +639,13 @@ body {
 }
 
 
-.btn-filter:focus, 
+.btn-filter:focus,
 .btn-filter:active,
-.show > .btn-filter.dropdown-toggle {
-  
+.show>.btn-filter.dropdown-toggle {
+
     border-color: var(--txt_std);
-    color: var(--txt_std);            
-    box-shadow: var(--selection_blue) !important;           
+    color: var(--txt_std);
+    box-shadow: var(--selection_blue) !important;
 }
 
 
@@ -582,6 +659,7 @@ body {
     background-color: var(--dashboard);
     margin-left: 20px;
     border-radius: 15px;
+
 }
 
 /* Container principal que alinha as colunas lado a lado */
@@ -658,16 +736,16 @@ body {
 .section-card {
     padding-left: 20px;
     padding-right: 20px;
+    gap: 20px;
 }
 
 /*Formato das Cards*/
 .cards {
     display: grid;
 
-
     margin-bottom: 30px;
 
-    border-radius: 15px;
+    border-radius: 7px;
     text-align: center;
 }
 
@@ -692,8 +770,28 @@ body {
     background-color: var(--dashboard);
     color: var(--txt_card);
     max-height: 130px;
+    border-bottom: 3px solid var(--txt_std);
 
 }
+
+.card-border-red {
+    border-bottom: 3px solid var(--txt_red);
+}
+
+.card-border-green {
+    border-bottom: 3px solid var(--txt_green);
+
+}
+
+.card-border-blue {
+    border-bottom: 3px solid var(--txt_blue);
+
+}
+
+.cards-max-height {
+    height: 130px;
+}
+
 
 /*Info de dinheiro*/
 .money {
@@ -702,7 +800,7 @@ body {
 }
 
 /*With Colored Background*/
-.money-w-cbg{
+.money-w-cbg {
     color: var(--txt_card);
 }
 
@@ -713,7 +811,7 @@ body {
 }
 
 /*With Colored Background*/
-.money-symbol-w-cbg{
+.money-symbol-w-cbg {
     font-size: 50px;
     color: var(--txt_card);
 }
@@ -734,12 +832,35 @@ body {
 }
 
 
+
 .card-std .card-label {
     margin: 0;
     padding-top: 12px;
     padding-bottom: 12px;
     line-height: 1;
     text-align: center;
+}
+
+
+.card-text-red {
+    color: var(--txt_red);
+    font-weight: bol;
+    font-weight: bold;
+}
+
+.card-text-green {
+    color: var(--txt_green);
+    font-weight: bold;
+}
+
+.card-text-blue {
+    color: var(--txt_blue);
+    font-weight: bold;
+}
+
+.card-text-std {
+    color: var(--txt_card);
+
 }
 
 
@@ -810,14 +931,6 @@ body {
 
 
 
-/* Classes de cores específicas do seu painel */
-.text-red {
-    color: #D11010;
-}
-
-.text-blue {
-    color: #4531E0;
-}
 
 
 /* ==========================================
@@ -862,14 +975,13 @@ body {
 .section-table {
     margin-left: 20px;
     margin-right: 20px;
+    margin-top: 40px;
 
     width: calc(100% - 20px) !important;
 }
 
-/*Botões de cima da tabela*/
-.table-btns {
-    gap: 30px;
-}
+
+
 
 
 /*Botão de Atualziar*/
@@ -878,7 +990,7 @@ body {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 5px;
-    background-color: var(--bg_body);
+    background-color: transparent;
 
     color: var(--txt_std);
     border: none;
@@ -897,7 +1009,7 @@ body {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 5px;
-    background-color: var(--bg_body);
+    background-color: transparent;
 
     color: var(--txt_std);
     border: none;
@@ -920,22 +1032,32 @@ table {
     width: 100%;
     border-collapse: collapse;
     color: var(--txt_std);
+  
+
 }
 
 
 /*Definição geral da tabela*/
 .tabela-container {
-    max-height: 350px;
+
     overflow-y: auto;
     border-radius: 15px;
     background: var(--bg_table);
 
-/*Mini configs de tamanho e barinhas*/
+
+    /*Mini configs de tamanho e barinhas*/
     width: 100%;
-    max-height: 350px;   
+    max-height: 55vh;
     overflow-y: auto;
     overflow-x: hidden;
     text-align: center;
+}
+
+thead {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--bg_table);
 }
 
 /*Table Header e Table Data*/
@@ -943,6 +1065,7 @@ th,
 td {
     padding: 15px;
     border-bottom: 1px solid #444;
+    max-height: 350px;
 }
 
 
@@ -966,48 +1089,85 @@ td {
     background: #23262d;
 }
 
-table {
-    width: 100%;
-    background: var(--bg_table);
-    border-collapse: collapse;
+/* Status */
+.status-badge {
+
+    padding: 3px 18px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 500;
 }
 
-th,
-td {
-    padding: 15px;
-    border-bottom: 1px solid #444;
+.status-green {
+    background-color: color-mix(in srgb, var(--table_status_green) 70%, transparent);
+    color: var(--txt_green);
 }
 
-th {
-    background: var(--bg_table);
+.status-red {
+    background-color: color-mix(in srgb, var(--table_status_red) 70%, transparent);
+    color: var(--txt_red);
+}
+
+.status-blue {
+    background-color: color-mix(in srgb, var(--table_status_blue) 70%, transparent);
+    color: var(--txt_blue);
+}
+
+.status-btn {
+    background-color: color-mix(in srgb, var(--txt_std) 70%, transparent);
+    color: var(--txt_invert);
+    border: transparent;
+}
+
+.status-btn:hover,
+.status-btn:active {
+    background-color: color-mix(in srgb, var(--txt_std) 30%, transparent);
+    color: var(--txt_invert);
+    border: color-mix(in srgb, var(--txt_std) 30%, transparent);
 }
 
 
 
+/* Contas a pagar tabela */
+
+#table-contas{
+    max-height: 55vh;
+}
+
+#table-fluxo{
+    max-height: 52vh;
+}
+
+#table-multas{
+    max-height: 33vh;
+}
 
 
 /* ==========================================
                    RECEITAS
    ========================================== */
 
-.info-receita {
-    margin-bottom: 100px;
-}
 
 /*Table da pag receitas com sidescrolling*/
 #table-receitas {
-    display: block !important; /*Força o container a se comportar como um bloco isolado*/
+    display: block !important;
+    /*Força o container a se comportar como um bloco isolado*/
     width: 100% !important;
-    max-height: 350px;
-    overflow-x: auto !important; /*Ativa o side-scrolling obrigatório*/
-    overflow-y: auto !important; /*Mantém o scroll vertical*/
+    max-height: 42vh;
+    overflow-x: auto !important;
+    /*Ativa o side-scrolling obrigatório*/
+    overflow-y: auto !important;
+    /*Mantém o scroll vertical*/
+
 }
 
 #table-receitas table {
-    display: block !important; /*Impede que a tabela se comprima para caber na tela*/
-    width: max-content !important; /*Faz a tabela assumir o tamanho real baseado no texto das colunas*/
+    display: block !important;
+    /*Impede que a tabela se comprima para caber na tela*/
+    width: max-content !important;
+    /*Faz a tabela assumir o tamanho real baseado no texto das colunas*/
     min-width: 100% !important;
-    
+
 }
 
 /*Cansei de comentar. Awui é o treco do cabeçalh*/
@@ -1039,53 +1199,7 @@ th {
                FLUXO DE CAIXA
    ========================================== */
 
-.financial-content {
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    width: 100%;
-    box-sizing: border-box;
-    color: var(--txt_std);
-}
 
-/* Filtros do topo */
-.filters-section {
-    display: flex;
-    gap: 20px;
-}
-
-.filter-group {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    flex: 1;
-}
-
-.filter-group label {
-    font-size: 14px;
-    font-weight: bold;
-    color: var(--txt_std);
-}
-
-.filter-box {
-    background-color: var(--bg_dropdown_filter);
-    color: var(--txt_std); 
-    border: none;
-    padding: 12px 15px;
-    border-radius: 4px;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-select.filter-box {
-    appearance: none;
-    cursor: pointer;
-}
 
 /* Dashboards */
 .summary-cards {
@@ -1100,8 +1214,8 @@ select.filter-box {
     border-radius: 4px;
     overflow: hidden;
     font-weight: bold;
-    border: none; 
-    color: #ffffff; 
+    border: none;
+    color: #ffffff;
 }
 
 .card-top {
@@ -1122,66 +1236,24 @@ select.filter-box {
     font-size: 18px;
     font-weight: bold;
     letter-spacing: 1px;
-    background-color: rgba(0, 0, 0, 0.15); 
+    background-color: rgba(0, 0, 0, 0.15);
 }
 
 /* Cor - cards */
-.card-green { background-color: var(--dashboard_green); }
-.card-red { background-color: var(--dashboard_red); }
-.card-blue { background-color: var(--dashboard_blue); }
-
-/* Tabela de Dados */
-.table-section {
-    background-color: var(--bg_table);
-    border-radius: 4px;
-    padding: 20px;
+.card-green {
+    background-color: var(--dashboard_green);
 }
 
-.table-header-actions {
-    display: flex;
-    justify-content: flex-end;
-    gap: 15px;
-    margin-bottom: 15px;
+.card-red {
+    background-color: var(--dashboard_red);
 }
 
-.table-header-actions .icon {
-    color: var(--disable_empty);
-    font-size: 20px;
-    cursor: pointer;
-    transition: color 0.2s;
+.card-blue {
+    background-color: var(--dashboard_blue);
 }
 
-.table-header-actions .icon:hover {
-    color: var(--txt_std);
-}
 
-.financial-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 13px;
-    color: var(--txt_std);
-}
 
-.financial-table th, 
-.financial-table td {
-    border: 1px solid var(--table_divs);
-    padding: 15px;
-    text-align: left;
-}
-
-.financial-table th {
-    text-transform: uppercase;
-    font-weight: normal;
-    color: var(--txt_std);
-    opacity: 0.8; 
-}
-
-.financial-table tr {
-    height: 45px;
-}
-
-.text-green td { color: var(--txt_green); }
-.text-red td { color: var(--txt_red); }
 
 
 /* ==========================================
@@ -1205,58 +1277,14 @@ select.filter-box {
     align-items: center;
 }
 
-.filter-buttons {
-    display: flex;
-    gap: 12px;
-}
 
-.right-buttons {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-/* Estilização dos Botões Baseada nas suas Variáveis */
-.btn-dash {
-    background: transparent;
-    color: var(--txt_std);
-    border: 1px solid var(--txt_std);
-    padding: 6px 18px;
-    border-radius: 20px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-
-.btn-dash.active, .btn-dash:hover {
-    background-color: var(--table_btn);
-    border-color: var(--table_btn);
-    color: #ffffff;
-}
-
-.btn-dash-outline {
-    background: transparent;
-    color: var(--txt_std);
-    border: 1px solid var(--txt_std);
-    padding: 6px 24px;
-    border-radius: 8px;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-.btn-refresh {
-    background: transparent;
-    border: none;
-    color: var(--txt_std);
-    font-size: 22px;
-    cursor: pointer;
-}
 
 /* Layout em fileiras (Rows) */
 .dashboard-row {
     display: flex;
     gap: 20px;
     width: 100%;
+    min-width: 0;
 }
 
 /* Boxes dos gráficos */
@@ -1267,6 +1295,7 @@ select.filter-box {
     flex: 1;
     display: flex;
     flex-direction: column;
+    min-width: 0;
 }
 
 .chart-title {
@@ -1288,12 +1317,14 @@ select.filter-box {
 .canvas-container {
     position: relative;
     width: 100%;
-    height: 180px; /* Altura padrão para gráficos médios */
+    height: 110px;
+    /* Altura padrão para gráficos médios */
+    min-width: 0;
 }
 
 /* Grid específico do topo: Gráfico Grande + Mini Cards */
 .grid-main-top {
-    display: grid;
+    display: flex;
     grid-template-columns: 3fr 1fr;
     gap: 20px;
 }
@@ -1345,6 +1376,7 @@ select.filter-box {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
+    min-width: 0;
 }
 
 .row-doughnut {
@@ -1388,7 +1420,7 @@ select.filter-box {
 
 /* Rodapé */
 .footer-chart {
-    height: 280px;
+    height: 180px;
 }
 
 /* Container para alinhar gráfico + legenda lado a lado */
@@ -1402,7 +1434,7 @@ select.filter-box {
 }
 
 .container-donut {
-    width: 130px !important; 
+    width: 130px !important;
     height: 130px !important;
 }
 
@@ -1433,349 +1465,36 @@ select.filter-box {
 }
 
 /* Cores batendo certinho com o gráfico do JS */
-.dot.yellow { background-color: #eab308; }
-.dot.blue   { background-color: #2563eb; }
-.dot.green  { background-color: #10b981; }
-.dot.purple { background-color: #4f46e5; }
-.dot.red    { background-color: #dc2626; }
+.dot.yellow {
+    background-color: #eab308;
+}
 
-.w-100 { width: 100%; }
+.dot.blue {
+    background-color: #2563eb;
+}
+
+.dot.green {
+    background-color: #10b981;
+}
+
+.dot.purple {
+    background-color: #4f46e5;
+}
+
+.dot.red {
+    background-color: #dc2626;
+}
+
+.w-100 {
+    width: 100%;
+}
+
 /* ajuste na extrutura geral (Caso o grupo use uma div wrapper/container principal) */
-.wrapper, .container-geral, #app {
+.wrapper,
+.container-geral,
+#app {
     height: 100vh !important;
     max-height: 100vh !important;
     overflow: hidden !important;
 }
 
-/* Fundo Geral do Site (Ajustado com trava ) */
-.main {
-    background-color: var(--bg_body, #252A2D) !important; 
-    height: calc(100vh - 70px) !important; /* Altura exata descontando a navbar */
-    max-height: calc(100vh - 70px) !important;
-    font-family: 'Science Gothic', sans-serif;
-    overflow-y: hidden !important; /* Garante que o main em si não role */
-    overflow-x: hidden !important;
-}
-
-/* Quadrado/Barra Superior dos Filtros */
-.topo-filtros-box {
-    background-color: var(--bg_sdbar, #1a1c1e); 
-    border-bottom: 1px solid var(--table_divs, #3E3E3E);
-    width: 100%;
-}
-
-/* Rótulo dos Filtros */
-.filtro-label {
-    font-size: 14px;
-    font-weight: 400;
-    color: var(--disable_empty, #72767B); 
-}
-
-/* Input do Intervalo de Datas */
-.data-input-group {
-    background-color: var(--bg_body, #252A2D); 
-    border: 1px solid var(--table_divs, #3E3E3E);
-    border-radius: 6px;
-    height: 38px;
-}
-
-.data-texto {
-    font-size: 14px;
-    color: var(--txt_std, #ffffff); 
-}
-
-/* Botões de Filtros Rápidos */
-.btn-filtro {
-    background-color: transparent;
-    border: 1px solid var(--table_btn, #4B4C4F);
-    color: var(--txt_std, #ffffff);
-    border-radius: 20px;
-    padding: 4px 16px;
-    font-size: 14px;
-    height: 38px;
-    transition: all 0.2s ease;
-}
-
-.btn-filtro:hover, .btn-filtro.active {
-    background-color: var(--table_btn, #4B4C4F); 
-    border-color: var(--table_btn, #4B4C4F);
-    color: var(--txt_std, #ffffff);
-}
-
-/* Botão Editar */
-.btn-editar-custom {
-    background-color: transparent;
-    border: 1px solid var(--txt_std, #ffffff);
-    color: var(--txt_std, #ffffff);
-    border-radius: 8px;
-    padding: 4px 24px;
-    font-size: 14px;
-    height: 38px;
-}
-
-.btn-editar-custom:hover {
-    background-color: var(--txt_std, #ffffff);
-    color: var(--bg_body, #252A2D);
-}
-
-/* Texto de Aviso Centralizado */
-.aviso-historico {
-    font-size: 24px;
-    font-weight: 400;
-    color: var(--txt_std, #ffffff);
-    letter-spacing: 0.5px;
-}
-
-/* Botão do Ícone Atualizar */
-.btn-refresh-table {
-    background: none;
-    border: none;
-    color: var(--txt_std, #ffffff);
-    padding: 0;
-    opacity: 0.8;
-}
-
-.btn-refresh-table:hover {
-    opacity: 1;
-}
-
-/* Container da Tabela Expandido */
-.tabela-container-wrapper {
-    width: 100%; 
-}
-
-/* Caixa com barra de rolagem  */
-.tabela-scroll-box {
-    height: calc(100vh - 360px); 
-    overflow-y: auto;  
-    overflow-x: hidden; 
-    border: 1px solid var(--table_divs, #3E3E3E);
-    border-radius: 4px;
-    background-color: var(--bg_table, #1C1D21);
-}
-
-/* ---- Estilização Customizada da Barra de Rolagem ---- */
-.tabela-scroll-box::-webkit-scrollbar {
-    width: 10px;
-}
-
-.tabela-scroll-box::-webkit-scrollbar-track {
-    background: var(--bg_table, #1C1D21);
-    border-left: 1px solid var(--table_divs, #3E3E3E);
-}
-
-.tabela-scroll-box::-webkit-scrollbar-thumb {
-    background: var(--table_btn, #4B4C4F);
-    border-radius: 20px;
-}
-
-.tabela-scroll-box::-webkit-scrollbar-thumb:hover {
-    background: var(--disable_empty, #72767B);
-}
-
-/* Tabela Customizada */
-.tabela-historico-preta {
-    background-color: var(--bg_table, #1C1D21) !important;
-    margin-bottom: 0;
-    width: 100%;
-}
-
-.tabela-historico-preta thead th {
-    background-color: var(--bg_table, #1C1D21) !important;
-    color: var(--disable_empty, #72767B) !important;
-    font-weight: 500;
-    font-size: 14px;
-    border-bottom: 2px solid var(--table_divs, #3E3E3E) !important;
-    border-right: 1px solid var(--table_divs, #3E3E3E) !important;
-    padding: 12px;
-    position: sticky;
-    top: 0;
-    z-index: 2;
-}
-
-.tabela-historico-preta tbody th, 
-.tabela-historico-preta tbody td {
-    background-color: transparent !important;
-    color: var(--txt_std, #ffffff) !important;
-    border-bottom: 1px solid var(--table_divs, #3E3E3E) !important;
-    border-right: 1px solid var(--table_divs, #3E3E3E) !important;
-    padding: 10px 12px;
-    font-size: 14px;
-    height: 40px;
-}
-
-/* Remoção da borda da última coluna */
-.tabela-historico-preta tbody td:last-child,
-.tabela-historico-preta thead th:last-child {
-    border-right: none !important;
-}
-
-.tabela-historico-preta tbody th, 
-.tabela-historico-preta thead th:first-child {
-    text-align: center;
-}
-
-/* ==========================================================================
-                            CONTAS A PAGAR                      
-   ========================================================================== */
-
-/* Grupo de Selects Superiores */
-.select-custom-group {
-    background-color: var(--bg_body, #252A2D); 
-    border: 1px solid var(--table_divs, #3E3E3E);
-    border-radius: 6px;
-    height: 38px;
-    cursor: pointer;
-}
-
-/* Estilização dos Cards Superiores */
-.card-financeiro-box {
-    background-color: var(--bg_table, #1C1D21);
-    border: 1px solid var(--table_divs, #3E3E3E);
-    border-radius: 4px;
-    padding: 12px 0;
-}
-
-.card-fin-title {
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--txt_std, #ffffff);
-    border-bottom: 1px solid var(--table_divs, #3E3E3E);
-    padding-bottom: 8px;
-    margin-bottom: 8px;
-}
-
-.card-fin-number {
-    font-size: 32px;
-    font-weight: 700;
-    color: var(--txt_std, #ffffff);
-    font-family: 'Science Gothic', sans-serif;
-}
-
-/* Filtros Rápidos da Tabela */
-.btn-filtro-tab {
-    background-color: transparent;
-    border: 1px solid var(--table_btn, #4B4C4F);
-    color: var(--txt_std, #ffffff);
-    border-radius: 6px;
-    padding: 2px 14px;
-    font-size: 13px;
-}
-
-.btn-filtro-tab:hover, .btn-filtro-tab.active {
-    background-color: var(--table_btn, #4B4C4F);
-    color: var(--txt_std, #ffffff);
-    border-color: var(--table_btn, #4B4C4F);
-}
-
-/* Ícones de ação superiores */
-.btn-icon-action {
-    background: none;
-    border: none;
-    color: var(--txt_std, #ffffff);
-    opacity: 0.8;
-    padding: 0;
-    transition: opacity 0.2s;
-}
-
-.btn-icon-action:hover {
-    opacity: 1;
-}
-
-/* Customização de Cores dos Textos das Colunas */
-.text-green-custom {
-    color: var(--txt_green, #00FF48) !important;
-}
-
-.text-red-custom {
-    color: var(--txt_red, #D11010) !important;
-}
-
-.text-muted-custom {
-    color: var(--disable_empty, #72767B) !important;
-}
-
-/* Badges de Status internas da tabela */
-.badge-status {
-    display: inline-block;
-    padding: 3px 18px;
-    border-radius: 12px;
-    font-size: 13px;
-    font-weight: 500;
-}
-
-.status-pago {
-    background-color: var(--table_status_green, #17411C);
-    color: var(--txt_green, #00FF48);
-}
-
-.status-aberto {
-    background-color:var(--table_status_red,#411717); 
-    color:var(--txt_red,#D11010);
-}
-
-.status-vencido {
-    background-color: var(--table_status_red, #411717);
-    color: var(--txt_red, #D11010);
-}
-
-/* Botão Anexar Comprovante (Tamanho Fixo do Figma) */
-.btn-anexar {
-    background-color: var(--txt_std, #ffffff);
-    color: var(--bg_body, #252A2D);
-    border: none;
-    border-radius: 6px;
-    font-size: 13px;
-    font-weight: 500;
-    
-    /* Trava o tamanho para não encolher sem o texto */
-    width: 78px;  /* Largura exata para manter o formato retangular */
-    height: 26px; /* Altura ideal e controlada */
-    padding: 0;   /* Zera os espaçamentos internos para não distorcer */
-    
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 0.2s;
-}
-
-.btn-anexar:hover {
-    opacity: 0.9;
-}
-
-/* Reutilização da estrutura da tabela com variáveis */
-.tabela-financeira-custom {
-    background-color: var(--bg_table, #1C1D21) !important;
-    margin-bottom: 0;
-    width: 100%;
-}
-
-.tabela-financeira-custom thead th {
-    background-color: var(--bg_table, #1C1D21) !important;
-    color: var(--txt_std, #ffffff) !important;
-    font-weight: 500;
-    font-size: 14px;
-    border-bottom: 2px solid var(--table_divs, #3E3E3E) !important;
-    border-right: 1px solid var(--table_divs, #3E3E3E) !important;
-    padding: 12px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 2;
-}
-
-.tabela-financeira-custom tbody td {
-    background-color: transparent !important;
-    border-bottom: 1px solid var(--table_divs, #3E3E3E) !important;
-    border-right: 1px solid var(--table_divs, #3E3E3E) !important;
-    padding: 8px 12px;
-    font-size: 14px;
-    height: 40px;
-    text-align: center;
-    vertical-align: middle;
-}
-
-.tabela-financeira-custom tbody td:last-child,
-.tabela-financeira-custom thead th:last-child {
-    border-right: none !important;
-}

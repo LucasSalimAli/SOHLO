@@ -299,17 +299,17 @@
         <!-- Tabela -->
         <section class="section-table d-flex flex-column align-items-end w-100">
 
-            <div class="row table-btns">
+           <div class="row table-btns">
 
 
-                <div class="col-1">
+                <div class="col-auto">
                     <button class="edit-btn">
                         <i class="bi bi-pencil-square"></i>
                     </button>
                 </div>
 
 
-                <div class="col-1">
+                <div class="col-auto">
                     <button class="refresh-btn">
                         <i class="bi bi-arrow-clockwise"></i>
                     </button>
@@ -318,8 +318,7 @@
 
 
 
-
-            <div class="tabela-container table-responsive" id="table-receitas">
+            <div class="tabela-container table-responsive w-100" id="table-receitas">
                 <table>
                     <thead>
                         <tr>
@@ -338,64 +337,104 @@
                     </thead>
 
                     <tbody class="table-content">
-                        <tr>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
+
+                        <tr class="text-green">
+                            <td>1</td>
+                            <td>08/08/2026 - 08:30</td>
+                            <td>Jurandir da Silva Melo Soares</td>
+                            <td>Plano Quinzenal Mensal</td>
+                            <td>10/06/2026</td>
+                            <td>Cartão de Crédito</td>
+                            <td>52.00</td>
+                            <td>52.00</td>
+                            <td>48.00</td>
+                            <td><span class="status-badge status-green">Pago</span></td>
+                            <td>-</td>
                         </tr>
 
-                        <tr>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
+                        <tr class="text-green">
+                            <td>2</td>
+                            <td>08/06/2026 - 16:43</td>
+                            <td>Ana Almeida Prado Lima</td>
+                            <td>Plano Semanal Anual</td>
+                            <td>10/06/2026</td>
+                            <td>Pix</td>
+                            <td>720.00</td>
+                            <td>720.00</td>
+                            <td>720.00</td>
+                            <td><span class="status-badge status-green">Pago</span></td>
+                            <td>-</td>
                         </tr>
 
-                        <tr>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
+                        <tr class="text-blue">
+                            <td>3</td>
+                            <td>08/06/2026 - 20:21</td>
+                            <td>Julio Clóvis Ferreira Costa</td>
+                            <td>Pano Quinzenal Mensal</td>
+                            <td>10/05/2026</td>
+                            <td>Pix</td>
+                            <td>52.00</td>
+                            <td>52.00</td>
+                            <td>52.00</td>
+                            <td><span class="status-badge status-blue">Com Atraso</span></td>
+                            <td>-</td>
                         </tr>
 
-                        <tr>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
+                        <tr class="text-green">
+                            <td>4</td>
+                            <td>08/06/2026 - 20:27</td>
+                            <td>Maria Claudia Mendes</td>
+                            <td>Plano Semanal Mensal</td>
+                            <td>10/06/2026</td>
+                            <td>Pix</td>
+                            <td>78.00</td>
+                            <td>78.00</td>
+                            <td>78.00</td>
+                            <td><span class="status-badge status-green">Pago</span></td>
+                            <td>-</td>
                         </tr>
 
-               
-                    
+                        <tr class="text-red">
+                            <td>5</td>
+                            <td>--/--/-- - --:--</td>
+                            <td>Vicenzo Porto Zontini</td>
+                            <td>Plano Semanal Mensal</td>
+                            <td>10/06/2026</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td><span class="status-badge status-red">Em Débito</span></td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr class="text-red">
+                            <td>6</td>
+                            <td>--/--/-- - --:--</td>
+                            <td>Vinicius Coelho Germano</td>
+                            <td>Plano Semanal Mensal</td>
+                            <td>10/06/2026</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td><span class="status-badge status-red">Em Débito</span></td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr class="text-red">
+                            <td>7</td>
+                            <td>--/--/-- - --:--</td>
+                            <td>Antônio Stoppa Neto</td>
+                            <td>Plano Semanal Mensal</td>
+                            <td>10/06/2026</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td><span class="status-badge status-red">Em Débito</span></td>
+                            <td>-</td>
+                        </tr>
 
                     </tbody>
 

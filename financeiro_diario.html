@@ -195,65 +195,27 @@
         <section class="section-card">
             <div class="row justify-content-between">
 
-                <div class="col-4">
-                    <div class="cards">
-
-                        <div class="card card-green">
-
-                            <div class="row">
-                                <div class="col-2">
-                                    <h2 class="money-symbol-w-cbg">$</h2>
-                                </div>
-                                <div class="col-8">
-                                    <h1 class="money-w-cbg">10.00</h1>
-                                </div>
-                            </div>
-                            <hr>
-                            <h1>Entrada</h1>
-
+                <div class="summary-cards my-4">
+                    <div class="card card-green">
+                        <div class="card-top">
+                            <span class="currency">$</span>
+                            <span class="amount">00.00</span>
                         </div>
+                        <div class="card-bottom">Entrada</div>
                     </div>
-                </div>
-
-
-
-                <div class="col-4">
-                    <div class="cards">
-
-                        <div class="card card-red">
-
-                            <div class="row">
-                                <div class="col-2">
-                                    <h2 class="money-symbol-w-cbg">$</h2>
-                                </div>
-                                <div class="col-8">
-                                    <h1 class="money-w-cbg">10.00</h1>
-                                </div>
-                            </div>
-                            <hr>
-                            <h1>Saida</h1>
-
+                    <div class="card card-red">
+                        <div class="card-top">
+                            <span class="currency">$</span>
+                            <span class="amount">00.00</span>
                         </div>
+                        <div class="card-bottom">Saida</div>
                     </div>
-                </div>
-
-                <div class="col-4">
-                    <div class="cards">
-
-                        <div class="card card-blue">
-
-                            <div class="row">
-                                <div class="col-2">
-                                    <h2 class="money-symbol-w-cbg">$</h2>
-                                </div>
-                                <div class="col-8">
-                                    <h1 class="money-w-cbg">10.00</h1>
-                                </div>
-                            </div>
-                            <hr>
-                            <h1>Lucro</h1>
-
+                    <div class="card card-blue">
+                        <div class="card-top">
+                            <span class="currency">$</span>
+                            <span class="amount">00.00</span>
                         </div>
+                        <div class="card-bottom">Lucro</div>
                     </div>
                 </div>
             </div>
@@ -265,25 +227,30 @@
 
         <section class="info">
 
-            <div class="box">
+            <div class="box card-border-green">
                 <h3>Maior Origem</h3>
-                <p class="entry">Venda de Biofertilizante</p>
-                <h2 class="entry">R$150,00</h2>
+                <p class="entry">-------</p>
+                <h2 class="entry">R$00.00</h2>
             </div>
 
-            <div class="box">
+            <div class="box card-border-red">
                 <h3>Maior Gasto</h3>
-                <p class="left">Posto de Gasolina</p>
-                <h2 class="left">R$300,00</h2>
+                <p class="left">-------</p>
+                <h2 class="left">R$00.00</h2>
             </div>
 
         </section>
 
 
         <section class="section-table d-flex flex-column align-items-end w-100">
-            <button class="refresh-btn">
-                <i class="bi bi-arrow-clockwise"></i>
-            </button>
+           <div class="row table-btns">
+
+                <div class="col-auto">
+                    <button class="refresh-btn">
+                        <i class="bi bi-arrow-clockwise"></i>
+                    </button>
+                </div>
+            </div>
 
 
             <div class="tabela-container">
@@ -299,10 +266,10 @@
 
                     <tbody class="table-content">
                         <tr>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
                         </tr>
 
                     </tbody>
