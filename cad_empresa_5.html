@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="dark"> >
+
+<!--Não Mexer!!!!!-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.O.H.L.O.</title>
+
+    <!--Link para o Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!--Link dos Ícones do Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!--Link das Fontes (Science Gothic)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+
+    <!--Link Css Custom-->
+    <link rel="stylesheet" href="css/cad.css">
+
+</head>
+
+
+<body>
+
+    <header>
+        <div class="container-fluid p-0">
+
+            <nav class="navbar navbar-expand-lg navbar_std w-100">
+
+                <div class="container-fluid position-relative">
+                    <div class="collapse navbar-collapse d-lg-flex">
+                        <a class="navbar-brand logo" href="#">Húmus - Compostagem</a>
+                    </div>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        <h1>Cadastra-se</h1>
+
+        <div class="container_flex" style="display: flex; flex-wrap: wrap;">
+
+            <div class="container_texto" style="margin-bottom: 20px;">
+                <h4>Finalização do cadastro</h4>
+                <p>O Seu cadastro está quase pronto! Agora apenas informa a forma de pagamento e você terá acesso ao sistema.
+                Tenha em mente que a data de pagamento poderá ser alterada mediante análise.Será enviado em seu
+                e-mail o código de Login para entrar posteriormente no sistema. Pode ser alterado dentro do Sistema.
+                </p>
+    
+            </div>
+
+            <div class="btn_temConta">
+                <button type="button" class="btn-custom btn-humus" onclick="window.location.href='login.html'">
+                    Já tem uma conta?
+                </button>
+            </div>
+
+            <div class="container_formulario">
+                <h2>Planos</h2>
+                <div class="mb-3">
+                    <label for="nome">Nome</label>
+                    <input type="text" class="form-control" id="nome" name="nome" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="tel_comercial">Email Comercial</label>
+                    <input type="email" class="form-control" id="email_comercial" name="email_comercial" required>
+                </div>
+
+                <div class="container_botoes">
+                    <div class="botoes_esquerda" style="display: flex; gap: 12px;">
+                        <button type="reset" class="btn-custom btn-back"
+                            onclick="window.location.href='login.html'">Voltar</button>
+                    </div>
+
+                    <button type="button" class="btn-custom btn-next"
+                        onclick="window.location.href='cad_empresa_2.html'">Próximo</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+    </script>
+
+</html>
