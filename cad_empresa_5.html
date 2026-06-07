@@ -50,40 +50,78 @@
         <div class="container_flex" style="display: flex; flex-wrap: wrap;">
 
             <div class="container_texto" style="margin-bottom: 20px;">
-                <h4>Finalização do cadastro</h4>
-                <p>O Seu cadastro está quase pronto! Agora apenas informa a forma de pagamento e você terá acesso ao sistema.
-                Tenha em mente que a data de pagamento poderá ser alterada mediante análise.Será enviado em seu
-                e-mail o código de Login para entrar posteriormente no sistema. Pode ser alterado dentro do Sistema.
+                <h4 style="margin-top: -140px">Finalização do cadastro</h4>
+                <p>O Seu cadastro está quase pronto! Agora apenas informa a forma de pagamento e você terá acesso ao
+                    sistema.
+                    Tenha em mente que a data de pagamento poderá ser alterada mediante análise.Será enviado em seu
+                    e-mail o código de Login para entrar posteriormente no sistema. Pode ser alterado dentro do Sistema.
                 </p>
-    
-            </div>
 
-            <div class="btn_temConta">
-                <button type="button" class="btn-custom btn-humus" onclick="window.location.href='login.html'">
-                    Já tem uma conta?
-                </button>
             </div>
 
             <div class="container_formulario">
                 <h2>Planos</h2>
-                <div class="mb-3">
-                    <label for="nome">Nome</label>
-                    <input type="text" class="form-control" id="nome" name="nome" required>
+
+                <div class="input-field">
+                    <label for="planos">Escolha o seu plano:</label>
+                    <select name="plano_escolhido" id="planos">
+                        <option value="" disabled selected data-price="R$ 0,00">Selecione um plano...</option>
+                        <option value="semanal" data-price="R$ 78,00 por mês">Semanal</option>
+                        <option value="quinzenal_Resi" data-price="R$ 52,00 por mês">Quinzenal residencial (15 dias)</option>
+                        <option value="anual_quinzenal" data-price="R$ 540,00 por ano">Anual quinzenal (15 dias)</option>
+                        <option value="anual_semanal" data-price="R$ 720,00 por ano">Anual toda semana</option>
+                    </select>
+
+                    <div class="input-field">
+                        <label for="dias_semana">Escolha o melhor dia para coleta:</label>
+                        <select name="dia_escolhido" id="dias_semana">
+                            <option value="" disabled selected>Selecione um dia...</option>
+                            <option value="segunda">Segunda-feira</option>
+                            <option value="terca">Terça-feira</option>
+                            <option value="quarta">Quarta-feira</option>
+                            <option value="quinta">Quinta-feira</option>
+                            <option value="sexta">Sexta-feira</option>
+                            <option value="sabado">Sábado</option>
+                        </select>
+                    </div>
+
                 </div>
 
-                <div class="mb-3">
-                    <label for="tel_comercial">Email Comercial</label>
-                    <input type="email" class="form-control" id="email_comercial" name="email_comercial" required>
+                <div class="payment-and-total-container">
+
+                    <fieldset class="payment-method">
+                        <legend>Forma de Pagamento</legend>
+
+                        <div class="radio-option">
+                            <input type="radio" id="pix" name="forma_pagamento" value="pix" checked>
+                            <label for="pix">Pix</label>
+                        </div>
+
+                        <div class="radio-option">
+                            <input type="radio" id="boleto" name="forma_pagamento" value="boleto">
+                            <label for="boleto">Boleto</label>
+                        </div>
+
+                        <div class="radio-option">
+                            <input type="radio" id="cartao" name="forma_pagamento" value="cartao">
+                            <label for="cartao">Cartão</label>
+                        </div>
+                    </fieldset>
+
+                    <div class="total-box">
+                        <div class="total-header">Total</div>
+                        <div class="total-price">R$ 00,00 por mês</div>
+                    </div>
                 </div>
 
                 <div class="container_botoes">
                     <div class="botoes_esquerda" style="display: flex; gap: 12px;">
                         <button type="reset" class="btn-custom btn-back"
-                            onclick="window.location.href='login.html'">Voltar</button>
+                            onclick="window.location.href='cad_empresa_4.html'">Voltar</button>
                     </div>
 
                     <button type="button" class="btn-custom btn-next"
-                        onclick="window.location.href='cad_empresa_2.html'">Próximo</button>
+                        onclick="window.location.href='login.html'">Finalizar</button>
                 </div>
             </div>
         </div>
@@ -92,6 +130,8 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
-    </script>
+</script>
+
+<script src="js/plans.js"></script>
 
 </html>
