@@ -7,7 +7,7 @@
    ========================================== */
 
 /*Tema Escuro */
-:root{
+:root {
 
     /*Textos*/
     --txt_std: #ffffff;
@@ -344,7 +344,7 @@ body {
     margin-bottom: 30px;
     font-weight: 700;
     letter-spacing: 2px;
-    color:#FFFFFF;
+    color:var(--logo_std);
 }
 
 /* Estrutura dos blocos (Flexbox lateral) */
@@ -400,7 +400,7 @@ body {
 
 /* Bloco da Direita - Formulário */
 .form-box {
-    flex: 1.4;
+    flex: 2.2;
     border: 1px solid var(--line);
     border-radius: 6px;
     padding: 30px 35px;
@@ -448,6 +448,176 @@ body {
 }
 
 .input-group input:focus {
+    border-color: var(--btn_next);
+}
+.input-group input:focus {
+    border-color: var(--btn_next);
+}
+
+/* ==========================================
+                DROPDOWNS (SELECT)
+   ========================================== */
+
+.input-group select {
+    width: 100%;
+    background-color: #141f24; /* Fundo escuro idêntico ao da imagem */
+    color: var(--txt_std);     /* Usando a sua variável de texto branco */
+    border: 1px solid #28373f; /* Borda sutil */
+    height: 42px;              /* Mesma altura que você definiu para os inputs */
+    padding: 0 12px;
+    padding-right: 40px;
+    font-size: 1.1rem;         /* Alinhado com o tamanho dos seus inputs */
+    border-radius: 4px;
+    outline: none;
+    
+    /* Remove a seta padrão do sistema para customizarmos depois */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+    cursor: pointer;
+}
+/* Torna a caixinha envolvente a referência de posicionamento */
+.custom-select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* Cria a setinha customizada flutuando no canto direito */
+.custom-select-wrapper::after {
+    content: '↓';              /* O caractere exato da seta da imagem */
+    font-size: 1.1rem;         /* Tamanho da seta */
+    color: var(--txt_std);     /* Cor branca (sua variável) */
+    position: absolute;
+    right: 16px;               /* Distância da borda direita */
+    top: 50%;                  /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajuste fino de centralização */
+    pointer-events: none;      /* Garante que se o usuário clicar na seta, o menu ainda abra */
+}
+/* ==========================================
+            FORMA DE PAGAMENTO E TOTAL
+   ========================================== */
+
+/* Linha que força o Pagamento e o Total a ficarem lado a lado */
+.row-details {
+    grid-column: span 2; /* Ocupa as duas colunas do seu form-grid */
+    display: flex;
+    gap: 20px;
+    align-items: stretch; /* Faz as duas caixas terem a mesma altura */
+    margin-bottom: 20px;
+}
+
+/* A caixa escura que envolve o grupo de pagamento */
+.payment-box {
+    flex: 1.2; /* Dá uma leve vantagem de tamanho para o pagamento */
+    background-color: #141f24;
+    border: 1px solid #28373f;
+    border-radius: 4px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 120px;
+}
+
+/* Título interno */
+.payment-title {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--txt_std);
+    margin-bottom: 4px;
+   +
+}
+
+/* Customização das linhas das opções */
+.radio-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 32px; 
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: var(--txt_std);
+    user-select: none;
+}
+
+/* Esconde COMPLETAMENTE o rádio padrão (Inclusive o contorno azul do navegador) */
+.radio-container input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    margin: 0;
+}
+
+/* Desenha o círculo customizado desmarcado */
+.radio-custom {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 18px;
+    width: 18px;
+    border: 1px solid #ffffff; 
+    border-radius: 50%;
+    background-color: transparent;
+    box-sizing: border-box;
+}
+
+/* Quando estiver checado, adiciona a bolinha branca interna */
+.radio-container input[type="radio"]:checked ~ .radio-custom::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 8px;
+    height: 8px;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+/* Container que segura o bloco de Total */
+.total-container {
+    flex: 1; /* Divide o espaço igualmente com a caixa de pagamento */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Alinha o bloco na base, igual ao print */
+}
+
+/* Parte de cima (Cabeçalho cinza escuro) */
+.total-header {
+    background-color: #111a1e; /* Tom mais escuro para o topo */
+    border: 1px solid #28373f;
+    border-bottom: none; /* Tira a borda de baixo para emendar na base */
+    padding: 8px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #cccccc;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+/* Parte de baixo (Fundo grafite com o valor) */
+.total-body {
+    background-color: #141f24; /* Mesmo fundo escuro dos selects */
+    border: 1px solid #28373f;
+    padding: 15px 10px;
+    text-align: center;
+    color: var(--txt_std);
+    font-family: 'Science Gothic', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* Garante que a lista de opções interna também herde o fundo escuro */
+.input-group select option {
+    background-color: #141f24;
+    color: var(--txt_std);
+}
+
+/* Efeito de foco para o select ficar igual ao input */
+.input-group select:focus {
     border-color: var(--btn_next);
 }
 
