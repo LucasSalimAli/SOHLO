@@ -349,24 +349,24 @@ Acredito que, em nome de todos do Grupo 1 (Aether V), nós iremos nos dedicar mu
 # Referências-Bibliográficas
 
 Ícones -
-·	https://icons.getbootstrap.com/
-·	https://www.flaticon.com/
+.	https://icons.getbootstrap.com/
+.	https://www.flaticon.com/
 
 Imagens -
-·	Húmus Compostagem 
-·	https://gemini.google.com/
+.	Húmus Compostagem 
+.	https://gemini.google.com/
 
 Fontes Tipográficas -
-·	https://www.dafontfree.io/
-·	https://fonts.google.com/
+. https://www.dafontfree.io/
+.	https://fonts.google.com/
 
 Sistemas Inspirados - 
-·	https://www.nationalparks.org/?utm_source=tailwindcss
-·	https://www.mintlify.com/?utm_source=tailwindcss
-·	https://pt.ubunlog.com/interface-da-web-de-cockpit-para-servidores-ubuntu-20-04/
+.	https://www.nationalparks.org/?utm_source=tailwindcss
+.	https://www.mintlify.com/?utm_source=tailwindcss
+.	https://pt.ubunlog.com/interface-da-web-de-cockpit-para-servidores-ubuntu-20-04/
 
 Ferramentas Utilizadas -
-·	https://www.figma.com 
-·	https://code.visualstudio.com  
+.	https://www.figma.com 
+.	https://code.visualstudio.com  
 ·	https://github.com 
 
