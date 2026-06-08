@@ -16,7 +16,6 @@
     --txt_blue: #4531E0;
     --txt_nav:  #DEE8FF;
     --txt_h_green: #00FF48;
-    --bg_footer: #FFEFEF;
     --txt_invert: #000000;
 
     /*Logo*/
@@ -27,6 +26,7 @@
     --bg_navbar: #192707; /*Background NavBar*/
     --bg_btns: #194F15; /*Background dos Botões*/
     --bg_cards: #1C1D21; /*Background dos Cards de planos e produtos*/
+    --bg_footer: #FFEFEF;
 
     /*Selection*/
     --selection: #32963E; /*Seleção*/
@@ -36,6 +36,14 @@
 
     /*Background Image*/
     --bg_img: url('../assets/img/Bg_Image_Dark.jpg');
+
+
+    /*Carousel Image*/
+    --carousel-img-1: url('../assets/img/Dashboards_Dark.png');
+    --carousel-img-2: url('../assets/img/Receitas_Dark.png');
+    --carousel-img-3: url('../assets/img/Hist_Dark.png');
+    --carousel-img-4: url('../assets/img/Diario_Dark.png');
+
 }
 
 /*Tema Claro*/
@@ -68,8 +76,13 @@
 
     /*Background Image*/
     --bg_img: url('../assets/img/Bg_Image_Light.png');
-}
 
+    /*Carousel Image*/
+    --carousel-img-1: url('../assets/img/Dashboards_Light.png');
+    --carousel-img-2: url('../assets/img/Receitas_Light.png');
+    --carousel-img-3: url('../assets/img/Hist_Light.png');
+    --carousel-img-4: url('../assets/img/Diario_Light.png');
+}
 
 
 
@@ -319,10 +332,17 @@ body {
 
 /* Controla o comportamento das imagens */
 .img-carosel {
+    width: 100%;
     height: 720px; /* Altura para ver os prints do sistema */
-    object-fit: cover;
-    object-position: top center; /* Foca no topo do print, fica a navbar */
+    background-size: cover;
+    background-position: top center; /* Foca no topo do print, fica a navbar */
+    background-repeat: no-repeat;
 }
+
+.img_1-carosel {content: var(--carousel-img-1);}
+.img_2-carosel {content: var(--carousel-img-2);}
+.img_3-carosel {content: var(--carousel-img-3);}
+.img_4-carosel {content: var(--carousel-img-4);}
 
 /*Borda do Texto do Carrossel*/
 .bg-blur-caption {
@@ -477,7 +497,7 @@ body {
   .mini-title{
     font-family: 'AnonymousPro' monospace;
     color: var(--txt_std);
-    font-size: 30px;
+    font-size: 34px;
     font-weight: bold;
   }
 
@@ -715,3 +735,15 @@ input::placeholder{
 .login-link:hover{
     color: var(--selection_invert);
 }
+
+
+
+
+/* Se o tema for dark, esconde as imagens claras e mostra as escuras */
+[data-theme="dark"] .d-theme-dark-none { display: none !important; }
+[data-theme="dark"] .d-theme-dark-block { display: block !important; }
+
+/* Se o tema for light, esconde as escuras e mostra as claras */
+[data-theme="light"] .d-theme-light-none { display: none !important; }
+[data-theme="light"] .d-theme-light-block { display: block !important; }
+
