@@ -133,27 +133,27 @@ RF15 – Criar Dashboards
     
 Segmento destinado a definir quais serão os parceiros comerciais que irão apoiar as operações, como fornecedores ou alianças estratégicas. 
 
-	Empresas de Hospedagem
-	Professores e Orientadores
-	Plataformas como GitHub e Figma
-	Fatec Jahu
+.	Empresas de Hospedagem
+. Professores e Orientadores
+.	Plataformas como GitHub e Figma
+.	Fatec Jahu
  
 ### 3.1.2 - Atividades Chaves
 Segmento destinado a definir quais serão as atividades essenciais e indispensável para criar, entregar e operar sua proposta de valor corretamente.
  
-	Modelagem do FrontEnd
-	Definição de Requisitos
-	Modelagem de Dados
-	Documento do Projeto
-	Testes
+.	Modelagem do FrontEnd
+.	Definição de Requisitos
+.	Modelagem de Dados
+.	Documento do Projeto
+.	Testes
 
 ### 3.1.3 - Recursos Chaves
 Segmento destinado a definir quais serão os ativos/ferramentas essenciais e indispensável para criar, entregar e operar sua proposta de valor corretamente.
  
-	Api de agenda/mapas 
-	Infraestrutura tecnológica  
-	Banco de dados 
-	Aplicativo/plataforma digital 
+.	Api de agenda/mapas 
+.	Infraestrutura tecnológica  
+.	Banco de dados 
+.	Aplicativo/plataforma digital 
 
 
 ### 3.1.4 - Proposta de Valor
@@ -168,38 +168,38 @@ Segmento destinado a definir quais serão os benefícios exclusivos e o valor 
 ### 3.1.5 - Relacionamento
 Segmento destinado a definir como irá funcionar a interação e o desenvolvimento da comunicação com o cliente.
  
-	CRM (Customer Relationship Management) 
-	Coleta de Feedback 
-	Suporte durante os Testes
+.	CRM (Customer Relationship Management) 
+.	Coleta de Feedback 
+.	Suporte durante os Testes
 
 
 ### 3.1.6 - Canais
 Segmento destinado a definir como irá alcançar e entregar sua proposta de valor aos segmentos do público-alvo. 
 
-	Whatsapp 
-	Redes sociais
-	Reuniões
+.	Whatsapp 
+.	Redes sociais
+.	Reuniões
 
 
 ### 3.1.7 - Segmento dos Clientes
 Segmento destinado a definir quais serão os grupos ou comunidades que irão se beneficiar com o produto e serviços desenvolvido.
  
-	Clientes da Empresa Húmus.
-	Funcionários da Empresa Húmus.
+.	Clientes da Empresa Húmus.
+.	Funcionários da Empresa Húmus.
 
 
 ### 3.1.8 - Estrutura de Custo
 Segmento destinado a definir a composição de todas as despesas que uma empresa passa para operar, produzir e entregar seus produtos ou serviços. 
 
-	Desenvolvimento e manutenção do app  
-	Infraestrutura digital (hospedagem, armazenamento, custo de APIs...) 
+.	Desenvolvimento e manutenção do app  
+.	Infraestrutura digital (hospedagem, armazenamento, custo de APIs...) 
 
 
 ### 3.1.9 - Fonte de Receita
 Segmento destinado a definir quais serão os diferentes meios que a empresa irá gerar dinheiro a partir dos seus produtos e serviços, ou seja, como ela captura valor.
  
-	Assinatura mensal 
-	Parcerias 
+.	Assinatura mensal 
+.	Parcerias 
 
 ## 3.2 - Imagem do Modelo Canvas
 <img width="1600" height="900" alt="WhatsApp Image 2026-06-07 at 18 37 37" src="https://github.com/user-attachments/assets/7bb2ed11-22e9-4666-bbc0-f3d2b1b49407" />
@@ -237,17 +237,19 @@ Devido a reais possibilidades de crescimento da empresa, pelo desenvolvimento t�
 <img width="1372" height="733" alt="Paleta_ADM (1)" src="https://github.com/user-attachments/assets/bd6ef762-11ba-4b1a-9280-aa5f89affedd" />
 
 ## 5.2 - Tipografia
- -Freestyle Script
- -Science Gothic
- -Gilroy
- -AnonymousPro
+. Freestyle Script
+. Science Gothic
+. Gilroy
+. AnonymousPro
 
 ## 5.3 - Logo
+
 <img width="837" height="195" alt="Captura de tela 2026-05-13 235249" src="https://github.com/user-attachments/assets/fd80f934-2652-4a40-b53e-dfb785d454b7" />
 
  
 
 ## 5.4 - Wireframe
+
 ### 5.4.1 - Pagina Inicial (Dark)
 <img width="1448" height="5128" alt="Main Page Dark" src="https://github.com/user-attachments/assets/9f5945a5-a0c9-4689-a08f-f4a569c9bd17" />
 
@@ -255,7 +257,9 @@ Devido a reais possibilidades de crescimento da empresa, pelo desenvolvimento t�
 <img width="1440" height="1024" alt="Manager Page Dark (Dashboards)" src="https://github.com/user-attachments/assets/f7607594-1ff9-42a2-abb6-cf64f6452b35" />
 
 ## 5.5 - Modelo de Navegação
+
 ### 5.5.1 - Navegação Geral
+
 <img width="1440" height="752" alt="Captura de tela 2026-05-13 234846" src="https://github.com/user-attachments/assets/1190a550-f962-4398-b932-c61512366504" />
 
 ### 5.5.2 - Navegação Sistema Financeiro
@@ -282,8 +286,4 @@ Devido a reais possibilidades de crescimento da empresa, pelo desenvolvimento t�
 
 # 7 - Aplicação
 
-# 10. Protótipo
-(Gere um protótipo funcional na ferramenta que se sentir mais confortável (Figma, por
-exemplo) e apresente aqui, indicando o link).
-
-# 11. Aplicação
+# 8 - Consideração Final
