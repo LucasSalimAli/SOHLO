@@ -27,7 +27,7 @@ Para cada semestre, do 1º ao 6º, iremos utilizar este template para documentar
 incrementalmente.
 
 # 1 - Introdução
-    O Maior problema que a Húmus-Compostagem enfrenta agora é a falta de um sistema para o auxilio organizacional. Atualmente a Húmus sofre com problemas para organizar as coletas de resíduos (confirmação de presença no dia da coleta) e gerenciamento financeiro.
+O Maior problema que a Húmus-Compostagem enfrenta agora é a falta de um sistema para o auxilio organizacional. Atualmente a Húmus sofre com problemas para organizar as coletas de resíduos (confirmação de presença no dia da coleta) e gerenciamento financeiro.
 
 
 ## 1.1 - Objetivos
@@ -36,12 +36,12 @@ incrementalmente.
   O Objetivo é a criação de um sistema para a Húmus, de forma que, com  isso, a empresa consiga um melhor gerenciamento de tempo e recursos, além  de automatizar tarefas repetitivas e demoradas. Com, no futuro, um sistema  completo integrando empresa e clientes.
 
 ### 1.1.2 - Objetivo Específico
-    O objetivo desse P.I. do primeiro semestre, é a realização de um site  estático com o intuito de apresentar ao cliente a ideia/proposta do que o sistema  irá se tornar no futuro. Por hora, as funcionalidades do sistema não serão  implementadas, e o sistema será focado na seção Financeira
+O objetivo desse P.I. do primeiro semestre, é a realização de um site  estático com o intuito de apresentar ao cliente a ideia/proposta do que o sistema  irá se tornar no futuro. Por hora, as funcionalidades do sistema não serão  implementadas, e o sistema será focado na seção Financeira
 
 
 
 # 2 - Requisitos
-    Um documento de requisitos é a parte da documentação onde se esclarece o que o sistema deve ou não fazer; Suas funcionalidades, comportamentos e restrições. Os Requisitos são “instruções” claras, consistentes e não podem ser ambíguas. Dessa forma garantido o pleno entendimento do que o cliente espera que seja desenvolvido.
+Um documento de requisitos é a parte da documentação onde se esclarece o que o sistema deve ou não fazer; Suas funcionalidades, comportamentos e restrições. Os Requisitos são “instruções” claras, consistentes e não podem ser ambíguas. Dessa forma garantido o pleno entendimento do que o cliente espera que seja desenvolvido.
 
 
 ## 2.1 - Histórias dos Usuários
@@ -202,6 +202,8 @@ Segmento destinado a definir quais serão os diferentes meios que a empresa ir�
 	Parcerias 
 
 ## 3.2 - Imagem do Modelo Canvas
+<img width="1600" height="900" alt="WhatsApp Image 2026-06-07 at 18 37 37" src="https://github.com/user-attachments/assets/7bb2ed11-22e9-4666-bbc0-f3d2b1b49407" />
+
 
 # 4 - Estudo de Viabilidade
 
@@ -231,10 +233,8 @@ Devido a reais possibilidades de crescimento da empresa, pelo desenvolvimento t�
 
 # 5 - Design
 ## 5.1 - Paletas de Cores
- 
- 
- 
-
+<img width="1373" height="733" alt="Paleta_Home (1)" src="https://github.com/user-attachments/assets/3d603838-bfea-41af-bf14-84f8fcf5e936" />
+<img width="1372" height="733" alt="Paleta_ADM (1)" src="https://github.com/user-attachments/assets/bd6ef762-11ba-4b1a-9280-aa5f89affedd" />
 
 ## 5.2 - Tipografia
  -Freestyle Script
@@ -243,59 +243,44 @@ Devido a reais possibilidades de crescimento da empresa, pelo desenvolvimento t�
  -AnonymousPro
 
 ## 5.3 - Logo
+<img width="837" height="195" alt="Captura de tela 2026-05-13 235249" src="https://github.com/user-attachments/assets/fd80f934-2652-4a40-b53e-dfb785d454b7" />
+
  
 
 ## 5.4 - Wireframe
 ### 5.4.1 - Pagina Inicial (Dark)
-
+<img width="1448" height="5128" alt="Main Page Dark" src="https://github.com/user-attachments/assets/9f5945a5-a0c9-4689-a08f-f4a569c9bd17" />
 
 ### 5.4.2 - Modelo Página ADM(Dark)
- 
-
- 
+<img width="1440" height="1024" alt="Manager Page Dark (Dashboards)" src="https://github.com/user-attachments/assets/f7607594-1ff9-42a2-abb6-cf64f6452b35" />
 
 ## 5.5 - Modelo de Navegação
+### 5.5.1 - Navegação Geral
+<img width="1440" height="752" alt="Captura de tela 2026-05-13 234846" src="https://github.com/user-attachments/assets/1190a550-f962-4398-b932-c61512366504" />
+
+### 5.5.2 - Navegação Sistema Financeiro
+<img width="2323" height="1154" alt="Nav" src="https://github.com/user-attachments/assets/f3d0e2bf-d461-445e-9672-7e04aa2868d9" />
+
 
 # 6 - Protótipo
 
 ## 6.1 - Pagina Principal (Dark)
-
+<img width="1920" height="1200" alt="Captura de tela 2026-06-03 233053" src="https://github.com/user-attachments/assets/fb66c9a6-e27c-4de1-adf3-01c7d7fba0ff" />
+<img width="1920" height="1200" alt="Captura de tela 2026-06-03 233108" src="https://github.com/user-attachments/assets/06c5feeb-ffb7-42b6-974f-de897a3a0b18" />
 
 
 ## 6.2 - Pagina ADM Receitas (Dark)
-
+<img width="1920" height="1200" alt="Captura de tela 2026-06-03 233229" src="https://github.com/user-attachments/assets/d6532504-3986-47f0-a0b8-2f80ba64e992" />
 
 ## 6.3 - Página ADM Receitas( (Light)
+<img width="1920" height="1200" alt="Captura de tela 2026-06-03 233334" src="https://github.com/user-attachments/assets/1dda95e0-78dc-41c4-9844-e7245d46be62" />
 
 
-## - Link Do Figma
+## 6.4 - Link Do Figma
  https://www.figma.com/design/IBaVFkxqLwspxBMtnUBCyK/H%C3%BAmus_Prototype?node-id=0-1&t=JqQmjEeGkf0BhI6R-1
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 9. Design
-(Paleta de cor, Tipografia, Logo, Wireframes, Modelo de navegação)
+# 7 - Aplicação
 
 # 10. Protótipo
 (Gere um protótipo funcional na ferramenta que se sentir mais confortável (Figma, por
