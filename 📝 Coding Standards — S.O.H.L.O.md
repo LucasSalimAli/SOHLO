@@ -1,6 +1,6 @@
-# 📝 Coding Standards — S.O.H.L.O.
+# Coding Standards — S.O.H.L.O.
 
-⚠️ **TENHAM EM MENTE QUE O CÓDIGO HTML SERÁ MUDADO EM PHP** ⚠️
+ **TENHAM EM MENTE QUE O CÓDIGO HTML SERÁ MUDADO EM PHP** 
 
 ---
 
@@ -14,7 +14,7 @@
 * Todas as classes, funções, objetos, IDs, etc., deverão ser escritos em **Inglês** para melhor conformidade com o padrão mundial.
 
 ### Estrutura de Pastas
-⚠️ **PROIBIDA A CRIAÇÃO DE NOVAS PASTAS/ESTRUTURAS** ⚠️
+ **PROIBIDA A CRIAÇÃO DE NOVAS PASTAS/ESTRUTURAS** 
 *Usaremos a Arquitetura Model View Controller. Esta estrutura representa estritamente a **View** do projeto.*
 
 ```text
@@ -44,7 +44,7 @@
     │   └── global.css
     └── index.html
 ```
-⚠️ **PROIBIDA A CRIAÇÃO DE NOVAS PASTAS/ESTRUTURAS** ⚠️
+ **PROIBIDA A CRIAÇÃO DE NOVAS PASTAS/ESTRUTURAS** 
 
 ---
 
@@ -202,4 +202,4 @@ Para manter o código alinhado e padronizado em todas as máquinas, todos devem 
 
 ---
 
-⚠️ **TENHAM EM MENTE QUE O CÓDIGO HTML SERÁ MUDADO EM PHP** ⚠️
+**TENHAM EM MENTE QUE O CÓDIGO HTML SERÁ MUDADO EM PHP** 
