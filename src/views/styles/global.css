@@ -1,0 +1,83 @@
+@charset 'utf-8';
+
+/* #region imports */
+
+@import url("shared/colors.css");
+@import url("shared/fonts.css");
+@import url("shared/navbars.css");
+@import url("shared/sidebar.css");
+
+@import url("vendor/bootstrap/bootstrap.min.css");
+@import url("components/buttons.css");
+@import url("components/cards.css");
+@import url("components/filters.css");
+@import url("components/dashboards.css");
+@import url("components/table.css");
+
+/* #endregion */
+
+html,
+body {
+  font-family: "Science Gothic";
+  background-color: var(--bg-body-adm);
+
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 280px;
+  /* margin-right: 34px; */
+
+  padding: 30px;
+  height: 100vh;
+  padding-bottom: 10vh;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+main h1 {
+  color: var(--txt-std-adm);
+}
+
+.space {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex: 1;
+  margin-bottom: 1.5rem;
+  max-height: 13rem;
+}
+
+.card-section,
+.filter-section,
+.space,
+.graph {
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1100;
+  }
+
+  body {
+    padding-top: 67px;
+    overflow: auto;
+  }
+
+  html {
+    scroll-padding-top: 67px;
+    overflow: auto;
+  }
+}

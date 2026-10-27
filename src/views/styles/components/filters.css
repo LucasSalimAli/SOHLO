@@ -1,0 +1,175 @@
+@import url('../shared/colors.css');
+
+/* ===== Barra ===== */
+.filter-bar {
+    margin-left: -25px;
+    margin-right: -25px;
+    width: calc(100% + 60px);
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 0;
+    background-color: var(--bg-filter-adm);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    border-bottom: 1px solid rgba(173, 151, 151, 0.05);
+
+    margin-top: -29px;
+    margin-bottom: 1rem; /* era o mb-3 */
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ===== Botão do filtro ===== */
+.filter-btn,
+.filter-menu {
+    font-family: 'Science Gothic', sans-serif;
+}
+
+.filter-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: 2.25rem;
+    padding: 0 1.25rem;
+    border: 1px solid var(--txt-std-adm);
+    border-radius: 999px;            /* formato de pílula */
+    background-color: transparent;
+    color: var(--txt-std-adm);
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.15s, border-color 0.15s;
+
+}
+
+/* Setinha (era o dropdown-toggle do Bootstrap) */
+.filter-btn::after {
+    content: "";
+    border-top: 5px solid currentColor;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    transition: transform 0.15s;
+}
+
+.filter-btn[aria-expanded="true"]::after {
+    transform: rotate(180deg);
+}
+
+.filter-btn:hover,
+.filter-btn[aria-expanded="true"] {
+    background-color: var(--hv-navbar-adm);
+}
+
+
+.filter-btn.active {
+    border: 2px solid;
+    border-color: var(--selection-adm);
+    background-color: var(--hv-navbar-adm);
+}
+
+.filter-btn:active {
+    background-color: var(--bg-btn-table);
+    border-color: var(--txt-std-adm);
+}
+
+.filter-btn:focus-visible {
+    outline: 2px solid var(--selection-adm);
+    outline-offset: 2px;
+}
+
+/* ===== Menu ===== */
+.filter-dropdown {
+    position: relative;
+}
+
+.filter-menu {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    z-index: 1000;
+    min-width: 100%;
+    margin: 0;
+    padding: 6px 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: var(--bg-filter-adm);
+    border: 1px solid color-mix(in srgb, var(--line) 15%, transparent);
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    font-size: 13px;
+
+    /* Fechado */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    transition: opacity 0.15s, transform 0.15s, visibility 0.15s;
+}
+
+.filter-dropdown.open .filter-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.filter-menu-item {
+    display: block;
+    padding: 6px 16px;
+    border-left: 3px solid transparent;
+    color: var(--txt-std-adm);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.filter-menu-item:hover,
+.filter-menu-item:focus-visible {
+    background-color: var(--selection-adm);
+    color: var(--txt-black);
+    outline: none;
+}
+
+.filter-menu-item.active {
+    background-color: var(--bg-navbar-adm);
+    border-left-color: var(--selection-adm);
+    font-weight: 500;
+}
+
+.filter-menu-item.active:hover,
+.filter-menu-item.active:focus-visible {
+    background-color: var(--selection-adm);
+    color: var(--txt-black);
+}
+
+/* ===== Responsivo (desktop-first) ===== */
+@media (max-width: 768px) {
+    .filter-bar {
+        height: auto;
+        min-height: 60px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .filter-group {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .filter-btn {
+        height: 2rem;
+        padding: 0 0.625rem;
+        font-size: 0.8125rem;
+    }
+
+    /* O último menu abre para a esquerda, para não sair da tela */
+    .filter-dropdown:last-child .filter-menu {
+        left: auto;
+        right: 0;
+    }
+}

@@ -1,0 +1,184 @@
+@import url('../shared/colors.css');
+
+.sidebar {
+    width: 280px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-sidebar-nav-adm);
+    z-index: 1050;
+    margin-top: 69px;
+}
+
+.sidebar-body {
+    display: flex;
+    flex-grow: 1;
+    height: calc(100vh - 70px);
+}
+
+.sidebar-nav {
+    width: 75px;
+    background-color: transparent;
+    border-right: 1px solid #23262b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.nav-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    align-items: center;
+}
+
+
+.logout-btn {
+    border: none;
+    background: transparent;
+    color: #8b949e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 90px;
+}
+
+.logout-btn i {
+    font-size: 22px;
+}
+
+.logout-btn:hover {
+    color: var(--txt-red);
+}
+
+.sidebar-submenu-panel {
+    flex-grow: 1;
+    background-color: var(--bg-sidebar-menu-adm);
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.module-title {
+    color: var(--txt-std-adm);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.sidebar-search-box {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.sidebar-search-box i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4e5561;
+    font-size: 14px;
+}
+
+.sidebar-search-box input {
+    width: 100%;
+    background-color: var(--bg-navbar-adm);
+    border: 1px solid var(--txt-std-adm);
+    border-radius: 6px;
+    padding: 8px 12px 8px 36px;
+    color: var(--txt-std-adm);
+    font-size: 13px;
+}
+
+.sidebar-search-box input::placeholder {
+    color: #4e5561;
+}
+
+.sidebar-divider {
+    border-color: var(--txt-std-adm);
+    margin: 10px 0 20px 0;
+    opacity: 1;
+}
+
+/* Links do submenu */
+.submenu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu-link {
+    color: var(--txt-std-adm);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 7px 12px;
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.menu-link:hover {
+    color: var(--txt-std-adm);
+    background-color: var(--hv-menu-adm);
+}
+
+
+.menu-link.active {
+    color: var(--txt-std-adm);
+    background-color: var(--bg-navbar-adm);
+    border-left: 3px solid var(--selection-adm);
+    font-weight: 500;
+    margin-right: 0;
+}
+
+.conteudo-principal {
+    margin-left: 280px;
+    padding: 30px;
+    min-height: 100vh;
+    background-color: var(--bg-body-adm);
+}
+
+
+
+/* ==========================================
+         EFEITO RECOLHER DA SIDEBAR
+   ========================================== */
+
+/* Adiciona um efeito suave de deslizamento na sidebar e no conteúdo */
+.sidebar,
+main {
+    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar.small {
+    width: 65px;
+}
+
+/* Esconde o painel de submenus de forma limpa */
+.sidebar.small .sidebar-submenu-panel {
+    display: none;
+}
+
+.full-main {
+    margin-left: 65px;
+}

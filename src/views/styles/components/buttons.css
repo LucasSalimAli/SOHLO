@@ -1,0 +1,215 @@
+@import url('../shared/colors.css');
+@import url('../shared/fonts.css');
+
+/*==========NAVBARS==========*/
+
+/*-----Navbar-Brand----*/
+
+.navbar-brands a {
+    font-family: 'AnonymousPro', monospace;
+    font-size: 20px;
+    border: 0px;
+    color: var(--txt-navbar-brand);
+
+}
+
+.navbar-brands .btn.is-alpha {
+    background-color: color-mix(in srgb, #4E9A22 40%, transparent);
+    width: 200px;
+}
+
+.navbar-brands .btn.is-beta {
+    margin-left: 20px;
+    background-color: color-mix(in srgb, #6761D3 40%, transparent);
+}
+
+
+.navbar-brands .btn:hover {
+    color: var(--txt-navbar-brand);
+    background-color: var(--selection-brand);
+
+}
+
+
+
+/*-----Navbar-System-----*/
+.navbar-adm .navbar-actions .nav-icon-btn {
+    /*Structure*/
+    height: 3.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 0.625rem;
+    gap: 0.5rem;
+
+    /*Colors*/
+    background-color: var(--bg-navbar-adm);
+    color: var(--txt-std-adm);
+
+    border: none;
+    cursor: pointer;
+}
+
+.navbar-adm .navbar-actions .nav-icon-btn .user-name {
+    margin: auto;
+    font-size: 1.25rem; /*20px*/
+    font-weight: 500;
+}
+
+.navbar-adm .navbar-actions .nav-icon-btn:hover {
+    background-color: var(--hv-navbar-adm);
+    color: var(--txt-std-adm);
+}
+
+.navbar-adm .navbar-actions .nav-icon-btn:active:focus {
+    background-color: var(--hv-sidebar-menu-adm);
+    color: var(--selection-adm);
+}
+
+.navbar-adm .navbar-actions .nav-icon-btn:focus-visible {
+    outline: 2px solid var(--selection-adm);
+    outline-offset: -2px;
+}
+
+/*==========SIDEBAR==========*/
+.nav-btn button{
+    width: 60px;
+    height: 60px;
+    border: none;
+    background: transparent;
+    color: #4e5561;
+    
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.nav-btn button:hover,
+.nav-btn button.active {
+    color: var(--selection-adm);
+    background-color: var(--bg-sidebar-menu-adm);
+}
+
+
+
+/*==========TABLES==========*/
+
+/*-----OUTSIDE-TABLE-BUTTONS-----*/
+
+.uptable-btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+    background-color: transparent;
+
+    color: var(--txt-std-adm);
+    border: none;
+    cursor: pointer;
+    font-size: 36px;
+}
+
+.uptable-btn:hover {
+    color: var(--selection-adm);
+}
+
+.uptable-btn:active {
+    color: rgb(21, 89, 138);
+}
+
+/*-----INSIDE-TABLE-BUTTONS-----*/
+td .btn {
+    background-color: color-mix(in srgb, var(--txt-std-adm) 70%, transparent);
+    color: var(--txt-invert);
+    border: 2px transparent;
+    padding: 3px 18px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+td .btn:hover{
+    background-color: color-mix(in srgb, var(--txt-std-adm) 30%, transparent);
+    color: var(--txt-invert);
+    border: 2px color-mix(in srgb, var(--txt-std-adm) 30%, transparent);
+}
+
+td .btn:active{
+    background-color: color-mix(in srgb, var(--selection-adm) 20%, transparent) !important;
+    color: var(--selection-adm) !important;
+    border: 2px color-mix(in srgb, var(--selection-adm) 30%, transparent) !important;
+}
+
+
+/*==========FILTERS==========*/
+
+.filter-group .btn {
+    background: transparent;
+    border: 1px solid var(--txt-std-adm);
+    /* Cor da borda discreta */
+    color: var(--txt-std-adm);
+    font-family: 'Science Gothic', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    padding: 6px 18px;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+.filter-group .btn.active,
+.filter-group .btn:hover {
+    background-color: color-mix(in srgb, var(--txt-std-adm) 25%, transparent);
+    border-color: var(--txt-std-adm);
+    color: var(--txt-std-adm) !important;
+}
+
+.filter-group .btn.dropdown-toggle::after {
+    display: none;
+}
+
+.filter-group .btn-action {
+    background: transparent !important;
+    border: 1px solid var() !important;
+
+    color: var() !important;
+    font-family: 'Science Gothic', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 22px !important;
+    border-radius: 20px !important;
+    transition: all 0.2s ease;
+}
+
+.filter-group .btn-action:hover {
+    background-color: color-mix(in srgb, var(--selection-brand) 70%, transparent) !important;
+    border-color: var() !important;
+}
+
+
+/*==========BRAND==========*/
+/*Botões*/
+.main-btn {
+    color: var(--txt-green);
+    background-color: color-mix(in srgb, var(--bg-btn-brand) 70%, transparent);
+
+    font-family: 'AnonymousPro', monospace;
+    
+    border-radius: 15px;
+}
+
+
+.big-btn{
+    font-size: 36px;
+    width: 660px;
+    margin-top: 100px;
+}
+
+
+.main-btn:hover {
+    color: var(--txt-green);
+    background-color: color-mix(in srgb, var(--selection-brand) 70%, transparent);
+}

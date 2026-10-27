@@ -1,0 +1,85 @@
+@import url("../shared/colors.css");
+
+/* Tabela */
+
+.section-table {
+  display: flex;            
+  flex-direction: column;    
+  align-items: flex-end;     
+  width: 100%; 
+  flex: 1;
+  min-height: 0; 
+
+}
+
+/* Definição geral da tabela */
+table {
+  width: 100%;
+  min-width: max-content; /* Faz a tabela usar seu tamanho natural e ativar o scroll se ultrapassar */
+  border-collapse: collapse;
+  color: var(--txt-std-adm);
+}
+
+thead {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg-table-adm);
+}
+
+/* Table Header e Table Data */
+th,
+td {
+  padding: 15px 25px;
+  border-bottom: 1px solid #444;
+  max-height: 2vh;
+  white-space: nowrap; /* Impede a quebra de linha para a tabela não "espremer" as colunas */
+}
+
+td {
+  color: var(--status-text);
+}
+
+/* Definição geral do container */
+.table-container {
+  border-radius: 15px;
+  background: var(--bg-table-adm);
+  width: 100%;
+  flex: 1;
+  min-height: 0; /* OBRIGATÓRIO: Impede o container de expandir com as linhas da tabela */
+  
+  overflow-x: auto; 
+  overflow-y: auto; /* Ativa o scroll quando o tbody estoura o flex: 1 */
+  
+  text-align: center;
+}
+
+/* Scroll customizado (Vertical e Horizontal) */
+.table-container::-webkit-scrollbar {
+  width: 8px;               /* Largura fina idêntica ao 'thin' do Firefox */
+  height: 8px;              /* Altura para a barra horizontal */
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: transparent;  /* Fundo transparente como no Firefox */
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background-color: var(--selection-adm);
+  border-radius: 20px;      /* Cantos arredondados estilo Firefox */
+  border: 2px solid transparent; /* Cria uma margem interna discreta */
+  background-clip: content-box;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+  background-color: var(--selection-adm); /* Ou uma cor ligeiramente mais clara no hover */
+}
+
+/* Status */
+.status-badge {
+  padding: 3px 18px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: var(--status-accent);
+}

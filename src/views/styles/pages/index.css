@@ -1,0 +1,309 @@
+@import url('../shared/colors.css');
+@import url("../shared/fonts.css");
+@import url("../shared/navbars.css");
+
+
+@import url("../vendor/bootstrap/bootstrap.min.css");
+@import url("../components/buttons.css");
+@import url("../components/cards.css");
+
+
+
+/*==========IMAGES==========*/
+[data-theme="dark"] {
+    /*Background Image*/
+    --bg-img: url('../../../assets/images/Bg_Image_Dark.jpg');
+
+    /*Carousel Image*/
+    --carousel-img-1: url('../../../assets/images/Dashboards_Dark.png');
+    --carousel-img-2: url('../../../assets/images/Receitas_Dark.png');
+    --carousel-img-3: url('../../../assets/images/Hist_Dark.png');
+    --carousel-img-4: url('../../../assets/images/Diario_Dark.png');
+}
+
+
+[data-theme="light"] {
+    /*Background*/    
+    --bg-img: url('../../../assets/images/Bg_Image_Light.png');
+
+    /*Carousel Image*/
+    --carousel-img-1: url('../../../assets/images/Dashboards_Light.png');
+    --carousel-img-2: url('../../../assets/images/Receitas_Light.png');
+    --carousel-img-3: url('../../../assets/images/Hist_Light.png');
+    --carousel-img-4: url('../../../assets/images/Diario_Light.png');
+
+}
+
+body {
+    font-family: 'Gilroy', sans-serif;
+    background-color: var(--bg-body-brand);
+
+    background-image: var(--bg-img);
+    background-size: 100% 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+
+
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/*Iten-Margin*/
+hero{
+    margin-left: 165px;
+    margin-right: 165px;
+    margin-top: 70px;
+}
+
+.iten-margin{
+    margin-left: 165px;
+    margin-right: 165px;
+}
+
+
+/*Slogan*/
+
+hero h1{
+    font-family: 'Freestyle Script', cursive;
+    color: var(--txt-brand);
+    font-size: 94px;
+}
+
+hero h2 {
+    font-family: 'Gilroy', sans-serif;
+    color: var(--txt-brand);
+}
+
+
+/*==========CARROSSEL==========*/
+
+/* Limita o tamanho máximo do carrossel para não quebrar a tela */
+#main-carousel {
+    max-width: 2880px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border: 2px solid color-mix(in srgb, var(--txt-brand) 30%, transparent);;
+    width: auto;
+}
+
+/* Controla o comportamento das imagens */
+.img-carosel {
+    width: 100%;
+    height: 720px; /* Altura para ver os prints do sistema */
+    background-size: cover;
+    background-position: top center; /* Foca no topo do print, fica a navbar */
+    background-repeat: no-repeat;
+}
+
+.img_1-carosel {content: var(--carousel-img-1);}
+.img_2-carosel {content: var(--carousel-img-2);}
+.img_3-carosel {content: var(--carousel-img-3);}
+.img_4-carosel {content: var(--carousel-img-4);}
+
+/*Borda do Texto do Carrossel*/
+.bg-blur-caption {
+    background: var(--bg-body-brand);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Letras Carrossel */
+.bg-blur-caption h5 {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 700;
+    color: var(--txt-brand);
+}
+
+.bg-blur-caption p {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: var(--txt-brand);
+    margin-bottom: 0;
+}
+
+/*Some com as setas*/
+#main-carousel .carousel-control-prev-icon,
+#main-carousel .carousel-control-next-icon {
+    display: none;
+}
+
+
+#main-carousel .carousel-indicators [data-bs-target] {
+    background-color: var(--txt-brand);
+    opacity: 0.4;
+    transition: opacity 0.3s ease, background-color 0.3s ease; 
+}
+
+#main-carousel .carousel-indicators .active {
+    background-color: var(--txt-brand);
+    opacity: 1;
+}
+
+/* Se o tema for dark, esconde as imagens claras e mostra as escuras */
+[data-theme="dark"] .d-theme-dark-none { display: none !important; }
+[data-theme="dark"] .d-theme-dark-block { display: block !important; }
+
+/* Se o tema for light, esconde as escuras e mostra as claras */
+[data-theme="light"] .d-theme-light-none { display: none !important; }
+[data-theme="light"] .d-theme-light-block { display: block !important; }
+
+
+
+/*===========Plans==========*/
+.product-title-size{
+    font-family: 'Freestyle Script', cursive;
+    font-size: 120px;
+    color: var(--txt-std-adm);
+}
+
+.product-div{
+    color: var(--txt-std-adm);
+    size: 120px;
+    opacity: 80%;
+    margin-top: -30px;
+    margin-bottom: 100px;
+}
+
+.plans{
+    width: 100%;
+    align-items: center;
+    padding: 30px;
+
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        color-mix(in srgb, var(--bg-body-brand) 85%, transparent) 20%,
+        color-mix(in srgb, var(--bg-body-brand) 85%, transparent) 
+    )
+    
+}
+
+.products{
+    width: 100%;
+    background-color: color-mix(in srgb, var(--bg-body-brand) 85%, transparent);
+    align-items: center;
+    padding-top: 65px;
+    padding-bottom: 30px;
+    
+}
+/*==========ABOUT==========*/
+.about{
+    width: 100%;
+    background-color: color-mix(in srgb, var(--bg-body-brand) 85%, transparent);
+    align-items: center;
+    padding-top: 65px;
+    padding-bottom: 30px;
+    color: var(--txt-brand);
+}
+
+.about-block{
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .img-about{
+    max-height: 500px;
+  }
+
+.about p{
+    font-family: 'Gilroy', sans-serif;
+    font-size: 20px;
+}
+
+.about h2{
+    font-family: 'AnonymousPro' monospace;
+    color: var(--txt_std);
+    font-size: 34px;
+    font-weight: bold;
+}
+
+/*==========FOOTER==========*/
+footer{
+    background-color: var(--bg-footer-brand);
+    padding-top: 50px;
+}
+
+footer h1{
+    color: var(--txt-invert);
+
+}
+
+footer hr{
+    color: var(--txt-invert);
+    size: 120px;
+    opacity: 80%;
+    
+    margin-bottom: 100px;
+    width: 2px;
+}
+
+
+footer a{
+    font-size: 60px;
+    color: var(--txt-invert);
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease, filter 0.3s ease;
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    margin-top: -15px;
+    align-self: center;
+    padding-bottom: 57px;
+
+    font-family: 'Gilroy', sans-serif;
+    color: var(--txt-invert);
+}
+
+
+footer a:hover {
+    transform: translateY(-10px);
+    color: var(--selection-brand-invert); /* Cor oficial do Instagram */
+    filter: drop-shadow(0 0 10px rgba(225, 48, 108, 0.4)); /* Brilho neon */
+}
+
+footer .sub-link{
+    font-family: 'Gilroy', sans-serif;
+    color: var(--txt-invert);
+    font-size: large;
+}
+
+footer h2{
+    font-family: 'Gilroy', sans-serif;
+    font-size: 30px;
+
+    color: var(--txt-invert);
+    font-weight: bold;
+}
+
+footer ul{
+    font-family: 'Gilroy', sans-serif;
+    font-size: 20px;
+    color: var(--txt-invert);
+    padding-bottom: 10px;
+}
+
+footer h2{
+    font-family: 'Gilroy', sans-serif;
+    font-size: 20px;
+
+    color: var(--txt-invert);
+    font-weight: bold;
+
+    margin-top: -70px;
+}
+
+footer a:hover{
+    color: var(--selection-brand-invert);
+}
+
+.copyright{
+    padding-top: 20px;
+    color: var(--txt-invert);
+}

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="ight">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+
+
+    <link rel="stylesheet" href="../styles/vendor/bootstrap/bootstrap.min.css">
+
+    <!--Link dos Ícones do Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="../styles/global.css">
+
+
+</head>
+
+<body>
+
+    <header>
+        <!-- #region NavBar -->
+        <div class="container-flex">
+
+            <!-- NavBar -->
+            <nav class="navbar navbar-expand-lg navbar-adm">
+                <!--#region Logo-->
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">S.O.H.L.O.</a>
+                </div>
+                <!-- #endregion -->
+
+                <!-- #region Navbar-Elements -->
+                <div class="navbar-btn">
+
+                    <!-- User Rights-Indicator -->
+                    <h1 class="d-flex user-status gap-2"> <span>Administrador</span>
+                        <i class="bi bi-unlock2-fill fs-4"></i>
+                    </h1>
+
+                    <!-- Notification-Button -->
+                    <div class="collapse navbar-collapse">
+                        <button class="btn dropdown-toggle" type="button">
+                            <i class="bi bi-bell fs-1"></i>
+                        </button>
+                    </div>
+
+                    <!-- Theme-Toggle-Button -->
+                    <div class="collapse navbar-collapse">
+                        <button class="btn" id="theme-toggle" type="button">
+                            <i id="theme-icon" class="bi bi-sun fs-1"></i>
+                        </button>
+                    </div>
+
+                    <!-- User Preferences Button -->
+                    <div class="collapse navbar-collapse">
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                <h1>Nome_Usuário</h1>
+                                <i class="bi bi-person-circle fs-1"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">Configurações</a></li>
+                                <li><a class="dropdown-item" href="#">Minha Conta</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- #endregion -->
+            </nav>
+        </div>
+
+        <!-- #endregion -->
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="sidebar-body">
+
+            <!-- Stripe-Menu -->
+            <div class="sidebar-nav">
+                <!-- #region System-Modes -->
+                <div class="nav-btn">
+                    <button class="" id="logistic-btn" onclick="logisticSidebar()">
+                        <i class="bi bi-globe"></i>
+                    </button>
+
+                    <button class="active" id="financial-btn" onclick="financialSidebar()">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </button>
+
+                    <button class="" id="history-btn" onclick="historyLog()">
+                        <i class="bi bi-stopwatch"></i>
+                    </button>
+                </div>
+                <!-- #endregion -->
+
+                <!-- #region LogOut-Button -->
+                <a href="../index.html" class=" btn logout-btn">
+                    <i class="bi bi-box-arrow-left"></i>
+                    <span>Log<br>Out</span>
+                </a>
+                <!-- #endregion -->
+            </div>
+
+            <!-- Pages-Links -->
+            <div class="sidebar-submenu-panel">
+
+                <!-- System-Indicator -->
+                <h4 class="module-title">Sistema<br>Financeiro</h4>
+
+                <!-- Search-Box -->
+                <div class="sidebar-search-box">
+                    <i class="bi bi-search"></i>
+                    <input type="text" placeholder="Pesquisar">
+                </div>
+
+                <hr class="sidebar-divider">
+
+                <!-- #region Pages-Links -->
+                <nav class="submenu-links">
+                    <a href="financeiro_dashboard.html" class="menu-link" id="fin-dashboard-pg">Dashboards</a>
+                    <a href="#" class="menu-link active" id="fin-income-pg">Receita</a>
+                    <a href="financeiro_contas.html" class="menu-link" id="fin-bill-pg">Contas à Pagar</a>
+                    <a href="financeiro_fluxo.html" class="menu-link" id="fin-flow-pg">Fluxo de Caixa</a>
+                    <a href="financeiro_multas.html" class="menu-link" id="fin-fines-pg">Multas</a>
+                    <a href="financeiro_preço.html" class="menu-link" id="fin-price-adjust-pg">Ajuste de Preço</a>
+                    <a href="financeiro_diario.html" class="menu-link" id="fin-diary-pg">Relatório Diário</a>
+                </nav>
+                <!-- #endregion -->
+            </div>
+
+        </div>
+    </aside>
+
+
+    <main class="main">
+        <section class="filter-bar d-flex align-items-center justify-content-between mb-3">
+
+            <div class="filter-group d-flex align-items-center gap-2">
+                <div class="dropdown">
+                    <button class="btn active dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Total
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-menu-item active" href="#">Total</a></li>
+                        <li><a class="dropdown-menu-item" href="#">Esta Semana</a></li>
+                        <li><a class="dropdown-menu-item" href="#">Este Mês</a></li>
+                        <li><a class="dropdown-menu-item" href="#">Ano Completo</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Filtro A
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-menu-item" href="#">Opção 1</a></li>
+                        <li><a class="dropdown-menu-item" href="#">Opção 2</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Filtro B
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-menu-item" href="#">Opção X</a></li>
+                        <li><a class="dropdown-menu-item" href="#">Opção Y</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="card-section">
+            <div class="card-epsilon is-green">
+                <h2>Legenda</h2>
+                <h3>-------</h3>
+                <h1>Informação</h1>
+            </div>
+
+            <div class="card-epsilon is-std">
+                <h2>Legenda</h2>
+                <h3>-------</h1>
+                <h1>Informação</h1>
+            </div>
+        </section>
+
+
+        <section class="section-table">
+
+            <!-- Botoes de Cima da Tabela -->
+            <div class="row table-btns">
+                <div class="col-auto">
+                    <button class="uptable-btn">
+                        <i class="bi bi-pencil-square"></i>
+                    </button>
+                </div>
+
+                <div class="col-auto">
+                    <button class="uptable-btn">
+                        <i class="bi bi-arrow-clockwise"></i>
+                    </button>
+                </div>
+            </div>
+
+
+            <!-- Tabela -->
+            <div class="table-container table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>EXEMPLO DE TÍTULO DE COLUNA</th>
+                            <th>EXEMPLO DE TÍTULO DE COLUNA</th>
+                            <th>EXEMPLO DE TÍTULO DE COLUNA</th>
+                        </tr>
+                    </thead>
+
+                    <tbody class="table-content">
+
+                        <tr class="status is-green">
+                            <td>Exemplo de Informação Normal</td>
+                            <td><span class="btn">Exemplo de Botão Interno</span></td>
+                            <td><span class="status-badge">Exemplo de Badge</span></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="../scripts/vendor/bootstrap/bootstrap.bundle.js"></script>
+    <script src="../scripts/shared/sidebar.js"></script>
+    <script src="../scripts/shared/themes.js"></script>
+
+</body>
+
+</html>

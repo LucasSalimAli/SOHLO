@@ -1,0 +1,387 @@
+@import url('../shared/colors.css');
+@import url('../shared/fonts.css');
+
+
+
+/*==========GENERAL==========*/
+.card-section {
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 40px;
+    display: flex;
+}
+
+.card-section.is-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-start;
+    row-gap: 5px;
+    flex-shrink: 0;
+    min-width: 520px;
+}
+
+.is-symbol{
+    font-size: 30px;
+    opacity: 85%;
+    font-weight: normal;
+}
+
+.is-value{font-size: 40px;}
+
+
+/*==========ALPHAS==========*/
+.card-alpha {
+    /*Structure*/
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    max-height: 130px;
+
+    /*Color*/
+    color: var(--txt-white);
+    background-color: var(--card-accent);
+}
+
+.card-alpha h2 {
+    /*Structure*/
+    padding: 15px;
+    margin-top: auto;
+    margin-bottom: 0px;
+
+    /*Text*/
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    /*Highlight*/
+    background-color: rgba(0, 0, 0, 0.15);
+    
+}
+
+.card-alpha h1{
+    /*Structure*/
+    padding: 15px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /*Text*/
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.card-alpha.is-std {color: var(--txt-std-adm);}
+
+
+/*==========BETAS==========*/
+.card-beta{
+    /*Structure*/
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    border-radius: 7px;
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid var(--card-accent);
+    padding: 1rem;
+    max-height: 125px;
+
+    /*Color*/
+    background-color: var(--bg-card-std);
+}
+
+.card-beta h2{
+    /*Structure*/
+    margin-bottom: 0px; 
+    display: block;   
+
+    /*Text*/
+    font-size: 0.875rem;       
+    text-transform: uppercase; 
+    opacity: 0.75;                   
+    text-align: center;
+     
+    /*Color*/
+    color: var(--txt-std-adm);   
+}
+
+.card-beta h1 {
+    /*Structure*/
+    padding: 15px;
+    margin-bottom: auto;    
+    margin-top: auto;
+
+    /*Text*/
+    font-family: 'Science Gothic', sans-serif !important; /* Adicione !important */
+    font-size: 3rem;       
+    font-weight: 700 !important;                        /* Adicione !important */
+    line-height: 1;
+    text-align: center;
+
+    /*Color*/
+    color: var(--card-accent);
+}
+
+
+
+
+
+/*==========GAMMAS==========*/
+
+.card-gamma{
+    /*Structure*/
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid var(--card-accent);
+    padding: 1rem;
+    max-height: 110px;
+    justify-content: space-between;
+
+    /*Color*/
+    background-color: var(--bg-card-std);
+}
+
+.card-gamma h2{
+    /*Structure*/
+    margin-bottom: 0px;    
+    display: block;  
+
+    /*Text*/
+    font-size: 0.875rem;       
+    text-transform: uppercase; 
+    opacity: 0.75;                
+    text-align: center;
+    align-self: end;
+    color: var(--txt-std-adm);
+}
+
+.card-gamma h1{
+    /*Structure*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: auto;
+
+    /*Text*/
+    font-size: 2rem;
+    font-weight: bold;
+
+    /*Color*/
+    color: var(--card-accent);
+    
+}
+
+/*Color*/
+    
+.card-gamma .is-symbol{color: var(--txt-std-adm);}
+
+
+/*==========DELTAS==========*/
+
+.card-delta{
+    /*Structure*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    height: 100px;
+    min-width: 250px;
+    
+    /*Color*/
+    background-color: var(--bg-card-std);
+    
+}
+
+.card-delta h2{
+    /*Structure*/
+    padding: 8px;
+    width: 100%;
+    border-bottom: 1px solid var(--line);
+
+    /*Text*/
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: none;
+
+    /*Color*/
+    color: var(--txt-std-adm);
+}
+
+.card-delta h1{
+    /*Text*/
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 1;
+    text-align: center;
+    margin: auto;
+
+    /*Color*/
+    color: var(--card-accent);
+}
+
+
+/*==========EPSILONS==========*/
+
+.card-epsilon{
+    /*Structure*/
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid var(--card-accent);
+    padding: 1.25rem;
+    height: 10.625rem;
+    align-items: start;
+
+    
+    /*Color*/
+    background-color: var(--bg-card-std);
+    
+}
+
+.card-epsilon h2{
+    /*Structure*/
+    display: flex;
+
+    margin-top: auto;
+
+    /*Text*/
+    font-size: 1.75rem;
+
+    /*Color*/
+    color: var(--txt-std-adm);
+   
+}
+
+.card-epsilon h3{
+    /*Structure*/
+    display: flex;
+
+    margin-top: auto;
+
+    /*Text*/
+    font-size: 0.855rem;
+  
+    /*Color*/
+    color: var(--card-accent);
+    
+}
+
+.card-epsilon h1{
+    /*Structure*/
+    display: flex;
+
+    margin-top: auto;
+
+    /*Text*/
+    font-size: 2.5rem;
+   
+
+    /*Color*/
+    color: var(--card-accent);
+}
+
+
+/*==========BRAND==========*/
+
+.card-zeta{
+    margin: auto;
+    background-color: color-mix(in srgb, var(--bg-card-brand) 70%, transparent);
+    color: var(--txt_std);
+    height: 560px;
+
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-zeta:hover {
+    transform: translateY(-8px); /* O card dá um leve salto para cima */
+    background-color: color-mix(in srgb, var(--bg-card-brand) 90%, transparent); 
+
+    /*Aura*/
+    box-shadow: 0 10px 20px color-mix(in srgb, var(--selection-brand) 50%, transparent); 
+}
+
+
+.card-zeta h1{
+    font-family: 'Freestyle Script', cursive;
+    color: var(--txt-brand);
+    font-size: 72px;
+    margin-bottom: -10px;
+}
+
+.card-zeta h2{
+    font-family: 'Gilroy', sans-serif;
+    color: var(--txt-brand);
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-zeta ul{
+    font-family: 'Gilroy', sans-serif;
+    font-size: 20px;
+    color: var(--txt-brand);
+}
+
+.card-zeta li{
+    padding-top: 15px;
+}
+
+.card-zeta button{
+    font-size: 24px;
+    width: 360px;
+    margin-top: 22px;
+    color: var(--txt-green);
+    background-color: color-mix(in srgb, var(--bg-btn-brand) 70%, transparent);
+
+    font-family: 'AnonymousPro', monospace;
+    
+    border-radius: 15px;
+}
+
+.card-zeta hr{
+    color: var(--txt-brand);
+    opacity: 60%;
+}
+
+.card-img{
+    max-width: 300px;
+    max-height: 220px;
+    padding:20px;
+}
+
+
+
+/* card-grid-actuator */
+.card-section.is-grid > [class*="card-"] {
+    margin: 0;
+    min-width: 0;
+    width: 100%;
+}
+
+.card-section.is-grid > [class*="card-delta"] {
+    width: 250px;
+}
