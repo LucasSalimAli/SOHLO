@@ -19,30 +19,30 @@
 
 ```text
 .
-└── src/
-    ├── assets/
-    │   ├── fonts/
-    │   │   └── fontes.ttf
-    │   └── images/
-    │       └── imagens.jpg/png
-    ├── pages/
-    │   └── paginas.html
-    ├── scripts/
-    │   ├── shared/
-    │   │   └── coisas-compartilhadas-por-todos.js
-    │   └── vendor/
-    │       └── coisas-de-terceiros.js
-    ├── styles/
-    │   ├── components/
-    │   │   └── componentes.css
-    │   ├── pages/
-    │   │   └── index.css
-    │   ├── shared/
-    │   │   └── coisas-compartilhadas-por-todos.css
-    │   ├── vendor/
-    │   │   └── coisas-de-terceiros.css
-    │   └── global.css
-    └── index.html
+└── root/
+    ├── src/
+    │   ├── assets/
+    │   │   ├── fonts
+    │   │   └── images
+    │   ├── controllers
+    │   ├── models
+    │   └── views/
+    │       ├── pages/
+    │       │   ├── brand
+    │       │   ├── shared
+    │       │   ├── components
+    │       │   ├── financial
+    │       │   └── logistics
+    │       ├── scripts/
+    │       │   ├── shared
+    │       │   └── vendor
+    │       └── styles/
+    │           ├── components 
+    │           ├── pages
+    │           ├── shared
+    │           ├── vendor
+    │           └── global.css
+    └── index.php
 ```
  **PROIBIDA A CRIAÇÃO DE NOVAS PASTAS/ESTRUTURAS** 
 
@@ -112,6 +112,45 @@ Os Cards seguirão a nomenclatura utilizando letras gregas para diferenciação 
       <h1>Informação</h1>
   </div>
   ```
+#### Filtros
+Os filtros seguem esse modelo 
+```html
+<section class="filter-bar">
+            <div class="filter-group">
+
+                <div class="filter-dropdown" data-filter="period">
+                    <button class="filter-btn active" type="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="filter-label">Filtro A</span>
+                    </button>
+                    <ul class="filter-menu">
+                        <li><a class="filter-menu-item active" href="#" data-value="total">Opção Alpha</a></li>
+                        <li><a class="filter-menu-item" href="#" data-value="total">Opção Beta</a></li>
+                    </ul>
+                </div>
+
+                <div class="filter-dropdown" data-filter="filter-a">
+                    <button class="filter-btn" type="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="filter-label">Filtro B</span>
+                    </button>
+                    <ul class="filter-menu">
+                        <li><a class="filter-menu-item" href="#" data-value="option-1">Opção 1</a></li>
+                        <li><a class="filter-menu-item" href="#" data-value="option-2">Opção 2</a></li>
+                    </ul>
+                </div>
+
+                <div class="filter-dropdown" data-filter="filter-b">
+                    <button class="filter-btn" type="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="filter-label">Filtro C</span>
+                    </button>
+                    <ul class="filter-menu">
+                        <li><a class="filter-menu-item" href="#" data-value="option-x">Opção X</a></li>
+                        <li><a class="filter-menu-item" href="#" data-value="option-y">Opção Y</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+```
 
 #### Tabelas
 As tabelas seguem essa nomenclatura e divisão. Elas se ajustam automaticamente a todos os tamanhos necessários dependendo do conteúdo e página.
@@ -162,21 +201,6 @@ As tabelas seguem essa nomenclatura e divisão. Elas se ajustam automaticamente 
 * Todo array em PHP deverá possuir índice de colunas nomeados e índice de linhas numéricos, quando a condição se aplicar (array de duas dimensões).
 * Todas as variáveis deverão ter simbologia e significado claros, sendo **proibido o uso de nomes genéricos** (Ex: `number_one` ao invés de `n1`).
 
-### Estruturas de Decisão
-Toda estrutura de decisão deverá ter seu código descrito da seguinte maneira:
-```php
-if (condição) {
-    Bloco de Código;
-}
-```
-
-### Estrutura For
-O laço de repetição `for` deverá seguir o seguinte padrão de espaçamento em sua declaração:
-```php
-for (inicio; condição > condição; incremento){
-    Bloco de Código;
-}
-```
 
 ### Nomenclatura de Arquivos
 * Todos os arquivos deverão possuir títulos simples, que deixem claro o seu conteúdo e sejam facilmente diferenciáveis (Ex: `logo_brand.png` ao invés de `logo.png`).
