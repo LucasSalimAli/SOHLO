@@ -3,7 +3,7 @@
 class initController
 {
 
-    public function financialInit()
+    public function Init()
     {
         require_once "src/views/pages/brand/landpage.html";
     }

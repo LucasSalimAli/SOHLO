@@ -6,6 +6,7 @@
 @import url("shared/fonts.css");
 @import url("shared/navbars.css");
 @import url("shared/sidebar.css");
+@import url("shared/forms.css");
 
 @import url("vendor/bootstrap/bootstrap.min.css");
 @import url("components/buttons.css");

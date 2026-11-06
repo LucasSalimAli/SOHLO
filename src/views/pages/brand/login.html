@@ -1,11 +1,51 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+
+    <link rel="stylesheet" href="src/views/styles/global.css">
+    <link rel="stylesheet" href="src/views/styles/pages/login.css"> 
 </head>
+
 <body>
-    
+
+    <header>
+        <nav class="navbar-brands inputs">
+            <!-- Logo -->
+            <a class="brands-logo" href="index.html">Húmus - Compostagem</a>
+
+        </nav>
+    </header>
+
+    <main>
+        <section class="login">
+
+            <h1>Login</h1>
+
+            <form action="#" method="post">
+                <label for="credential">Digite seu E-mail ou Documento</label>
+                <br>
+                <input type="text" name="credential" placeholder="Email // CPF // CNPJ">
+                <br>
+                <label for="password">Digite sua Senha</label>
+                <br>
+                <input type="password" name="password" placeholder="-----">
+                <br>
+                <input class="btn" type="submit" value="Entrar">
+                <br>
+                <a href="#">Esqueci Minha Senha</a>
+            </form>
+        </section>
+
+    </main>
+
+
 </body>
+
+<script src="/src/views/scripts/shared/navbars.js"></script>
+<script src="/src/views/scripts/shared/themes.js"></script>
+
 </html>

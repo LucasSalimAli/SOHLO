@@ -63,5 +63,20 @@ class pagesController{
         require_once "src/views/pages/logistic/schedule.php";
     }
 
+    public function initPermission()
+    {
+        require_once "src/views/pages/logistic/permissions.php";
+    }
+
+    public function initLogin()
+    {
+        require_once "src/views/pages/brand/login.html";
+    }
+
+    public function initSignUp()
+    {
+        require_once "src/views/pages/brand/signup.html";
+    }
+
 }
 ?>

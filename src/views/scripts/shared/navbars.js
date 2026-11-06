@@ -58,3 +58,49 @@
     if (e.key === "Escape") setMenu(false);
   });
 })();
+
+
+(function () {
+  const brandsNavbar = document.getElementById("navbar-brands");
+  if (!brandsNavbar) return; // página sem a navbar da área Brand
+
+  const brandsToggle = document.getElementById("brands-menu-toggle");
+  const brandsCollapse = document.getElementById("brands-collapse");
+  const brandsIcon = brandsToggle.querySelector("i");
+  const desktopQuery = window.matchMedia("(min-width: 1025px)");
+
+  function setBrandsMenu(open) {
+    brandsNavbar.classList.toggle("open", open);
+    brandsToggle.setAttribute("aria-expanded", String(open));
+    brandsToggle.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+    brandsIcon.classList.toggle("bi-list", !open);
+    brandsIcon.classList.toggle("bi-x-lg", open);
+  }
+
+  brandsToggle.addEventListener("click", () => {
+    setBrandsMenu(!brandsNavbar.classList.contains("open"));
+  });
+
+  // Clicou num link (âncora ou botão): fecha o painel
+  brandsCollapse.addEventListener("click", (event) => {
+    if (event.target.closest("a")) setBrandsMenu(false);
+  });
+
+  // Clicar fora fecha
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest("#navbar-brands")) setBrandsMenu(false);
+  });
+
+  // Esc fecha e devolve o foco ao botão
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && brandsNavbar.classList.contains("open")) {
+      setBrandsMenu(false);
+      brandsToggle.focus();
+    }
+  });
+
+  // Voltou para tela grande com o painel aberto: fecha
+  desktopQuery.addEventListener("change", (event) => {
+    if (event.matches) setBrandsMenu(false);
+  });
+})();

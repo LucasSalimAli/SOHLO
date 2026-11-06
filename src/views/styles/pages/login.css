@@ -1,0 +1,122 @@
+@import url('colors.css');
+
+[data-theme="dark"] {
+  /*Background Image*/
+  --bg-img: url("../../../assets/images/Bg_Image_Dark.jpg");
+}
+
+[data-theme="light"] {
+  /*Background*/
+  --bg-img: url("../../../assets/images/Bg_Image_Light.png");
+}
+
+body {
+  background-image: var(--bg-img) !important;
+  background-size: 100% 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 0px;
+  /* margin-right: 34px; */
+
+  padding: 0px;
+  height: 100vh;
+  padding-bottom: 10vh;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+
+.login {
+    
+    align-self:  center;
+    width: 30%;
+}
+.login h1 {
+    text-align: center;
+    color:var(--txt-brand);
+    margin-bottom:30px;
+   
+    margin-top: 100px;
+}
+
+.login form{
+    font-family: 'Gilroy', sans-serif;
+    /* width: 30%; */
+    padding: 40px;
+    margin: auto;
+    
+ 
+    background: rgba(32, 106, 46, 0.35);
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 30px;
+    backdrop-filter: blur(12px);
+    box-shadow :0 0 25px rgba(0, 0, 0, 0.46);
+    text-align: start;
+    color: var(--txt-brand);
+}
+
+.login label {
+    color: var(--txt-brand);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.login input {
+     width:100%;
+    padding:15px;
+    margin-top:10px;
+    margin-bottom:25px;
+
+    border:none;
+    border-radius:10px;
+
+    background:rgba(255, 255, 255, 0.2);
+}
+
+.login input::placeholder {
+    color: var(--txt-brand);
+}
+
+.login .btn{
+
+    width:100%;
+    padding:14px;
+
+    border:none;
+    border-radius:12px;
+
+    background-color: var(--bg-btn-brand);
+    color: var(--txt-brand);
+
+    font-size:30px;
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.login .btn:hover{
+    transform:scale(1.03);
+    background-color: color-mix(in srgb, var(--selection-brand) 70%, transparent);
+    color: var(--txt-invert);
+
+}
+
+.login a {
+    color: var(--txt-brand);
+}
+
+.login a:hover {
+    color: var(--selection-brand);
+}

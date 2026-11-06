@@ -374,8 +374,6 @@
 }
 
 
-
-/* card-grid-actuator */
 .card-section.is-grid > [class*="card-"] {
     margin: 0;
     min-width: 0;
@@ -383,5 +381,10 @@
 }
 
 .card-section.is-grid > [class*="card-delta"] {
+    width: 250px;
+}
+
+.card-section.is-grid > [class*="card-alpha"] {
+    margin-top: 2.5rem;
     width: 250px;
 }

@@ -185,7 +185,6 @@
 
     </main>
 
-    <script src="src/views/scripts/vendor/bootstrap/bootstrap.bundle.js"></script>
     <script src="src/views/scripts/shared/navbars.js"></script>
     <script src="src/views/scripts/shared/sidebar.js"></script>
     <script src="src/views/scripts/shared/themes.js"></script>

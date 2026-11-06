@@ -19,42 +19,152 @@
 
 
 /*==========BRAND=========*/
-.navbar-brands{
-    /*Margens*/
+.navbar-brands {
+    /*Structure*/
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
     padding-left: 54px;
     padding-right: 54px;
     height: 65px;
 
-    /*Cor BG*/
+    /*Color*/
     background-color: color-mix(in srgb, var(--bg-navbar-brand) 44%, transparent);
 }
 
-.navbar-brands .navbar-brand{
+
+.brands-logo {
+    justify-self: start;
     color: var(--logo-brand);
     font-family: 'Freestyle Script', cursive;
     font-size: 50px;
+    line-height: 1;
+    text-decoration: none;
+    white-space: nowrap;
 }
 
+/* No desktop o wrapper some, e o menu e os botões entram direto na grade */
+.brands-collapse {
+    display: contents;
+}
 
+.brands-menu {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 
-.navbar-brands .nav-link {
+.brands-menu-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
     color: var(--txt-navbar-brand);
     font-family: 'AnonymousPro', monospace;
     font-size: 18px;
+    text-decoration: none;
+    transition: color 0.15s;
 }
 
-.navbar-brands .nav-link:hover,
-.navbar-brands .logo:hover, .navbar-brands .navbar-home, .navbar-brands .nav-link:focus,
-.navbar-brands .nav-link:active{
+.brands-menu-link:hover {
     color: var(--selection-brand);
 }
-.navbar-brands .navbar-brand:hover{
-    color: var(--txt-navbar-brand);
+
+.brands-menu-link:focus-visible {
+    outline: 2px solid var(--selection-brand);
+    outline-offset: 2px;
 }
 
-.navbar-brands .navbar-home, .navbar-brands .nav-link:focus,
-.navbar-brands .nav-link:active{
+.brands-actions {
+    display: flex;
+    align-items: center;
+    justify-self: end;
+    gap: 0.5rem;
+}
+
+/* Hambúrguer: escondido no desktop */
+.brands-menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    padding: 0 0.625rem;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
     color: var(--txt-navbar-brand);
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.15s;
+}
+
+.brands-menu-toggle:hover {
+    color: var(--selection-brand);
+}
+
+.brands-menu-toggle:focus-visible {
+    outline: 2px solid var(--selection-brand);
+    outline-offset: 2px;
+}
+
+/* ===== Responsivo (desktop-first) ===== */
+@media (max-width: 1024px) {
+    .navbar-brands {
+        grid-template-columns: 1fr auto;
+        height: auto;
+        min-height: 65px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .brands-menu-toggle {
+        display: inline-flex;
+    }
+
+    /* O wrapper vira o painel, fechado por padrão */
+    .brands-collapse {
+        display: none;
+        grid-column: 1 / -1;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.5rem 0 1rem;
+    }
+
+    /* Aberto: fundo mais sólido, para o texto não se perder sobre a imagem */
+    .navbar-brands.open {
+        background-color: color-mix(in srgb, var(--bg-navbar-brand) 92%, transparent);
+    }
+
+    .navbar-brands.open .brands-collapse {
+        display: flex;
+    }
+
+    .brands-menu {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .brands-menu-link {
+        padding: 0.75rem 0.5rem;
+    }
+
+    .brands-actions {
+        justify-self: stretch;
+        padding-top: 0.5rem;
+    }
+
+    .brands-actions .btn {
+        flex: 1;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .brands-logo {
+        font-size: 40px;
+    }
 }
 
 

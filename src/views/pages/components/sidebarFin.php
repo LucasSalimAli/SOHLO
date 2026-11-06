@@ -34,7 +34,7 @@
         <!-- #endregion -->
 
         <!-- #region LogOut-Button -->
-        <a href="landpage.html" class="logout-btn">
+        <a href="index.php" class="logout-btn">
             <i class="bi bi-box-arrow-left"></i>
             <span>Log<br>Out</span>
         </a>

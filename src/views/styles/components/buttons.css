@@ -144,6 +144,43 @@ td .btn:active{
     border: 2px color-mix(in srgb, var(--selection-adm) 30%, transparent) !important;
 }
 
+td .action{
+    display: flex;
+    gap: 1rem;
+    background-color: transparent;
+    margin: none;
+
+    color: var(--txt-std-adm);
+    border: none;
+    cursor: pointer;
+}
+
+td .btn.action{
+    background-color: transparent;
+    padding: 0px;
+    border: none;
+    border-radius: 0px;
+    font-size: 26px;
+}
+
+td .btn.action:hover{
+    color: var(--selection-adm);
+}
+
+td .btn.action.trash:hover{
+    color: var(--txt-red);
+}
+
+td .btn.action:active{
+    color: rgb(21, 89, 138) !important;
+    background-color: transparent !important;
+}
+
+td .btn.action.trash:active{
+    color: rgb(122, 41, 20) !important;
+    background-color: transparent !important;
+}
+
 
 /*==========FILTERS==========*/
 

@@ -14,7 +14,7 @@ if ($_GET)
 else{
     require_once "src/controllers/initController.class.php";
     $object = new initController();
-    $object->financialInit();
+    $object->Init();
 }
 
 ?>
