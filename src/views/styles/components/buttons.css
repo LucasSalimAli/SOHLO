@@ -153,6 +153,8 @@ td .action{
     color: var(--txt-std-adm);
     border: none;
     cursor: pointer;
+
+    justify-content: center;
 }
 
 td .btn.action{

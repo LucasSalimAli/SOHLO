@@ -1,0 +1,325 @@
+@import url('../shared/colors.css');
+
+
+
+.modal-adm{
+    display: flexbox;
+    background-color: var(--bg-modal-adm);
+    border-width: 3px;
+    border-color: var(--bg-table-adm);
+    border-radius: 14px;
+    position: relative;
+
+}
+
+.modal-adm button{
+    border-radius: 10px;
+    background-color: var(--bg-btn-modal);
+    color: var(--txt-std-adm);
+    height: 7rem;
+    width: 15rem;
+    margin: 0 1rem;
+}
+
+.modal-adm button:hover{
+    background-color: var(--hv-navbar-adm);
+    border-color: var(--selection-adm);
+    box-shadow: 0 0 5px var(--selection-adm);
+}
+
+.modal-adm h1{
+    margin: 0 1rem;
+    text-align: center;
+    font-size: 32px;
+}
+
+.modal-adm form label{
+    color: var(--txt-std-adm);
+}
+
+.modal-adm form{
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap; 
+    margin-top: 2.5rem;
+}
+
+
+.modal-adm  form > fieldset {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    
+   
+    border-radius: 8px;
+   
+}
+
+
+.modal-adm form > label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-top: 4px;
+}
+
+.modal-adm form > input {
+   
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+
+.modal-adm input {
+    margin-bottom: 1.5rem;
+}
+
+.modal-adm textarea {
+  margin-bottom: 1.5rem;
+}
+
+.modal-adm #exit{
+    border: none;
+    background-color: transparent;
+    color: var(--txt-std-adm);
+    height: 3rem;
+    width: 3rem;
+    margin: 0 0.5rem;
+    font-size: larger;
+    position: absolute;
+   
+}
+
+.modal-adm #exit:hover{
+    border-color: var(--txt-red);
+    color: var(--txt-red);
+    box-shadow: 0 0 5px var(--txt-red);
+}
+
+
+.modal-adm .form-actions {
+    margin-top: auto;      /* empurra pro fundo do fieldset */
+    display: flex;
+    gap: 1rem;
+}
+
+.modal-adm .form-actions input {
+    flex: 1;
+    height: 3rem;
+    margin: 0;             /* anula o margin-bottom: 1.5rem do .modal-adm input */
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-color: var(--bg-btn-modal);
+    color: var(--txt-std-adm);
+    font: inherit;
+    cursor: pointer;
+}
+
+.modal-adm .form-actions input:hover {
+    background-color: var(--hv-navbar-adm);
+    border-color: var(--selection-adm);
+    box-shadow: 0 0 5px var(--selection-adm);
+}
+
+/* "Limpar" fica vermelho no hover, igual ao seu botão de fechar */
+.modal-adm .form-actions input[type="reset"]:hover {
+    border-color: var(--txt-red);
+    color: var(--txt-red);
+    box-shadow: 0 0 5px var(--txt-red);
+    background-color: var(--bg-btn-modal);
+}
+
+
+
+/* ===== Modal de visualização de cliente ===== */
+.modal-view {
+  width: min(42rem, 92vw);
+  padding: 1.5rem 2rem 2rem;
+  color: var(--txt-std-adm);
+}
+
+.modal-view::backdrop {
+  background-color: rgb(0 0 0 / 0.6);
+  backdrop-filter: blur(3px);
+}
+
+/* Cabeçalho */
+.modal-view > header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.modal-view > header h1 {
+  margin: 0;
+}
+
+.modal-view > header button {
+  position: absolute;
+  left: 0;
+  width: 3rem;
+  height: 3rem;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  font-size: larger;
+}
+
+.modal-view > header button:hover {
+  background-color: transparent;
+  border-color: var(--txt-red);
+  color: var(--txt-red);
+  box-shadow: 0 0 5px var(--txt-red);
+}
+
+/* Cartão de perfil (primeira section) */
+.modal-view > section:first-of-type {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid color-mix(in srgb, var(--selection-adm) 40%, transparent);
+  border-radius: 12px;
+  background-color: color-mix(in srgb, var(--selection-adm) 8%, transparent);
+}
+
+.modal-view > section:first-of-type img,
+.modal-view > section:first-of-type i {
+  flex-shrink: 0;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  font-size: 4.5rem;
+  line-height: 1;
+  color: var(--selection-adm);
+}
+
+.modal-view > section:first-of-type img {
+  object-fit: cover;
+  border: 2px solid var(--selection-adm);
+  box-shadow: 0 0 8px var(--selection-adm);
+}
+
+.modal-view > section:first-of-type img:not([hidden]) + i {
+  display: none;
+}
+
+.modal-view > section:first-of-type div {
+  flex: 1;
+  min-width: 0;
+}
+
+.modal-view > section:first-of-type h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  overflow-wrap: anywhere;
+}
+
+.modal-view > section:first-of-type p {
+  margin: 0.25rem 0 0;
+  color: var(--txt-gray, #9a9a9a);
+  overflow-wrap: anywhere;
+}
+
+/* Selo de status */
+.modal-view [data-field="status"] {
+  padding: 0.3rem 0.9rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: var(--txt-gray, #9a9a9a);
+}
+
+.modal-view [data-field="status"][data-value="ativo"] {
+  color: #3ddc5f;
+  background-color: color-mix(in srgb, #3ddc5f 15%, transparent);
+}
+
+.modal-view [data-field="status"][data-value="inativo"] {
+  color: var(--txt-red);
+  background-color: color-mix(in srgb, var(--txt-red) 15%, transparent);
+}
+
+/* Seções de dados */
+.modal-view > section + section {
+  margin-top: 1.5rem;
+}
+
+.modal-view > section h3 {
+  margin: 0 0 0.75rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--selection-adm) 40%, transparent);
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--selection-adm);
+}
+
+.modal-view dl {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 2rem;
+  margin: 0;
+}
+
+.modal-view dl > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.modal-view dl > div:has(> [data-field="street"]),
+.modal-view dl > div:has(> [data-field="email"]) {
+  grid-column: 1 / -1;
+}
+
+.modal-view dt {
+  font-size: 0.8rem;
+  color: var(--txt-gray, #9a9a9a);
+}
+
+.modal-view dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+/* Campo vazio mostra um traço */
+.modal-view dd:empty::before {
+  content: "—";
+  color: var(--txt-gray, #9a9a9a);
+}
+
+/* Rodapé */
+.modal-view > footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+.modal-view > footer button {
+  width: auto;
+  height: 3rem;
+  margin: 0;
+  padding: 0 2rem;
+}
+
+
+@media (max-width: 560px) {
+  .modal-view {
+    padding: 1rem;
+  }
+
+  .modal-view dl {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-view > section:first-of-type {
+    flex-wrap: wrap;
+  }
+}
+

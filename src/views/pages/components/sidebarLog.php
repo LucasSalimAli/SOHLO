@@ -60,16 +60,16 @@
                 onclick="pageSelect()">Clientes</a>
             <a href="index.php?controller=pagesController&method=initEmployees" class="menu-link" id="fin-income-pg"
                 onclick="pageSelect()">Funcionarios</a>
-            <a href="index.php?controller=pagesController&method=initContracts" class="menu-link" id="fin-bill-pg onclick="
-                pageSelect()">Planos</a>
-            <a href="index.php?controller=pagesController&method=initSchedule" class="menu-link" id="fin-flow-pg onclick="
-                pageSelect()">Agenda</a>
-            <a href="index.php?controller=pagesController&method=initProfiles" class="menu-link" id="fin-fines-pg onclick="
-                pageSelect()">Perfis e Permissões</a>
-            <a href="index.php?controller=pagesController&method=initDashboards" class="menu-link" id="fin-price-adjust-pg"
-                onclick="pageSelect()">Dashboards</a>
+            <a href="index.php?controller=pagesController&method=initPlans" class="menu-link"
+                id="fin-bill-pg onclick=" pageSelect()">Planos</a>
+            <a href="index.php?controller=pagesController&method=initPermission" class="menu-link"
+                id="fin-fines-pg onclick=" pageSelect()">Perfis e Permissões</a>
+            <a href="index.php?controller=pagesController&method=initPermission" class="menu-link"
+                id="fin-price-adjust-pg" onclick="pageSelect()">Dashboards</a>
             <a href="index.php?controller=pagesController&method=initDiary" class="menu-link" id="fin-diary-pg onclick="
                 pageSelect()">Relatório Diário</a>
+            <a href="index.php?controller=pagesController&method=initSchedule" class="menu-link"
+                id="fin-flow-pg onclick=" pageSelect()">Agenda</a>
         </nav>
         <!-- #endregion -->
     </div>

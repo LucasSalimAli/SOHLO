@@ -314,7 +314,7 @@ body {
   border-color: var(--txt-blue);
     box-shadow: 0 0 15px rgba(27, 84, 92, 0.7);
     /*Brilho*/
-    background-color: color-mix(in srgb, #120c5e 60%, transparent);
+    background-color: color-mix(in srgb,  #120c5e 60%, transparent);
 
     /*Cor ao passar o mouse*/
     color: var(--txt-brand  )
@@ -344,4 +344,83 @@ body {
   .signup-options {
     grid-template-columns: 1fr;
   }
+}
+
+
+/* ===== Upload de imagem ===== */
+.signup-upload > span {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.9375rem;
+}
+
+.signup-upload label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+/* O input fica invisível, mas continua acessível pelo teclado */
+.signup-upload input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.signup-upload label > span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 20px 16px;
+  border: 2px dashed color-mix(in srgb, var(--line) 35%, transparent);
+  border-radius: 12px;
+  text-align: center;
+  transition:
+    border-color 0.15s,
+    background-color 0.15s;
+}
+
+.signup-upload label:hover > span {
+  border-color: var(--selection-brand);
+  background-color: color-mix(in srgb, var(--selection-brand) 10%, transparent);
+}
+
+.signup-upload input:focus-visible + span {
+  outline: 2px solid var(--selection-brand);
+  outline-offset: 2px;
+}
+
+.signup-upload i {
+  color: var(--selection-brand);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.signup-upload small {
+  color: var(--txt-gray);
+  font-size: 0.875rem;
+}
+
+/* A pré-visualização só aparece depois de escolher a imagem */
+.signup-upload img {
+  display: none;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.signup-upload.has-file img {
+  display: block;
+}
+
+.signup-upload.has-file i {
+  display: none;
+}
+
+.signup-upload.has-file label > span {
+  border-style: solid;
+  border-color: var(--selection-brand);
 }

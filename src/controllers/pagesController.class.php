@@ -53,9 +53,9 @@ class pagesController{
         require_once "src/views/pages/logistic/employees.php";
     }
 
-    public function initContracts()
+    public function initPlans()
     {
-        require_once "src/views/pages/logistic/contract.php";
+        require_once "src/views/pages/logistic/plans.php";
     }
 
     public function initSchedule()

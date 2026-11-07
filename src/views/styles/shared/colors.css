@@ -41,6 +41,7 @@
     --bg-btn-next: #4E9A22;
     --bg-btn-to-login: #6761D3;
     --bg-btn-table: #4B4C4F;
+    --bg-btn-modal: #1f2229;;
 
     /*---FILTERS---*/
     --bg-filter-adm: #1C1D21;
@@ -57,6 +58,9 @@
 
     /*---GRAPHICS---*/
     --bg-graph-adm: #1C1D21;
+
+    /*---MODALS---*/
+    --bg-modal-adm: #121315;
 
     /*---FOOTERS---*/
     --bg-footer-brand: #FFEFEF;
@@ -123,6 +127,7 @@
     --bg-btn-next: #4E9A22;
     --bg-btn-to-login: #6761D3;
     --bg-btn-table: #ACAFB1;
+    --bg-btn-modal: #d2d4d5;    
 
     /*---FILTERS---*/
     --bg-filter-adm: #E5E9EC;
@@ -139,6 +144,9 @@
 
     /*---GRAPHICS---*/
     --bg-graph-adm: #DCDCDC;
+
+    /*---MODALS---*/
+    --bg-modal-adm: #E5E9EC;
 
     /*---FOOTERS---*/
     --bg-footer-brand: #000000;
