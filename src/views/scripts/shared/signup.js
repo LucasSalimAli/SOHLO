@@ -8,17 +8,7 @@
   const nextButton = document.getElementById("signup-next-btn");
   const submitButton = document.getElementById("signup-submit-btn");
 
-  // O que aparece para cada tipo de cliente
-  const customerGroups = {
-    individual: [
-      document.getElementById("individual-fields"),
-      document.getElementById("individual-plan"),
-    ],
-    company: [
-      document.getElementById("company-fields"),
-      document.getElementById("company-summary"),
-    ],
-  };
+
 
   let currentStep = 0;
 
@@ -62,38 +52,10 @@
     focusFirstField();
   }
 
-  /* ===== PF ou PJ ===== */
-  function toggleGroup(group, visible) {
-    group.hidden = !visible;
-    group.disabled = !visible; // desativado: não é enviado ao PHP
-  }
-
-  function updateCustomerType() {
-    const selected = signupForm.querySelector(
-      'input[name="customer_type"]:checked'
-    );
-    const isCompany = Boolean(selected) && selected.value === "company";
-
-    customerGroups.individual.forEach((group) => toggleGroup(group, !isCompany));
-    customerGroups.company.forEach((group) => toggleGroup(group, isCompany));
-
-    // Textos que mudam conforme o tipo (título da etapa 3 e rótulo do progresso)
-    document
-      .querySelectorAll("[data-individual][data-company]")
-      .forEach((element) => {
-        element.textContent = isCompany
-          ? element.dataset.company
-          : element.dataset.individual;
-      });
-  }
-
   /* ===== Eventos ===== */
   nextButton.addEventListener("click", goNext);
   backButton.addEventListener("click", goBack);
 
-  signupForm
-    .querySelectorAll('input[name="customer_type"]')
-    .forEach((radio) => radio.addEventListener("change", updateCustomerType));
 
   // Enter numa etapa que não é a última funciona como "Próximo"
   signupForm.addEventListener("submit", (event) => {
@@ -107,6 +69,5 @@
   // O PHP pode reabrir o formulário numa etapa (ex.: data-start-step="2" depois de um erro)
   const startStep = Number(signupForm.dataset.startStep) || 1;
 
-  updateCustomerType();
   showStep(Math.min(Math.max(startStep, 1), steps.length) - 1);
 })();

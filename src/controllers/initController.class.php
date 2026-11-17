@@ -1,6 +1,6 @@
 <?php
 
-class initController
+class InitController
 {
 
     public function Init()

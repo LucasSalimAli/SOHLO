@@ -1,0 +1,186 @@
+/* ===== Card do perfil (seu bloco, sem alterações) ===== */
+.account > section:first-of-type {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid color-mix(in srgb, var(--selection-adm) 40%, transparent);
+  border-radius: 12px;
+  background-color: color-mix(in srgb, var(--selection-adm) 8%, transparent);
+}
+
+.account > section:first-of-type img,
+.account > section:first-of-type i {
+  flex-shrink: 0;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  font-size: 4.5rem;
+  line-height: 1;
+  color: var(--selection-adm);
+}
+
+.account > section:first-of-type img {
+  object-fit: cover;
+  border: 2px solid var(--selection-adm);
+  box-shadow: 0 0 8px var(--selection-adm);
+}
+
+.account > section:first-of-type img:not([hidden]) + i {
+  display: none;
+}
+
+.account > section:first-of-type div {
+  flex: 1;
+  min-width: 0;
+}
+
+.account > section:first-of-type h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  overflow-wrap: anywhere;
+  color: var(--txt-std-adm);
+}
+
+.account > section:first-of-type p {
+  margin: 0.25rem 0 0;
+  color: var(--txt-gray, #9a9a9a);
+  overflow-wrap: anywhere;
+}
+
+/* ===== Tela: perfil em cima, cards ocupando a largura toda ===== */
+.account {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1.5rem;
+}
+
+/* Perfil e ações ocupam a largura toda */
+.account > section:first-of-type,
+.account > footer {
+  grid-column: 1 / -1;
+}
+
+/* Cards de informação, no mesmo tom do perfil */
+.account > section:not(:first-of-type) {
+  min-width: 0;
+  padding: 1.25rem;
+  border: 1px solid color-mix(in srgb, var(--selection-adm) 25%, transparent);
+  border-radius: 12px;
+  background-color: color-mix(in srgb, var(--selection-adm) 4%, transparent);
+}
+
+.account > section:not(:first-of-type) h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 0.75rem;
+  font-size: 1.05rem;
+  color: var(--txt-std-adm);
+}
+
+.account h3 i {
+  color: var(--selection-adm);
+}
+
+.account dl {
+  margin: 0;
+}
+
+/* Rótulo em cima, valor embaixo: o valor usa a largura toda do card */
+.account dl > div {
+  padding: 0.7rem 0;
+}
+
+.account dl > div + div {
+  border-top: 1px solid color-mix(in srgb, var(--selection-adm) 15%, transparent);
+}
+
+.account dl dt {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--txt-std-adm);
+}
+
+.account dl dd {
+  margin: 0.25rem 0 0;
+  font-size: 1rem;
+  text-align: left;
+  overflow-wrap: break-word;
+  color: var(--txt-gray, #9a9a9a);
+}
+
+/* Ações */
+.account > footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.account > footer button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.1rem;
+  font: inherit;
+  border: 1px solid var(--selection-adm);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.account > footer button:first-child {
+  background-color: transparent;
+  color: var(--selection-adm);
+}
+
+.account > footer button:last-child {
+  background-color: transparent;
+  color: var(--selection-adm);
+}
+
+.account > footer button:hover {
+  border-color: var(--selection-adm);
+    box-shadow: 0 0 15px rgba(27, 84, 92, 0.7);
+
+
+    /*Cor ao passar o mouse*/
+    color: var(--txt-std-adm)
+}
+
+.account > footer button:focus-visible {
+  outline: 2px solid var(--selection-adm);
+  outline-offset: 2px;
+}
+
+/* Responsivo (desktop-first): 4 colunas > 2 > 1 */
+@media (max-width: 1024px) {
+  .account {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .account {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .account {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .account > section:first-of-type {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .account > footer button {
+    width: 100%;
+    justify-content: center;
+  }
+}

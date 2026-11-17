@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre sua empresa | S.O.H.L.O.</title>
+
+    <!-- Ícones do Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="src/views/styles/shared/navbars.css">
+    <link rel="stylesheet" href="src/views/styles/pages/signup.css">
+</head>
+
+<body>
+
+    <header>
+
+    </header>
+
+    <main class="signup-page">
+        <section>
+            <h1>Crie a conta da sua empresa</h1>
+
+            <ol class="signup-progress" aria-label="Etapas do cadastro">
+                <li class="active" aria-current="step">
+                    <span>1</span>
+                    <span>Dados da empresa</span>
+                </li>
+                <li>
+                    <span>2</span>
+                    <span>Endereço</span>
+                </li>
+                <li>
+                    <span>3</span>
+                    <span>Sobre a empresa</span>
+                </li>
+            </ol>
+
+            <!-- enctype é obrigatório por causa do upload da logo -->
+            <form class="signup-form" id="signup-form"
+                action="#" method="post"
+                enctype="multipart/form-data">
+
+                <!-- ===== ETAPA 1: Dados da empresa ===== -->
+                <fieldset>
+                    <legend>Dados da empresa</legend>
+
+                    <div class="signup-upload">
+                        <span>Logo da empresa (opcional)</span>
+                        <label>
+                            <input type="file" name="foto" accept="image/png, image/jpeg, image/webp">
+                            <span>
+                                <img alt="Pré-visualização da imagem escolhida">
+                                <i class="bi bi-cloud-arrow-up"></i>
+                                <strong>Escolher imagem</strong>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="signup-grid">
+                        <div>
+                            <label for="company-name">Razão social</label>
+                            <input type="text" id="company-name" name="nome" autocomplete="organization"
+                                required>
+                                <small role="alert"><?php echo $msg[0] ?></small>
+                        </div>
+                        <div>
+                            <label for="trade-name">Nome fantasia</label>
+                            <input type="text" id="trade-name" name="nome_fantasia" required>
+                            <small role="alert"><?php echo $msg[1] ?></small>
+                        </div>
+                        <div>
+                            <label for="cnpj">CNPJ</label>
+                            <input type="text" id="cnpj" name="cnpj" inputmode="numeric"
+                                placeholder="00.000.000/0000-00" required>
+                                <small role="alert"><?php echo $msg[2] ?></small>
+                        </div>
+                    </div>
+
+                    <div class="signup-grid">
+                        <div>
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" autocomplete="email" required>
+                        </div>
+                        <small role="alert"><?php echo $msg[3] ?></small>
+                        <div>
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" name="telefone" inputmode="tel" autocomplete="tel"
+                                placeholder="(00) 90000-0000" required>
+                                <small role="alert"><?php echo $msg[4] ?></small>
+                        </div>
+                        <div>
+                            <label for="password">Senha</label>
+                            <input type="password" id="password" name="senha" autocomplete="new-password" required>
+                            <small role="alert"><?php echo $msg[5] ?></small>
+                        </div>
+                        <div>
+                            <label for="password-confirm">Confirme a senha</label>
+                            <input type="password" id="password-confirm" name="confirma_senha"
+                                autocomplete="new-password" required>
+                                <small role="alert"><?php echo $msg[6] ?></small>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- ===== ETAPA 2: Endereço ===== -->
+                <fieldset>
+                    <legend>Endereço</legend>
+
+                    <div class="signup-grid">
+                        <div>
+                            <label for="zip-code">CEP</label>
+                            <input type="text" id="zip-code" name="cep" placeholder="00000-000" required>
+                            <small role="alert"><?php echo $msg[7] ?></small>
+                        </div>
+                        <div>
+                            <label for="number">Número</label>
+                            <input type="text" id="number" name="numero" maxlength="5" required>
+                            <small role="alert"><?php echo $msg[8] ?></small>
+                        </div>
+                        <div>
+                            <label for="street">Rua</label>
+                            <input type="text" id="street" name="rua" required>
+                            <small role="alert"><?php echo $msg[9] ?></small>
+                        </div>
+                        <div>
+                            <label for="complement">Complemento (opcional)</label>
+                            <input type="text" id="complement" name="complemento">
+                        </div>
+                        <div>
+                            <label for="neighborhood">Bairro</label>
+                            <input type="text" id="neighborhood" name="bairro" required>
+                            <small role="alert"><?php echo $msg[10] ?></small>
+                        </div>
+                        <div>
+                            <label for="city">Cidade</label>
+                            <input type="text" id="city" name="cidade" placeholder="Jahu" required>
+                            <small role="alert"><?php echo $msg[11] ?></small>
+                        </div>
+
+                    </div>
+                </fieldset>
+
+                <!-- ===== ETAPA 3: Sobre a empresa ===== -->
+                <fieldset>
+                    <legend>Sobre a empresa</legend>
+
+                    <div class="signup-grid">
+                        <div>
+                            <label for="company-summary-text">Resumo sobre a empresa</label>
+                            <textarea id="company-summary-text" name="descricao" rows="5" maxlength="1000"
+                                placeholder="O que a empresa faz, que tipo de resíduo orgânico gera e o que precisa."
+                                required></textarea>
+                            <small>O plano é combinado diretamente com a nossa equipe.</small>
+                            <small role="alert"><?php echo $msg[12] ?></small>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Botões -->
+                <div class="signup-actions">
+                    <button type="button" class="btn back" id="signup-back-btn" hidden>Voltar</button>
+                    <button type="button" class="btn next" id="signup-next-btn">Próximo</button>
+                    <input type="submit" class="btn next" id="signup-submit-btn" value="Criar Conta" hidden>
+                </div>
+            </form>
+
+            <!-- Troque o method pelo da sua rota do cadastro PF -->
+            <p>Quer uma conta para a sua casa? <a class="btn"
+                    href="index.php?controller=ClienteController&method=inserirClientePf">Cadastre-se como Pessoa
+                    Física</a></p>
+
+            <p><a class="btn to-login" href="index.php?controller=pagesController&method=initLogin">Já tenho uma conta
+                    Húmus</a></p>
+        </section>
+    </main>
+
+    <script src="src/views/scripts/shared/themes.js"></script>
+    <script src="src/views/scripts/shared/navbars.js"></script>
+    <script src="src/views/scripts/shared/signup.js"></script>
+</body>
+
+</html>

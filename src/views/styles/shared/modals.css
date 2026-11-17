@@ -33,6 +33,10 @@
     font-size: 32px;
 }
 
+.modal-adm p {
+  text-align: center;
+}
+
 .modal-adm form label{
     color: var(--txt-std-adm);
 }

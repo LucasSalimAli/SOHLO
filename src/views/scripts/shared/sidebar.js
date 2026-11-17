@@ -50,3 +50,10 @@ function historyLog() {
   historyBtn.classList.add("active");
 }
 
+function conta() {
+  sidebarRetracts();
+  logisticBtn.classList.remove("active");
+  financialBtn.classList.remove("active");
+  historyBtn.classList.remove("active");
+}
+

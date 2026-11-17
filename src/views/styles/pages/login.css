@@ -83,6 +83,7 @@ main {
     border-radius:10px;
 
     background:rgba(255, 255, 255, 0.2);
+    color: var(--txt-brand);
 }
 
 .login input::placeholder {

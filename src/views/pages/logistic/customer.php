@@ -1,3 +1,10 @@
+<?php
+    $i = 0;
+    foreach($clientes as $cliente){
+        $i++;
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -31,7 +38,7 @@
 
     <main>
 
-        <section class="filter-bar">
+        <!-- <section class="filter-bar">
             <div class="filter-group">
 
                 <div class="filter-dropdown" data-filter="client-status">
@@ -70,7 +77,7 @@
                 </div>
 
             </div>
-        </section>
+        </section> -->
 
 
         <div class="space">
@@ -79,19 +86,19 @@
             <div class="card-epsilon is-green">
                 <h2>Total de Clientes Ativos</h2>
                 <h3>-------</h3>
-                <h1>Informação</h1>
+                <h1><?php echo str_pad($i, 2, "0", STR_PAD_LEFT); ?></h1>
             </div>
 
 
             <section class="card-section is-grid">
                 <div class="card-alpha is-std">
                     <h2>Nº Clientes PJ</h2>
-                    <h1>Informação</h1>
+                    <h1>00</h1>
                 </div>
 
                 <div class="card-alpha is-std">
                     <h2>Nº Clientes PF</h2>
-                    <h1>Informação</h1>
+                    <h1><?php echo str_pad($i, 2, "0", STR_PAD_LEFT); ?></h1>
                 </div>
             </section>
         </div>
@@ -100,11 +107,15 @@
 
             <!-- Botoes de Cima da Tabela -->
             <div class="row table-btns">
-                <div class="col-auto">
-                    <button class="uptable-btn" data-open="md-sel-customer">
-                        <i class="bi bi-plus-square"></i>
+            <?php
+            if (AutenticacaoController::autenticarPermissoes("Cadastrar-Clientes")){
+                echo "
+                <div class='col-auto'>
+                    <button class='uptable-btn' data-open='md-sel-customer'>
+                        <i class='bi bi-plus-square'></i>
                     </button>
-                </div>
+                </div>";};
+                ?>
 
                 <div class="col-auto">
                     <button class="uptable-btn">
@@ -119,28 +130,50 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>EXEMPLO DE TÍTULO DE COLUNA</th>
-                            <th>EXEMPLO DE TÍTULO DE COLUNA</th>
-                            <th>EXEMPLO DE TÍTULO DE COLUNA</th>
+                            <th>NOME</th>
+                            <th>PLANO</th>
+                            <th>EMAIL</th>
                             <th>AÇÕES</th>
                         </tr>
                     </thead>
 
                     <tbody class="table-content">
 
-                        <tr class="status is-green">
-                            <td>Exemplo de Informação Normal</td>
-                            <td><span class="btn">Exemplo de Botão Interno</span></td>
-                            <td><span class="status-badge">Exemplo de Badge</span></td>
-                            <td><span class="action">
-                                    <button class="action btn" data-open="md-view-customer"><i
-                                            class="bi bi-three-dots"></i></i></button>
-                                    <button class="action btn trash"><i class="bi bi-archive"></i></button>
-                                </span>
-                            </td>
-                        </tr>
 
-
+                        <?php
+                        foreach ($clientes as $cliente) {
+                            echo "
+                                        <tr class='status is-green'
+                                            data-id='$cliente->id_usuario';
+                                            data-name='$cliente->nome'
+                                            data-email='$cliente->email'
+                                            data-document='$cliente->documento'
+                                            data-plan='$cliente->nome_plano'
+                                            data-tel='$cliente->telefone_numero'
+                                            data-created='$cliente->criado_em'
+                                            data-cep='$cliente->cep'
+                                            data-numero='$cliente->endereco_numero',
+                                            data-complemento='$cliente->complemento'
+                                            data-rua='$cliente->rua',
+                                            data-cidade='$cliente->cidade'
+                                            data-bairro='$cliente->bairro'>
+                                            
+                                        <td>$cliente->nome</td>
+                                        <td>$cliente->nome_plano</td>
+                                        <td>$cliente->email</td>
+                                        <td><span class='action'>
+                                            <button class='action btn' data-show='md-view-customer'><i
+                                            class='bi bi-three-dots'></i></button>";
+                                            if (AutenticacaoController::autenticarPermissoes("Excluir-Clientes")){
+                                                echo "
+                                                    <button class='action btn trash' data-show='md-delete'><i class='bi bi-archive'></i></button>";};
+                                    echo "
+                                            </span>
+                                        </td>
+                                        </tr>
+                                        ";
+                        }
+                        ?>
                     </tbody>
 
                 </table>
@@ -162,22 +195,22 @@
             </div>
 
 
-            <form action="" method="post">
+            <form action="index.php?controller=ClienteController&method=inserirClientePf&origin=admin" method="post">
 
 
                 <fieldset>
                     <label for="name">Digite o Nome do Cliente</label>
-                    <input type="text" name="name">
+                    <input type="text" name="nome">
                     <label for="document">Digite o Cpf do Cliente</label>
-                    <input type="text" name="document">
+                    <input type="text" name="cpf">
                     <label for="email">E-mail</label>
                     <input type="email" name="email" required>
                     <label for="phone">Telefone</label>
-                    <input type="tel" name="tel" placeholder="(00) 0000-0000" required>
+                    <input type="tel" name="telefone" placeholder="(00) 0000-0000" required>
                     <label for="password">Senha</label>
-                    <input type="password" name="password" required>
+                    <input type="password" name="senha" required>
                     <label for="password-confirm">Confirme a senha</label>
-                    <input type="password" name="password_confirm" required>
+                    <input type="password" name="confirma_senha" required>
 
                     <div class="form-actions">
                         <input type="reset" value="Limpar">
@@ -189,17 +222,27 @@
                     <label for="cep">CEP</label>
                     <input type="text" name="cep" placeholder="00000-000" required>
                     <label for="number">Número</label>
-                    <input type="text" name="number" maxlength="10" required>
+                    <input type="text" name="numero" maxlength="10" required>
                     <label for="street">Rua</label>
-                    <input type="text" name="street" autocomplete="address-line1" required>
+                    <input type="text" name="rua" autocomplete="address-line1" required>
                     <label for="complement">Complemento (opcional)</label>
-                    <input type="text" name="complement" autocomplete="address-line2">
+                    <input type="text" name="complemento" autocomplete="address-line2">
                     <label for="neighborhood">Bairro</label>
-                    <input type="text" name="neighborhood" required>
+                    <input type="text" name="bairro" required>
                     <label for="city">Cidade</label>
-                    <input type="text" name="city" required>
-                    <label for="state">UF</label>
-                    <input type="text" name="state" maxlength="2" placeholder="SP" required>
+                    <input type="text" name="cidade" required>
+                </fieldset>
+
+                <fieldset>
+                    <label for="tipo_plano" value="0">Tipo de Plano</label>
+                    <select id="tipo_plano" name="tipo_plano" required>
+                        <option value="0" selected>Selecione</option>
+                        <?php
+                        foreach ($return as $plano) {
+                            echo ("<option value='{$plano->id_plano}'>{$plano->nome} - R$: {$plano->preco}");
+                        }
+                        ?>
+                    </select>
                 </fieldset>
 
 
@@ -270,8 +313,7 @@
                 <div>
                     <h2 data-field="name"></h2>
                     <p data-field="email"></p>
-                </div>
-                <span data-field="status"></span>
+                </div>      
             </section>
 
             <section>
@@ -313,31 +355,51 @@
                     </div>
                     <div>
                         <dt>Número</dt>
-                        <dd data-field="number"></dd>
+                        <dd data-field="numero"></dd>
                     </div>
                     <div>
                         <dt>Rua</dt>
-                        <dd data-field="street"></dd>
+                        <dd data-field="rua"></dd>
                     </div>
                     <div>
                         <dt>Complemento</dt>
-                        <dd data-field="complement"></dd>
+                        <dd data-field="complemento"></dd>
                     </div>
                     <div>
                         <dt>Bairro</dt>
-                        <dd data-field="neighborhood"></dd>
+                        <dd data-field="bairro"></dd>
                     </div>
                     <div>
                         <dt>Cidade</dt>
-                        <dd data-field="city"></dd>
-                    </div>
-                    <div>
-                        <dt>UF</dt>
-                        <dd data-field="state"></dd>
+                        <dd data-field="cidade"></dd>
                     </div>
                 </dl>
             </section>
 
+        </dialog>
+
+
+        <dialog class="modal-adm modal-view" id="md-delete">
+            <div>
+                <button id="exit"><i class="bi bi-x-lg"></i></button>
+                <h1>Excluir Cliente</h1>
+            </div>
+
+            <form action="index.php?controller=ClienteController&method=excluirClientes" method="post">
+                <fieldset>
+                    <input type="hidden" name="id">
+
+                    <p>Tem Certeza que Quer Excluir esse Cliente?</p>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="form-actions">
+                        <input type="reset" onclick="this.closest('dialog').close()" value="Não">
+                        <input type="submit" value="Sim">
+                    </div>
+
+                </fieldset>
+            </form>
         </dialog>
 
     </main>

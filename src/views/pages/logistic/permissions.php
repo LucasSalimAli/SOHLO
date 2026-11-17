@@ -31,7 +31,7 @@
 
     <main>
 
-        <section class="filter-bar">
+        <!-- <section class="filter-bar">
             <div class="filter-group">
 
                 <div class="filter-dropdown" data-filter="client-status">
@@ -70,7 +70,7 @@
                 </div>
 
             </div>
-        </section>
+        </section> -->
 
         <h1>
             Perfís
@@ -80,11 +80,16 @@
 
             <!-- Botoes de Cima da Tabela -->
             <div class="row table-btns">
-                <div class="col-auto">
-                    <button class="uptable-btn" data-open="md-cad-profiles">
-                        <i class="bi bi-plus-square"></i>
+                <?php
+                if (AutenticacaoController::autenticarPermissoes("Cadastrar-Perfis")){
+                    echo "
+                <div class='col-auto'>
+                    <button class='uptable-btn' data-open='md-cad-profiles'>
+                        <i class='bi bi-plus-square'></i>
                     </button>
-                </div>
+                </div>";};
+
+                ?>
 
                 <div class="col-auto">
                     <button class="uptable-btn">
@@ -108,19 +113,53 @@
 
                     <tbody class="table-content">
 
-                        <tr class="status is-green">
-                            <td>Operário de Máquinad</td>
-                            <td><button class="btn">Mostrar Descrição</button></td>
-                            <td><button class="btn">Mostrar Permissões</button></td>
-                            <td><span class="action">
-                                    <button class="action btn" data-open="md-edit-profiles"><i
-                                            class="bi bi-pencil-square"></i></i></button>
-                                    <button class="action btn trash"><i class="bi bi-archive"></i></button>
-                                </span>
-                            </td>
-                        </tr>
+                        <?php
+                        foreach ($perfis as $perfil) {
+                            $id = (int) $perfil->getIdPerfil();
+                            $nome = htmlspecialchars((string) $perfil->getNome(), ENT_QUOTES);
+                            $descricao = htmlspecialchars((string) $perfil->getDescricao(), ENT_QUOTES);
 
+                            $idsPermissoesPerfil = implode(',', array_map(
+                                fn($p) => (int) $p['id_permissao'],
+                                $perfil->getPermissoes()
+                            ));
 
+                            $nomesPermissoesPerfil = htmlspecialchars(implode(', ', array_map(
+                                fn($p) => $p['nome'],
+                                $perfil->getPermissoes()
+                            )), ENT_QUOTES);
+
+                            echo
+                                "
+                                <tr class='status is-green'
+                                    data-id='{$id}'
+                                    data-name='{$nome}'
+                                    data-description='{$descricao}'
+                                    data-permissions='{$idsPermissoesPerfil}'
+                                    data-permission-names='{$nomesPermissoesPerfil}'>
+
+                                    <td>{$nome}</td>
+                                    <td><button class='btn' data-show='md-description'>Mostrar Descrição</button></td>
+                                    <td><button class='btn' data-show='md-permission'>Mostrar Permissões</button></td>
+                                    <td><span class='action'>
+                                ";
+                            if ($id !== 1) {
+                                if (AutenticacaoController::autenticarPermissoes("Editar-Perfis")){
+                                                echo "
+                                        <button class='action btn' data-edit='md-edit-profile'>
+                                            <i class='bi bi-pencil-square'></i>
+                                        </button>";};
+                                if (AutenticacaoController::autenticarPermissoes("Deletar-Perfis")){
+                                                echo " 
+                                        <button class='action btn trash' data-show='md-delete'>
+                                            <i class='bi bi-archive'></i>
+                                        </button>";};
+                            };
+                            echo "</span>
+                                </td>
+                                </tr>";
+                        }
+                        ?>
                     </tbody>
 
                 </table>
@@ -135,17 +174,22 @@
             </div>
 
 
-            <form action="" method="post">
+            <form action="index.php?controller=PerfilController&method=inserirPerfil" method="post">
 
 
                 <fieldset>
                     <label for="name">Digite o Nome do Perfil</label>
                     <input type="text" name="name">
                     <label for="name">Digite a Descrição do Perfil</label>
-                    <textarea name="descriprion" id=""></textarea>
-                    <label for="document">Selecione as Permissões</label>
-                    <option value=""></option>
+                    <textarea name="description" id=""></textarea>
+                    <label for="permissions">Selecione as Permissões</label>
+                    <?php foreach ($permissoes as $permissao) { ?>
 
+                        <label>
+                            <input type="checkbox" name="permissoes[]" value="<?= $permissao->id_permissao ?>">
+                            <?= htmlspecialchars($permissao->nome) ?>
+                        </label>
+                    <?php } ?>
                     <div class="form-actions">
                         <input type="reset" value="Limpar">
                         <input type="submit" value="Cadastrar">
@@ -156,33 +200,83 @@
         </dialog>
 
 
-        <dialog class="modal-adm modal-view" id="md-edit-profiles">
+        <dialog class="modal-adm modal-view" id="md-edit-profile">
             <div>
                 <button id="exit"><i class="bi bi-x-lg"></i></button>
                 <h1>Edição de Planos</h1>
             </div>
 
 
-            <form action="" method="post">
+            <form action="index.php?controller=PerfilController&method=editarPerfil" method="post">
 
 
                 <fieldset>
-                    <label for="name">Digite o Nome do Perfil</label>
-                    <input type="text" name="name">
-                    <label for="name">Digite a Descrição do Perfil</label>
-                    <textarea name="descriprion" id=""></textarea>
-                    <label for="document">Selecione as Permissões</label>
-                    <option value=""></option>
+                    <input type="hidden" name="id" id="edit-id">
+
+                    <label for="edit-name">Digite o Nome do Perfil</label>
+                    <input type="text" name="name" id="edit-name">
+
+                    <label for="edit-description">Digite a Descrição do Perfil</label>
+                    <textarea name="description" id="edit-description"></textarea>
+
+                    <label>Selecione as Permissões</label>
+
+                    <?php foreach ($permissoes as $permissao) { ?>
+                        <label>
+                            <input type="checkbox" name="permissoes[]" value="<?= $permissao->id_permissao ?>">
+                            <?= htmlspecialchars($permissao->nome) ?>
+                        </label>
+                    <?php } ?>
 
                     <div class="form-actions">
                         <input type="reset" value="Limpar">
-                        <input type="submit" value="Cadastrar">
+                        <input type="submit" value="Salvar Alterações">
+                    </div>
+                </fieldset>
+            </form>
+        </dialog>
+
+        <dialog class="modal-adm modal-view" id="md-description">
+            <div>
+                <button id="exit"><i class="bi bi-x-lg"></i></button>
+                <h1>Descrição</h1>
+            </div>
+            <br><br>
+            <p data-field="description"></p>
+        </dialog>
+
+        <dialog class="modal-adm modal-view" id="md-permission">
+            <div>
+                <button id="exit"><i class="bi bi-x-lg"></i></button>
+                <h1>Permissoes</h1>
+            </div>
+            <br><br>
+            <ul id="lista-permissoes"></ul>
+        </dialog>
+
+
+        <dialog class="modal-adm modal-view" id="md-delete">
+            <div>
+                <button id="exit"><i class="bi bi-x-lg"></i></button>
+                <h1>Excluir Perfil</h1>
+            </div>
+
+            <form action="index.php?controller=PerfilController&method=excluirPerfil" method="post">
+                <fieldset>
+                    <input type="hidden" name="id">
+
+                    <p>Tem Certeza que Quer Excluir esse Perfil?</p>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="form-actions">
+                        <input type="reset" onclick="this.closest('dialog').close()" value="Não">
+                        <input type="submit" value="Sim">
                     </div>
 
                 </fieldset>
             </form>
         </dialog>
-
     </main>
 
 

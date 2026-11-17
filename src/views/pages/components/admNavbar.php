@@ -1,3 +1,11 @@
+
+<?php
+if (!isset($_SESSION)) {
+    session_start();
+    require_once "src/controllers/AutenticacaoController.class.php";
+} 
+?>
+
 <!-- #region NavBar -->
 <nav class="navbar-adm">
 
@@ -14,7 +22,7 @@
     <div class="navbar-actions" id="navbar-actions">
 
         <p class="user-status">
-            Administrador
+            <?php echo $_SESSION["perfil"]?>
             <i class="bi bi-unlock2-fill icon-sm"></i>
         </p>
 
@@ -30,12 +38,13 @@
 
         <div class="nav-dropdown">
             <button class="nav-icon-btn nav-dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
-                <span class="user-name">Nome_Usuário</span>
+                <span class="user-name"><?php echo $_SESSION["nome"]?></span>
                 <i class="bi bi-person-circle icon-lg"></i>
             </button>
             <ul class="nav-dropdown-menu">
+                <li><a class="nav-dropdown-item" href="index.php?controller=FuncionarioController&method=minhaConta">Minha Conta</a></li>
                 <li><a class="nav-dropdown-item" href="#">Configurações</a></li>
-                <li><a class="nav-dropdown-item" href="#">Minha Conta</a></li>
+                <li><a class="nav-dropdown-item" href="index.php?controller=AutenticacaoController&method=logOut">LogOut</a></li>
             </ul>
         </div>
 

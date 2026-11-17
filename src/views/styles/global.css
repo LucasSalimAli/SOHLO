@@ -7,6 +7,7 @@
 @import url("shared/navbars.css");
 @import url("shared/sidebar.css");
 @import url("shared/modals.css");
+@import url("shared/account.css");
 
 @import url("vendor/bootstrap/bootstrap.min.css");
 @import url("components/buttons.css");

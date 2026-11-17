@@ -35,7 +35,7 @@
                         <i class="bi bi-caret-left-square" id="sidebar-extend-icon"></i>
                     </button>
 
-                    <a href="index.php?controller=pagesController&method=initCustomers">
+                    <a href="index.php?controller=ClienteController&method=listarTodosOsClientes    ">
                         <button class="" id="logistic-btn" title="Sistema Logístico">
                             <i class="bi bi-globe"></i>
                         </button>

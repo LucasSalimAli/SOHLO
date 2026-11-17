@@ -38,12 +38,16 @@
         <section class="section-table">
 
             <!-- Botoes de Cima da Tabela -->
-            <div class="row table-btns">
-                <div class="col-auto">
-                    <button class="uptable-btn" data-open="md-cad-plans">
-                        <i class="bi bi-plus-square"></i>
+             <?php
+             if (AutenticacaoController::autenticarPermissoes("Cadastrar-Plano")){
+                echo "
+            <div class='row table-btns'>
+                <div class='col-auto'>
+                    <button class='uptable-btn' data-open='md-cad-plans'>
+                        <i class='bi bi-plus-square'></i>
                     </button>
-                </div>
+                </div>";};
+                ?>
 
                 <div class="col-auto">
                     <button class="uptable-btn">
@@ -67,18 +71,35 @@
 
                     <tbody class="table-content">
 
-                        <tr class="status is-green">
-                            <td>Operário de Máquinad</td>
-                            <td><button class="btn">Mostrar Descrição</button></td>
-                            <td>1212</td>
-                            <td><span class="action">
-                                    <button class="action btn" data-open="md-edit-plans"><i
-                                            class="bi bi-pencil-square"></i></i></button>
-                                    <button class="action btn trash"><i class="bi bi-archive"></i></button>
-                                </span>
-                            </td>
-                        </tr>
+                        <?php foreach ($return as $plano) {
+                            echo "
+                                    <tr class='status is-green' 
+                                    data-id='$plano->id_plano'
+                                    data-name='$plano->nome'
+                                    data-description=' $plano->descricao'
+                                    data-price=' $plano->preco'>
 
+                                <td> $plano->nome </td>
+                                <td><button class='btn' data-show='md-description'>Mostrar Descrição</button></td>
+                                <td> $plano->preco </td>
+                                <td><span class='action'>";
+                            if (AutenticacaoController::autenticarPermissoes("Editar-Planos")) {
+                                echo "
+                                        <button class='action btn' data-edit='md-edit-plans'>
+                                            <i class='bi bi-pencil-square'></i></button>";
+                            }
+                            ;
+                            if (AutenticacaoController::autenticarPermissoes("Excluir-Planos")) {
+                                echo "
+                                        <button class='action btn trash' data-show='md-delete'><i class='bi bi-archive'></i></button>";
+                            }
+                            ;
+                            echo "
+                                    </span>
+                                </td>
+                            </tr>
+                            ";
+                        } ?>
 
                     </tbody>
 
@@ -94,14 +115,14 @@
             </div>
 
 
-            <form action="" method="post">
+            <form action="index.php?controller=PlanoController&method=inserirPlano" method="post">
 
 
                 <fieldset>
                     <label for="name">Digite o Nome do Plano</label>
                     <input type="text" name="name">
                     <label for="name">Digite a Descrição do Plano</label>
-                    <textarea name="descriprion" id=""></textarea>
+                    <textarea name="description" id=""></textarea>
                     <label for="document">Digite o Valor do Plano</label>
                     <input type="text" name="price">
 
@@ -122,18 +143,49 @@
             </div>
 
 
-            <form action="" method="post">
+            <form action="index.php?controller=PlanoController&method=editarPlano" method="post">
+                <input type="hidden" name="id">
                 <fieldset>
                     <label for="name">Digite o Nome do Plano</label>
                     <input type="text" name="name">
                     <label for="name">Digite a Descrição do Plano</label>
-                    <textarea name="descriprion" id=""></textarea>
+                    <textarea name="description" id=""></textarea>
                     <label for="document">Digite o Valor do Plano</label>
                     <input type="text" name="price">
-
                     <div class="form-actions">
                         <input type="reset" value="Limpar">
-                        <input type="submit" value="Cadastrar">
+                        <input type="submit" value="Salvar">
+                    </div>
+                </fieldset>
+            </form>
+        </dialog>
+
+        <dialog class="modal-adm modal-view" id="md-description">
+            <div>
+                <button id="exit"><i class="bi bi-x-lg"></i></button>
+                <h1>Descrição</h1>
+            </div>
+            <br><br>
+            <p data-field="description"></p>
+        </dialog>
+
+        <dialog class="modal-adm modal-view" id="md-delete">
+            <div>
+                <button id="exit"><i class="bi bi-x-lg"></i></button>
+                <h1>Excluir Plano</h1>
+            </div>
+
+            <form action="index.php?controller=PlanoController&method=excluirPlano" method="post">
+                <fieldset>
+                    <input type="hidden" name="id">
+
+                    <p>Tem Certeza que Quer Excluir esse Plano?</p>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="form-actions">
+                        <input type="reset" onclick="this.closest('dialog').close()" value="Não">
+                        <input type="submit" value="Sim">
                     </div>
 
                 </fieldset>
