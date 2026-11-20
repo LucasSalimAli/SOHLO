@@ -1,3 +1,4 @@
+<?php /** @var stdClass $meusDados */ ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -72,11 +73,18 @@
 
             <!-- Perfil -->
             <section>
-                <img data-field="photo" alt="Foto do usuário" hidden>
-                <i class="bi bi-person-circle"></i>
+                <?php 
+                    if($meusDados->foto !== "img_std_user.svg"){
+                       echo "<img data-field='foto' alt='Foto do usuário' src='src/uploads/images/users/<?php $meusDados->foto;?>'>";
+                    }
+                    else{
+                        echo "<i class='bi bi-person-circle'></i>";
+                    }
+
+                ?>
                 <div>
-                    <h2><?php echo $_SESSION["nome"]?></h2>
-                    <p><?php echo $_SESSION["email"]?></p>
+                    <h2><?php echo $meusDados->nome; ?></h2>
+                    <p><?php echo $meusDados->email?></p>
                 </div>
             </section>
 
@@ -86,11 +94,11 @@
                 <dl>
                     <div>
                         <dt>Nome completo</dt>
-                        <dd><?php echo $_SESSION["nome"]?></dd>
+                        <dd><?php echo $meusDados->nome?></dd>
                     </div>
                     <div>
                         <dt>CPF</dt>
-                        <dd><?php echo $_SESSION["documento"]?></dd>
+                        <dd><?php echo $meusDados->documento?></dd>
                     </div>
                 </dl>
             </section>
@@ -101,11 +109,11 @@
                 <dl>
                     <div>
                         <dt>E-mail</dt>
-                        <dd><?php echo $_SESSION["email"]?></dd>
+                        <dd><?php echo $meusDados->email?></dd>
                     </div>
                     <div>
                         <dt>Telefone</dt>
-                        <dd><?php echo $_SESSION["telefone"]?></dd>
+                        <dd><?php echo $meusDados->telefone_numero?></dd>
                     </div>
                 </dl>
             </section>
@@ -116,23 +124,23 @@
                 <dl>
                     <div>
                         <dt>Rua / Número</dt>
-                        <dd><?php echo $_SESSION["rua"] . " " . "/" . " " . $_SESSION["numero"]?></dd>
+                        <dd><?php echo $meusDados->rua . " " . "/" . " " . $meusDados->endereco_numero?></dd>
                     </div>
                     <div>
                         <dt>Cidade / UF</dt>
-                        <dd><?php echo $_SESSION["cidade"] . " " . "/" . " ". $_SESSION["estado"]?></dd>
+                        <dd><?php echo $meusDados->cidade . " " . "/" . " ". $meusDados->estado?></dd>
                     </div>
                     <div>
                         <dt>CEP</dt>
-                        <dd><?php echo $_SESSION["cep"]?></dd>
+                        <dd><?php echo $meusDados->cep?></dd>
                     </div>
                     <div>
                         <dt>Bairro</dt>
-                        <dd><?php echo $_SESSION["bairro"]?></dd>
+                        <dd><?php echo $meusDados->bairro?></dd>
                     </div>
                     <div>
                         <dt>Complemento</dt>
-                        <dd><?php echo $_SESSION["complemento"]?></dd>
+                        <dd><?php echo $meusDados->complemento?></dd>
                     </div>
                     
                 </dl>
@@ -152,7 +160,7 @@
                     </div>
                     <div>
                         <dt>Usuário desde</dt>
-                        <dd><?php echo $_SESSION["criado"]?></dd>
+                        <dd><?php echo $meusDados->criado_em?></dd>
                     </div>
                 </dl>
             </section>
@@ -161,7 +169,10 @@
             <footer>
                 <button type="button" id="btn-edit-data" onclick="editSelfData()"><i class="bi bi-pencil-square"></i> Editar dados</button>
                 <button type="button" onclick="changePassword()"><i class="bi bi-key"></i> Alterar senha</button>
+                
             </footer>
+
+            <p>Versão: Beta 2.7</p>
 
         </section>
 
@@ -174,16 +185,17 @@
 
 
             <form action="index.php?controller=FuncionarioController&method=alterarDadosCadastrais" method="post">
-                <input type="hidden" name="id" value="<?php echo $_SESSION["id"]; ?>">
+                <input type="hidden" name="id" value="<?php echo $meusDados->id_usuario; ?>">
+                <input type="hidden" name="foto_antiga" value="<?php echo $meusDados->foto;?>">
                 <fieldset>
                     <label for="nome">Nome</label>
-                    <input type="text" name="nome" value="<?php echo $_SESSION["nome"]; ?>">
+                    <input type="text" name="nome" value="<?php echo $meusDados->nome; ?>">
                     <label for="cpf">CPF</label>
-                    <input type="text" name="cpf" value="<?php echo $_SESSION["documento"]; ?>">
+                    <input type="text" name="cpf" value="<?php echo $meusDados->documento; ?>">
                     <label for="email">E-mail</label>
-                    <input type="email" name="email" value="<?php echo $_SESSION["email"]; ?>" required>
+                    <input type="email" name="email" value="<?php echo $meusDados->email; ?>" required>
                     <label for="telefone">Telefone</label>
-                    <input type="tel" name="telefone" value="<?php echo $_SESSION["telefone"]; ?>" required>
+                    <input type="tel" name="telefone" value="<?php echo $meusDados->telefone_numero; ?>" required>
 
                     <div class="form-actions">
                         <input type="reset" value="Limpar">
@@ -193,17 +205,17 @@
                 </fieldset>
                 <fieldset>
                     <label for="cep">CEP</label>
-                    <input type="text" name="cep" placeholder="00000-000" value="<?php echo $_SESSION["cep"]; ?>" required>
+                    <input type="text" name="cep" placeholder="00000-000" value="<?php echo $meusDados->cep; ?>" required>
                     <label for="number">Número</label>
-                    <input type="text" name="numero" value="<?php echo $_SESSION["numero"]; ?>" required>
+                    <input type="text" name="numero" value="<?php echo $meusDados->endereco_numero; ?>" required>
                     <label for="street">Rua</label>
-                    <input type="text" name="rua" value="<?php echo $_SESSION["rua"]; ?>"required>
+                    <input type="text" name="rua" value="<?php echo $meusDados->rua; ?>"required>
                     <label for="complement">Complemento (opcional)</label>
-                    <input type="text" name="complemento" value="<?php echo $_SESSION["complemento"]; ?>"">
+                    <input type="text" name="complemento" value="<?php echo $meusDados->complemento; ?>"">
                     <label for="neighborhood">Bairro</label>
-                    <input type="text" name="bairro" value="<?php echo $_SESSION["bairro"]; ?>" required>
+                    <input type="text" name="bairro" value="<?php echo $meusDados->bairro; ?>" required>
                     <label for="city">Cidade</label>
-                    <input type="text" name="cidade" value="<?php echo $_SESSION["cidade"]; ?>" required>
+                    <input type="text" name="cidade" value="<?php echo $meusDados->cidade; ?>" required>
                 </fieldset>
 
 
@@ -220,7 +232,7 @@
 
 
             <form action="index.php?controller=FuncionarioController&method=alterarSenha" method="post">
-                <input type="hidden" name="id" value="<?php echo $_SESSION["id"]; ?>">
+                <input type="hidden" name="id" value="<?php echo $_SESSION["id"] ?>">
                 <fieldset>
                     <label for="name">Digite Sua Senha Atual</label>
                     <input type="text" name="senha_antiga">

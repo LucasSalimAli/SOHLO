@@ -108,6 +108,7 @@ class ClienteDAO extends Conection {
                 usuarios.nome,
                 usuarios.documento,
                 usuarios.email,
+                usuarios.foto,
                 DATE_FORMAT(usuarios.criado_em, '%d/%m/%Y %H:%i') AS criado_em,
                 planos.id_plano,
                 planos.nome AS nome_plano,
@@ -234,3 +235,4 @@ class ClienteDAO extends Conection {
     }
 }
 ?>
+ 

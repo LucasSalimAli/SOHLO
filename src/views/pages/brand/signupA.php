@@ -48,25 +48,25 @@
                     <div class="signup-upload">
                         <span>Foto de perfil (opcional)</span>
                         <label>
-                            <input type="file" name="foto" accept="image/png, image/jpeg, image/webp">
+                            <input type="file" name="foto" accept="image/*" onchange="previewImagem(event)">
                             <span>
-                                <img alt="Pré-visualização da imagem escolhida">
+                                <img id="img_user" alt="Pré-visualização da imagem escolhida">
                                 <i class="bi bi-cloud-arrow-up"></i>
                                 <strong>Escolher imagem</strong>
                             </span>
                         </label>
+                        
                     </div>
 
                     <div class="signup-grid">
                         <div>
                             <label for="name">Nome completo</label>
-                            <input type="text" id="name" name="nome" required>
+                            <input type="text" id="name" name="nome" value="<?php echo htmlspecialchars($_POST['nome'] ?? '', ENT_QUOTES, 'UTF-8'); ?>">
                             <small role="alert"><?php echo $msg[0] ?></small>
                         </div>
                         <div>
                             <label for="cpf">CPF</label>
-                            <input type="text" id="cpf" name="cpf" inputmode="numeric" placeholder="000.000.000-00"
-                                required>
+                            <input type="text" id="cpf" name="cpf" inputmode="numeric" placeholder="000.000.000-00" value="<?php echo htmlspecialchars($_POST['cpf'] ?? '', ENT_QUOTES, 'UTF-8'); ?>">
                             <small role="alert"><?php echo $msg[1] ?></small>
                         </div>
                     </div>
@@ -74,13 +74,13 @@
                     <div class="signup-grid">
                         <div>
                             <label for="email">E-mail</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($_POST['email'] ?? '', ENT_QUOTES, 'UTF-8'); ?>">
                             <small role="alert"><?php echo $msg[2] ?></small>
                         </div>
                         <div>
                             <label for="telefone">Telefone</label>
                             <input type="tel" id="telefone" name="telefone" inputmode="tel"
-                                placeholder="(00) 90000-0000" required>
+                                placeholder="(00) 90000-0000" value="<?php echo htmlspecialchars($_POST['telefone'] ?? '', ENT_QUOTES, 'UTF-8'); ?>">
                             <small role="alert"><?php echo $msg[3] ?></small>
                         </div>
                         <div>
@@ -103,31 +103,31 @@
                     <div class="signup-grid">
                         <div>
                             <label for="zip-code">CEP</label>
-                            <input type="text" id="zip-code" name="cep" placeholder="00000-000" required>
+                            <input type="text" id="zip-code" name="cep" placeholder="00000-000" value="<?php echo htmlspecialchars($_POST['cep'] ?? '', ENT_QUOTES, 'UTF-8'); ?>">
                             <small role="alert"><?php echo $msg[6] ?></small>
                         </div>
                         <div>
                             <label for="number">Número</label>
-                            <input type="text" id="number" name="numero" maxlength="5" required>
+                            <input type="text" id="number" name="numero" maxlength="5" value="<?php echo htmlspecialchars($_POST['numero'] ?? '', ENT_QUOTES, 'UTF-8'); ?>">
                             <small role="alert"><?php echo $msg[7] ?></small>
                         </div>
                         <div>
                             <label for="street">Rua</label>
-                            <input type="text" id="street" name="rua" required>
+                            <input type="text" id="street" name="rua" value="<?php echo htmlspecialchars($_POST['rua'] ?? '', ENT_QUOTES, 'UTF-8'); ?>">
                             <small role="alert"><?php echo $msg[8] ?></small>
                         </div>
                         <div>
                             <label for="complement">Complemento (opcional)</label>
-                            <input type="text" id="complement" name="complemento">
+                            <input type="text" id="complement" name="complemento" value="<?php echo htmlspecialchars($_POST['complemento'] ?? '', ENT_QUOTES, 'UTF-8'); ?>">
                         </div>
                         <div>
                             <label for="neighborhood">Bairro</label>
-                            <input type="text" id="neighborhood" name="bairro" required>
+                            <input type="text" id="neighborhood" name="bairro" value="<?php echo htmlspecialchars($_POST['bairro'] ?? '', ENT_QUOTES, 'UTF-8'); ?>">
                             <small role="alert"><?php echo $msg[9] ?></small>
                         </div>
                         <div>
                             <label for="city">Cidade</label>
-                            <input type="text" id="city" name="cidade" placeholder="Jahu" required>
+                            <input type="text" id="city" name="cidade" placeholder="Jahu" value="<?php echo htmlspecialchars($_POST['cidade'] ?? '', ENT_QUOTES, 'UTF-8'); ?>">
                             <small role="alert"><?php echo $msg[10] ?></small>
                         </div>
 
@@ -198,6 +198,27 @@
     <script src="src/views/scripts/shared/themes.js"></script>
     <!-- <script src="src/views/scripts/shared/navbars.js"></script> -->
     <script src="src/views/scripts/shared/signup.js"></script>
+
+    <script>
+        function previewImagem(event) {
+        const input = event.target;
+        const imagemPreview = document.getElementById('img_user');
+
+        if (input.files && input.files[0]) {
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                imagemPreview.src = e.target.result;
+                imagemPreview.style.display = 'block';
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        } else {
+            imagemPreview.src = '';     
+            imagemPreview.style.display = 'none';
+        }
+    }
+    </script>
 </body>
 
 </html>

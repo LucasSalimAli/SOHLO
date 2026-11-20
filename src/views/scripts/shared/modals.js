@@ -82,7 +82,11 @@ document.addEventListener("click", (e) => {
       mostrar.closest("tr").dataset,
     )) {
       alvo.querySelectorAll(`[data-field="${campo}"]`).forEach((el) => {
-        el.textContent = valor;
+        if (el.tagName === "IMG") {
+          el.src = `src/uploads/images/users/${valor}`;
+        } else {
+          el.textContent = valor;
+        }
       });
 
       if (form?.elements[campo]) {
@@ -100,14 +104,12 @@ document.addEventListener("click", (e) => {
   }
 });
 
-
-
-function editSelfData(){
+function editSelfData() {
   const modals = document.getElementById("md-self-edit");
   modals.showModal();
 }
 
-function changePassword(){
+function changePassword() {
   const modals = document.getElementById("md-change-password");
   modals.showModal();
 }

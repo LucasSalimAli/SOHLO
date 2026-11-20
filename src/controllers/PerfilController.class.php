@@ -2,6 +2,7 @@
 require_once "src/models/Conection.class.php";
 require_once "src/models/Perfil.class.php";
 require_once "src/models/PerfilDAO.class.php";
+require_once "src/controllers/AutenticacaoController.class.php";
 
 
 class PerfilController
@@ -17,40 +18,45 @@ class PerfilController
 
     public function inserirPerfil()
     {
+        session_start();
+        require_once "src/controllers/AutenticacaoController.class.php";
+        if (AutenticacaoController::autenticarPermissoes("Cadastrar-Perfis")) {
 
+            $msg = array("", "", "");
 
-        $msg = array("", "", "");
+            if ($_POST) {
+                $erro = false;
 
-        if ($_POST) {
-            $erro = false;
+                if (empty($_POST["name"])) {
+                    $erro = true;
+                    $msg[0] = "Preencha o nome do Plano";
+                }
 
-            if (empty($_POST["name"])) {
-                $erro = true;
-                $msg[0] = "Preencha o nome do Plano";
-            }
+                if (empty($_POST["description"])) {
+                    $erro = true;
+                    $msg[1] = "Preencha a Descrição do Plano";
+                }
 
-            if (empty($_POST["description"])) {
-                $erro = true;
-                $msg[1] = "Preencha a Descrição do Plano";
-            }
+                if (!$erro) {
+                    $perfilNovo = new Perfil(0, $_POST["name"], $_POST["description"], $_POST["permissoes"] ?? []);
+                    $perfiDAO = new PerfilDAO($perfilNovo);
+                    $return = $perfiDAO->cadastrarPerfil($perfilNovo);
 
-            if (!$erro) {
-                $perfilNovo = new Perfil(0, $_POST["name"], $_POST["description"], $_POST["permissoes"] ?? []);
-                $perfiDAO = new PerfilDAO($perfilNovo);
-                $return = $perfiDAO->cadastrarPerfil($perfilNovo);
-
-                echo "<script>
+                    echo "<script>
                     alert('$return');
                     window.location.href = 'index.php?controller=PerfilController&method=listarTodosOsPerfis';
                     </script>";
+                }
+
             }
-
-
         }
     }
 
     public function editarPerfil()
     {
+        session_start();
+        require_once "src/controllers/AutenticacaoController.class.php";
+        if (AutenticacaoController::autenticarPermissoes("Editar-Perfis")) {
         if ($_POST) {
 
             $perfil = new Perfil(
@@ -69,10 +75,14 @@ class PerfilController
             alert('$return');
             window.location.href = 'index.php?controller=PerfilController&method=listarTodosOsPerfis';
         </script>";
-        }
+        }}
     }
 
-    public function excluirPerfil(){
+    public function excluirPerfil()
+    {
+        session_start();
+        require_once "src/controllers/AutenticacaoController.class.php";
+        if (AutenticacaoController::autenticarPermissoes("Excluir-Perfis")) {
         if ($_POST) {
 
             $perfil = new Perfil(
@@ -87,7 +97,7 @@ class PerfilController
             alert('$return');
             window.location.href = 'index.php?controller=PerfilController&method=listarTodosOsPerfis';
         </script>";
-        }
+        }}
     }
 }
 

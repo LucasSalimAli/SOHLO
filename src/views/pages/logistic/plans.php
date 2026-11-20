@@ -39,11 +39,11 @@
 
             <!-- Botoes de Cima da Tabela -->
              <?php
-             if (AutenticacaoController::autenticarPermissoes("Cadastrar-Plano")){
+             if (AutenticacaoController::autenticarPermissoes("Cadastrar-Planos")){
                 echo "
             <div class='row table-btns'>
                 <div class='col-auto'>
-                    <button class='uptable-btn' data-open='md-cad-plans'>
+                    <button class='uptable-btn' data-open='md-cad-plans' title='Cadastrar'>
                         <i class='bi bi-plus-square'></i>
                     </button>
                 </div>";};
@@ -85,13 +85,13 @@
                                 <td><span class='action'>";
                             if (AutenticacaoController::autenticarPermissoes("Editar-Planos")) {
                                 echo "
-                                        <button class='action btn' data-edit='md-edit-plans'>
+                                        <button class='action btn' data-edit='md-edit-plans' title='Editar'>
                                             <i class='bi bi-pencil-square'></i></button>";
                             }
                             ;
                             if (AutenticacaoController::autenticarPermissoes("Excluir-Planos")) {
                                 echo "
-                                        <button class='action btn trash' data-show='md-delete'><i class='bi bi-archive'></i></button>";
+                                        <button class='action btn trash' data-show='md-delete' title='Excluir'><i class='bi bi-archive'></i></button>";
                             }
                             ;
                             echo "

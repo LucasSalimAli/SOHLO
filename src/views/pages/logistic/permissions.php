@@ -84,7 +84,7 @@
                 if (AutenticacaoController::autenticarPermissoes("Cadastrar-Perfis")){
                     echo "
                 <div class='col-auto'>
-                    <button class='uptable-btn' data-open='md-cad-profiles'>
+                    <button class='uptable-btn' data-open='md-cad-profiles' title='Cadastrar'>
                         <i class='bi bi-plus-square'></i>
                     </button>
                 </div>";};
@@ -146,12 +146,12 @@
                             if ($id !== 1) {
                                 if (AutenticacaoController::autenticarPermissoes("Editar-Perfis")){
                                                 echo "
-                                        <button class='action btn' data-edit='md-edit-profile'>
+                                        <button class='action btn' data-edit='md-edit-profile' title='Editar'>
                                             <i class='bi bi-pencil-square'></i>
                                         </button>";};
-                                if (AutenticacaoController::autenticarPermissoes("Deletar-Perfis")){
+                                if (AutenticacaoController::autenticarPermissoes("Excluir-Perfis")){
                                                 echo " 
-                                        <button class='action btn trash' data-show='md-delete'>
+                                        <button class='action btn trash' data-show='md-delete' title='Excluir'>
                                             <i class='bi bi-archive'></i>
                                         </button>";};
                             };

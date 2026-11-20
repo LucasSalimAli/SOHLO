@@ -53,18 +53,7 @@ class AutenticacaoController
                         $_SESSION["id"] = $return[0]->id_usuario;
                         $_SESSION["nome"] = $return[0]->nome;
                         $_SESSION["email"] = $return[0]->email;
-                        $_SESSION["telefone"] = $return[0]->telefone_numero;
-                        $_SESSION["documento"] = $return[0]->documento;
-                        $_SESSION["rua"] = $return[0]->rua;
-                        $_SESSION["cidade"] = $return[0]->cidade;
-                        $_SESSION["numero"] = $return[0]->endereco_numero;
-                        $_SESSION["estado"] = $return[0]->estado;
-                        $_SESSION["cep"] = $return[0]->cep;
-                        $_SESSION["bairro"] = $return[0]->bairro;
-                        $_SESSION["estado"] = $return[0]->estado;
-                        $_SESSION["complemento"] = $return[0]->complemento;
-                        $_SESSION["criado"] = $return[0]->criado_em;
-
+                    
                         if($tipo === "Funcionario"){
                             $perilDAO = new PerfilDAO();
                             $perfil = $perilDAO->buscarPerfilPorId($return[0]->id_perfil);

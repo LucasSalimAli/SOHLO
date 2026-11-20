@@ -72,7 +72,7 @@
 
         <div class="space">
             <section class="graph">
-                <h1>Teste de Gráfico para ficar legals,kcjhkdfhjcdbjcdbkjbjdhcbjkh bhkjjdbcjfcbhljdchbljdcbcjlbccjldcbhl    </h1>
+                <h1>Teste de Gráfico para ficar legal </h1>
             </section>
 
             <section class="card-section is-grid">

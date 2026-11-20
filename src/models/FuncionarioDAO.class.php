@@ -201,6 +201,7 @@ class FuncionarioDAO extends Conection
                     usuarios.documento,
                     usuarios.email,
                     usuarios.senha,
+                    usuarios.foto,
                     DATE_FORMAT(usuarios.criado_em, '%d/%m/%Y %H:%i') AS criado_em,
                     telefones.numero AS telefone_numero,
                     enderecos.cep,
@@ -239,6 +240,7 @@ class FuncionarioDAO extends Conection
             $stmt->bindValue(1, $funcionario->getEmail());
 
             $stmt->execute();
+            
 
             $this->db = null;
 
@@ -355,6 +357,64 @@ class FuncionarioDAO extends Conection
         catch(PDOException $e){
             $this->db = null;
             return "Erro ao Alterar Senha";
+        }
+    }
+    
+    public function buscarMeusDados($id)
+    {
+        $sql = "SELECT
+                    usuarios.id_usuario,
+                    usuarios.nome,
+                    usuarios.documento,
+                    usuarios.email,
+                    usuarios.senha,
+                    usuarios.foto,
+                    DATE_FORMAT(usuarios.criado_em, '%d/%m/%Y %H:%i') AS criado_em,
+                    telefones.numero AS telefone_numero,
+                    enderecos.cep,
+                    enderecos.numero AS endereco_numero,
+                    enderecos.rua,
+                    enderecos.complemento,
+                    enderecos.bairro,
+                    enderecos.cidade,
+                    enderecos.estado,
+                    funcionarios.cargo,
+                    perfis.id_perfil,
+                    perfis.nome AS perfil_nome,
+                    perfis.id_perfil,
+                    perfis.descricao AS perfil_descricao
+                FROM usuarios
+
+                INNER JOIN funcionarios
+                    ON funcionarios.usuario_id = usuarios.id_usuario
+
+                INNER JOIN perfis
+                    ON perfis.id_perfil = funcionarios.perfil_id
+
+                INNER JOIN enderecos
+                    ON enderecos.usuario_id = usuarios.id_usuario
+
+                INNER JOIN telefones
+                    ON telefones.usuario_id = usuarios.id_usuario
+                    
+                WHERE usuarios.id_usuario = ?
+                        AND usuarios.deletado_em IS NULL";
+
+
+        try {
+            $stmt = $this->db->prepare($sql);
+
+            $stmt->bindValue(1, $id);
+            
+
+            $stmt->execute();
+
+            $this->db = null;
+
+            return $stmt->fetch(PDO::FETCH_OBJ);
+        } catch (PDOException $e) {
+            $this->db = null;
+            return "Erro ao Acessar o Banco de Dados";
         }
     }
 

@@ -97,12 +97,14 @@ foreach ($funcionarios as $funcionario) {
             <!-- Botoes de Cima da Tabela -->
             <div class="row table-btns">
                 <?php
-                    if (AutenticacaoController::autenticarPermissoes("Cadastrar-Funcionarios")){
-                        echo "<div class='col-auto'>
-                        <button class='uptable-btn' data-open='md-cad-employee'>
+                if (AutenticacaoController::autenticarPermissoes("Cadastrar-Funcionarios")) {
+                    echo "<div class='col-auto'>
+                        <button class='uptable-btn' data-open='md-cad-employee' title='Cadastrar'>
                         <i class='bi bi-plus-square'></i>
                         </button>
-                        </div>";};
+                        </div>";
+                }
+                ;
                 ?>
 
                 <div class="col-auto">
@@ -154,23 +156,28 @@ foreach ($funcionarios as $funcionario) {
                                         <td>$funcionario->cargo</td>
                                         <td>$funcionario->perfil_nome</td>
                                         <td><span class='action'>
-                                            <button class='action btn' data-show='md-view-employee'><i
+                                            <button class='action btn' data-show='md-view-employee' title='Ver Mais Informações'><i
                                             class='bi bi-three-dots'></i></button>";
-                                
-                                        if ($funcionario->id_usuario !== 1){
-                                            if (AutenticacaoController::autenticarPermissoes("Editar-Funcionarios")){
-                                                echo "
-                                            <button class='action btn' data-show='md-edit-employee'>
+
+                            if ($funcionario->id_perfil !== 1) {
+                                if (AutenticacaoController::autenticarPermissoes("Editar-Funcionarios")) {
+                                    echo "
+                                            <button class='action btn' data-show='md-edit-employee' title='Editar'>
                                             <i class='bi bi-pencil-square'></i>
-                                            </button>";};
-                                            
-                                            if (AutenticacaoController::autenticarPermissoes("Excluir-Funcionarios")){
-                                                echo "
-                                                <button class='action btn trash' data-show='md-delete'><i class='bi bi-archive'></i></button>
+                                            </button>";
+                                }
+                                ;
+
+                                if (AutenticacaoController::autenticarPermissoes("Excluir-Funcionarios")) {
+                                    echo "
+                                                <button class='action btn trash' data-show='md-delete' title='Excluir'><i class='bi bi-archive'></i></button>
                                                 </span>
                                                 ";
-                                            };};
-                                        echo "   
+                                }
+                                ;
+                            }
+                            ;
+                            echo "   
                                         </td>
                                         </tr>
                                     ";
@@ -185,7 +192,7 @@ foreach ($funcionarios as $funcionario) {
         </section>
 
 
-        <dialog class="modal-adm modal-view" id="md-cad-employee">
+        <dialog class="modal-adm" id="md-cad-employee">
             <div>
                 <button id="exit"><i class="bi bi-x-lg"></i></button>
                 <h1>Cadastro de Funcionário</h1>
@@ -193,6 +200,7 @@ foreach ($funcionarios as $funcionario) {
 
 
             <form action="index.php?controller=FuncionarioController&method=inserirFuncionarios" method="post">
+
                 <fieldset>
                     <label for="nome">Digite o Nome do Funcionário</label>
                     <input type="text" name="nome">
@@ -242,9 +250,8 @@ foreach ($funcionarios as $funcionario) {
                         }
                         ?>
                     </select>
+                    <input type="hidden" name="foto" accept="image/*" onchange="previewImagem(event)">
                 </fieldset>
-
-
 
             </form>
         </dialog>
@@ -397,6 +404,7 @@ foreach ($funcionarios as $funcionario) {
     <script src="src/views/scripts/shared/pageSelect.js"></script>
     <script src="src/views/scripts/shared/filters.js"></script>
     <script src="src/views/scripts/shared/modals.js"></script>
+
 </body>
 
 </html>

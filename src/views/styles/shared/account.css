@@ -156,6 +156,9 @@
   outline-offset: 2px;
 }
 
+p {
+  color: var(--txt-std-adm)
+}
 /* Responsivo (desktop-first): 4 colunas > 2 > 1 */
 @media (max-width: 1024px) {
   .account {

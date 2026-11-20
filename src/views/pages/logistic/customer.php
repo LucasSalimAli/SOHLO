@@ -111,7 +111,7 @@
             if (AutenticacaoController::autenticarPermissoes("Cadastrar-Clientes")){
                 echo "
                 <div class='col-auto'>
-                    <button class='uptable-btn' data-open='md-sel-customer'>
+                    <button class='uptable-btn' data-open='md-sel-customer' title='Cadastrar'>
                         <i class='bi bi-plus-square'></i>
                     </button>
                 </div>";};
@@ -144,7 +144,8 @@
                         foreach ($clientes as $cliente) {
                             echo "
                                         <tr class='status is-green'
-                                            data-id='$cliente->id_usuario';
+                                            data-id='$cliente->id_usuario'
+                                            data-foto='$cliente->foto'
                                             data-name='$cliente->nome'
                                             data-email='$cliente->email'
                                             data-document='$cliente->documento'
@@ -154,7 +155,7 @@
                                             data-cep='$cliente->cep'
                                             data-numero='$cliente->endereco_numero',
                                             data-complemento='$cliente->complemento'
-                                            data-rua='$cliente->rua',
+                                            data-rua='$cliente->rua'
                                             data-cidade='$cliente->cidade'
                                             data-bairro='$cliente->bairro'>
                                             
@@ -162,11 +163,11 @@
                                         <td>$cliente->nome_plano</td>
                                         <td>$cliente->email</td>
                                         <td><span class='action'>
-                                            <button class='action btn' data-show='md-view-customer'><i
+                                            <button class='action btn' data-show='md-view-customer' title='Ver Mais Informações'><i
                                             class='bi bi-three-dots'></i></button>";
                                             if (AutenticacaoController::autenticarPermissoes("Excluir-Clientes")){
                                                 echo "
-                                                    <button class='action btn trash' data-show='md-delete'><i class='bi bi-archive'></i></button>";};
+                                                    <button class='action btn trash' data-show='md-delete' title='Excluir'><i class='bi bi-archive'></i></button>";};
                                     echo "
                                             </span>
                                         </td>
@@ -188,7 +189,7 @@
             <button data-open="md-cad-pj">Pessoa Jurídica</button>
         </dialog>
 
-        <dialog class="modal-adm modal-view" id="md-cad-pf">
+        <dialog class="modal-adm" id="md-cad-pf">
             <div>
                 <button id="exit"><i class="bi bi-x-lg"></i></button>
                 <h1>Cadastro de Clientes PF</h1>
@@ -243,6 +244,7 @@
                         }
                         ?>
                     </select>
+                    
                 </fieldset>
 
 
@@ -308,10 +310,10 @@
             </header>
 
             <section>
-                <img data-field="photo" alt="Foto do cliente" hidden>
-                <i class="bi bi-person-circle"></i>
+                <img data-field="foto" alt="Foto do cliente">
+                
                 <div>
-                    <h2 data-field="name"></h2>
+                    <h2 data-field="foto"></h2>
                     <p data-field="email"></p>
                 </div>      
             </section>
@@ -411,6 +413,8 @@
     <script src="src/views/scripts/shared/pageSelect.js"></script>
     <script src="src/views/scripts/shared/filters.js"></script>
     <script src="src/views/scripts/shared/modals.js"></script>
+
+    
 </body>
 
 </html>

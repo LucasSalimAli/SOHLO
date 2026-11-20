@@ -94,10 +94,35 @@ require_once "src/models/PlanoDAO.class.php";
                         $msg[11] = "Escolha um Plano" ;
                     }
 
-                    // if (!isset($_POST["frequencia_coleta"])){
-                    //     $erro = true;
-                    //     $msg[12] = "Escolha uma frequência para a Coleta";
-                    // }
+                    if(empty($_FILES["foto"]["name"])){
+                        $nomeFoto = "img_std_user.svg";
+                        $isStd = true;
+                    }
+                    else{
+                        $isStd = false;
+                        $caminhoTemp = $_FILES["foto"]["tmp_name"];
+
+                        // Descobre o tipo real lendo o arquivo no servidor
+                        $tipoMimeReal = mime_content_type($caminhoTemp);
+                        $mimesPermitidos = ['image/jpeg', 'image/png'];
+
+                        if (!in_array($tipoMimeReal, $mimesPermitidos)) {
+                            $msg[12] = "O arquivo enviado não é um formato de imagem válido (Apenas JPG e PNG)";
+                            $erro = true;
+                        }
+                        else
+                        {
+                            $ext = strtolower(pathinfo($_FILES["foto"]["name"], PATHINFO_EXTENSION));
+
+                            // Cria o prefixo com Data e Hora atual (Ex: 2026-06-06_14-30-22)
+                            $dataHora = date('Y-m-d_H-i-s');
+
+                            // Adiciona um número aleatório de 4 dígitos
+                            $numeroAleatorio = rand(1000, 9999);
+                            // Usando data, hora e número aleatório:
+                            $nomeFoto = "img_{$dataHora}_{$numeroAleatorio}." . $ext;
+                        }
+                    }
 
                     //endregion
 
@@ -111,7 +136,7 @@ require_once "src/models/PlanoDAO.class.php";
                             $_POST["nome"],
                             "",
                             $_POST["cpf"],
-                            "",
+                            $nomeFoto,
                             $_POST["email"],
                             password_hash($_POST["senha"], PASSWORD_DEFAULT),
                             0,
@@ -139,11 +164,14 @@ require_once "src/models/PlanoDAO.class.php";
                             return;
                         }
 
-                        $return = $clienteDAO->cadastrarCliente(
-                            $clienteNovo,
-                            (int) $plano->id_plano
+                        $return = $clienteDAO->cadastrarCliente($clienteNovo, (int) $plano->id_plano
                         );
 
+                        if($isStd === false){
+                        $folder = "src/uploads/images/users/";
+					    $caminhoFinal = $folder . $nomeFoto;
+                        move_uploaded_file($caminhoTemp, $caminhoFinal);}
+            
                         if($origem == "admin"){
                             echo "<script>
                                 alert('$return');
