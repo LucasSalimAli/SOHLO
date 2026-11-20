@@ -21,6 +21,8 @@ class FuncionarioController
     }
 
     public function inserirFuncionarios()
+
+    // DISGRAÇA PQP QUE INFERNO DE COISA DAO DE MERDA N VAI
     {
         session_start();
         require_once "src/controllers/AutenticacaoController.class.php";

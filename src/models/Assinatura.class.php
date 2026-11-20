@@ -1,4 +1,5 @@
 <?php
+// Ficou de fora, boot
     class Assinatura {
         public function __construct(private int $id_assinatura = 0,
                                     private int $plano_id = 0,

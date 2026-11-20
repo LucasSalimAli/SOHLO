@@ -65,6 +65,7 @@
     </aside>
 
     <main class="full-main">
+        <!-- Mó preguiça de fazer esse treco -->
         <h1>Histórico</h1>
     </main>
 

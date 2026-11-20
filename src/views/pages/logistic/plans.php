@@ -16,6 +16,7 @@
 <body>
 
     <header>
+        <!-- Pessoas, essa parte aqui é de componentes. O Arquivo para fazer a alteração está na pasta "Componnents" -->
         <?php
         require_once __DIR__ . "/../components/admNavbar.php";
         ?>
@@ -24,6 +25,7 @@
     <!-- Sidebar -->
 
     <aside class="sidebar">
+        <!-- Pessoas, essa parte aqui é de componentes. O Arquivo para fazer a alteração está na pasta "Componnents" -->
         <?php
         require_once __DIR__ . "/../components/sidebarLog.php";
         ?>

@@ -9,7 +9,7 @@ class FuncionarioDAO extends Conection
     public function cadastrarFuncionario($funcionario)
     {
         try {
-
+            // Não esquecer de fechar a MERDA da conexão
             $this->db->beginTransaction();
 
             // 1. CADASTRA USUARIO
@@ -194,6 +194,7 @@ class FuncionarioDAO extends Conection
     }
 
     public function verificarFuncionario($funcionario)
+    // Ta permitido dar Alt+F4?
     {
         $sql = "SELECT
                     usuarios.id_usuario,

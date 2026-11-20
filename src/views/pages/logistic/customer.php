@@ -23,14 +23,17 @@
 <body>
 
     <header>
+        <!-- Pessoas, essa parte aqui é de componentes. O Arquivo para fazer a alteração está na pasta "Componnents" -->
         <?php
         require_once __DIR__ . "/../components/admNavbar.php";
         ?>
     </header>
+    <!-- Pq eu me dei o trabalho disso? NINGUÉM VIU ESSA MERDA!!!!! E EU TOMO NO CU!!! -->
 
     <!-- Sidebar -->
 
     <aside class="sidebar">
+        <!-- Pessoas, essa parte aqui é de componentes. O Arquivo para fazer a alteração está na pasta "Componnents" -->
         <?php
         require_once __DIR__ . "/../components/sidebarLog.php";
         ?>
@@ -141,6 +144,8 @@
 
 
                         <?php
+                        // #Gambiarra a gente aceita. a gente só não aceita A DERROTA!!!!!
+                        // e tomates. tomates são do capiroto, blehg.
                         foreach ($clientes as $cliente) {
                             echo "
                                         <tr class='status is-green'

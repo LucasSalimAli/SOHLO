@@ -16,6 +16,7 @@
 <body>
 
     <header>
+        <!-- Pessoas, essa parte aqui é de componentes. O Arquivo para fazer a alteração está na pasta "Componnents" -->
         <?php
         require_once __DIR__ . "/../components/admNavbar.php";
         ?>
@@ -24,12 +25,14 @@
     <!-- Sidebar -->
 
     <aside class="sidebar">
+        <!-- Pessoas, essa parte aqui é de componentes. O Arquivo para fazer a alteração está na pasta "Componnents" -->
         <?php
         require_once __DIR__ . "/../components/sidebarLog.php";
         ?>
     </aside>
 
     <main>
+        <!-- Vai sem filtro msm, no tiempo -->
 
         <!-- <section class="filter-bar">
             <div class="filter-group">
@@ -279,6 +282,7 @@
         </dialog>
     </main>
 
+    <!-- Permissoes do Inferno. Que caralho -->
 
     <script src="src/views/scripts/shared/navbars.js"></script>
     <script src="src/views/scripts/shared/sidebar.js"></script>

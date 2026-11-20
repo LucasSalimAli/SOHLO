@@ -70,6 +70,7 @@
 
     <main class="full-main">
         <section class="account">
+            <!-- aaaaaaaaaaaaa que merdaaaaaa -->
 
             <!-- Perfil -->
             <section>
@@ -249,6 +250,7 @@
         </dialog>
     </main>
 
+    <!-- FOI CARALHOOOOOO!!!!!! -->
 
     <script src="src/views/scripts/vendor/bootstrap/bootstrap.bundle.js"></script>
     <script src="src/views/scripts/shared/navbars.js"></script>
